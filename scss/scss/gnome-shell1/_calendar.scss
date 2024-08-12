@@ -1,0 +1,31 @@
+@import 'colors';
+// calendar.scss
+
+#calendar {
+    background-color: $dark_4;
+    color: $light_1;
+}
+
+#calendar .header {
+    background-color: $blue_1;
+    color: $dark_5;
+    padding: 8px;
+    font-weight: bold;
+}
+
+#calendar .day {
+    background-color: $dark_3;
+    color: $light_2;
+    border-radius: 4px;
+    padding: 4px;
+}
+
+#calendar .day.today {
+    background-color: $blue_2;
+    color: $dark_5;
+}
+
+#calendar .day:hover {
+    background-color: $blue_3;
+}
+

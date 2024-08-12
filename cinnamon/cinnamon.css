@@ -1,0 +1,5854 @@
+.cinnamon-link {
+  color: #00ffcc; /* Neon Aqua */
+  font-weight: normal;
+  text-decoration: none;
+}
+
+.cinnamon-link:hover {
+  color: #00eaff; /* Neon Blue */
+  text-decoration: underline;
+}
+
+.label-shadow {
+  color: rgba(0, 0, 0, 0) !important;
+}
+
+/* ======================================
+ * ! Tooltips
+ * ====================================== */
+#Tooltip {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 4px 6px; /* Compact padding */
+  color: #eee;
+  font-size: 11px; /* Compact font size */
+  font-weight: bold;
+  text-align: center;
+  spacing: .3em;
+  background-color: rgba(0, 0, 0, 0.8); /* Dark background */
+  box-shadow: 0 0 8px rgba(0, 255, 204, 0.8); /* Neon Aqua shadow */
+}
+
+/* ======================================
+ * ! Scrollbars
+ * ====================================== */
+StScrollView.vfade {
+  -st-vfade-offset: 0 !important;
+}
+
+StScrollView.hfade {
+  -st-hfade-offset: 0 !important;
+}
+
+StScrollBar {
+  padding: 2px; /* Compact padding */
+  min-width: 14px; /* Compact size */
+  min-height: 14px; /* Compact size */
+  background-color: #13131a; /* Darker background */
+  border: 1px solid #00ffcc; /* Neon Aqua */
+}
+
+StScrollView.vfade StScrollBar {
+  padding: 0 4px;
+}
+
+StScrollView.hfade StScrollBar {
+  padding: 4px 0;
+}
+
+StScrollBar StBin#trough {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+StScrollBar StButton#vhandle,
+StScrollBar StButton#hhandle {
+  background-color: #00ffcc; /* Neon Aqua */
+  border-radius: 8px; /* Rounded handle */
+}
+
+StScrollBar StButton#vhandle:hover,
+StScrollBar StButton#vhandle:focus,
+StScrollBar StButton#vhandle:active,
+StScrollBar StButton#hhandle:hover,
+StScrollBar StButton#hhandle:focus,
+StScrollBar StButton#hhandle:active {
+  background-color: #00eaff; /* Neon Blue */
+}
+
+/* ======================================
+ * ! Entries
+ * ====================================== */
+.menu StEntry,
+.modal-dialog StEntry,
+#notification StEntry {
+  background-color: #13131a; /* Darker background */
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #00ffcc; /* Neon Aqua */
+  padding: .2em .5em; /* Compact padding */
+  width: 200px; /* Compact width */
+  height: 1.5em; /* Compact height */
+  font-size: 11px; /* Compact font size */
+  font-weight: normal;
+  box-shadow: 0 0 4px rgba(0, 255, 204, 0.5); /* Neon shadow */
+}
+
+.menu StEntry:focus,
+.menu StEntry:active,
+.menu StEntry:pressed,
+.modal-dialog StEntry:focus,
+.modal-dialog StEntry:active,
+.modal-dialog StEntry:pressed,
+#notification StEntry:focus,
+#notification StEntry:active,
+#notification StEntry:pressed {
+  border: 1px solid #ff0055; /* Neon Red */
+  font-weight: bold;
+  color: #fff;
+  caret-color: #ff0055; /* Neon Red */
+  caret-size: 2px;
+  selected-color: #fff;
+  selection-background-color: #4e8378;
+}
+
+.menu StEntry StIcon,
+.modal-dialog StEntry StIcon,
+#notification StEntry StIcon {
+  color: #00eaff; /* Neon Blue */
+  icon-size: 14px; /* Compact icon size */
+}
+
+.menu StEntry:focus > StIcon,
+.menu StEntry:active > StIcon,
+.menu StEntry:pressed > StIcon,
+.modal-dialog StEntry:focus > StIcon,
+.modal-dialog StEntry:active > StIcon,
+.modal-dialog StEntry:pressed > StIcon,
+#notification StEntry:focus > StIcon,
+#notification StEntry:active > StIcon,
+#notification StEntry:pressed > StIcon {
+  color: #fff;
+}
+
+/* ======================================
+ * ! Switchers
+ * ====================================== */
+.toggle-switch-us,
+.toggle-switch-intl {
+  width: 32px; /* Compact width */
+  height: 16px; /* Compact height */
+  background-color: #13131a; /* Darker background */
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.toggle-switch-us:checked,
+.toggle-switch-intl:checked {
+  background-color: #00ffcc; /* Neon Aqua */
+}
+
+/* ======================================
+ * ! Checkboxes + Radio buttons
+ * ====================================== */
+.check-box CinnamonGenericContainer {
+  spacing: .1em; /* Compact spacing */
+  min-height: 14px; /* Compact size */
+}
+
+.check-box StBin {
+  width: 14px; /* Compact size */
+  height: 14px; /* Compact size */
+  background-color: #13131a; /* Darker background */
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  border-radius: 2px; /* Rounded corners */
+}
+
+.check-box:focus StBin {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.check-box:checked StBin {
+  background-color: #00eaff; /* Neon Blue */
+}
+
+.check-box:focus:checked StBin {
+  background-color: #00ffcc; /* Neon Aqua */
+}
+
+.radiobutton CinnamonGenericContainer {
+  spacing: .1em; /* Compact spacing */
+  min-height: 14px; /* Compact size */
+}
+
+.radiobutton StBin {
+  width: 14px; /* Compact size */
+  height: 14px; /* Compact size */
+  background-color: #13131a; /* Darker background */
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  border-radius: 7px; /* Fully rounded for radio */
+}
+
+.radiobutton:focus StBin {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.radiobutton:checked StBin {
+  background-color: #00eaff; /* Neon Blue */
+}
+
+.radiobutton:focus:checked StBin {
+  background-color: #00ffcc; /* Neon Aqua */
+}
+
+/* ======================================
+ * ! Button (global selector)
+ * ====================================== */
+.button {
+  background-color: #13131a; /* Darker background */
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 8px rgba(0, 255, 204, 0.8); /* Neon Aqua shadow */
+  border-radius: 4px; /* Rounded corners */
+  font-weight: bold;
+  font-size: 11px; /* Compact font size */
+  color: #eee;
+  padding: .5em 1em; /* Compact padding */
+}
+
+.button StIcon {
+  icon-size: 14px !important; /* Compact icon size */
+  color: #eee;
+}
+
+.button:hover,
+.button:active,
+.button:checked,
+.button:activate,
+.button:pressed,
+.button:selected {
+  color: #00ffcc; /* Neon Aqua */
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 8px rgba(0, 234, 255, 0.8); /* Neon Blue shadow */
+}
+
+.button:hover StIcon,
+.button:active StIcon,
+.button:checked StIcon,
+.button:activate StIcon,
+.button:pressed StIcon,
+.button:selected StIcon {
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.button:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.button:focus StIcon {
+  color: #fff;
+}
+
+.button:grayed,
+.button:disabled,
+.button:insensitive,
+.button:focus:grayed,
+.button:focus:disabled,
+.button:focus:insensitive {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  color: rgba(238, 238, 238, 0.3);
+}
+
+.button:grayed StIcon,
+.button:disabled StIcon,
+.button:insensitive StIcon,
+.button:focus:grayed StIcon,
+.button:focus:disabled StIcon,
+.button:focus:insensitive StIcon {
+  color: rgba(238, 238, 238, 0.3);
+}
+
+/* ======================================
+ * ! Slider
+ * ====================================== */
+.slider {
+  -slider-height: 0.3em;
+  -slider-background-color: #13131a; /* Darker background */
+  -slider-border-color: #00eaff; /* Neon Blue */
+  -slider-active-background-color: #00ffcc; /* Neon Aqua */
+  -slider-active-border-color: #00ffcc; /* Neon Aqua */
+  -slider-border-width: 1px;
+  -slider-handle-radius: 0.5em;
+  height: 1em;
+  min-width: 12em; /* Compact width */
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+/* ======================================
+ * ! Popup Menus
+ * ====================================== */
+.menu {
+  min-width: 80px; /* Compact width */
+}
+
+.popup-menu-content {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: .4em .2px; /* Compact padding */
+  color: #eee;
+  background-color: #13131a; /* Darker background */
+  box-shadow: 0 0 8px rgba(0, 255, 204, 0.8); /* Neon Aqua shadow */
+}
+
+.popup-menu-icon {
+  icon-size: 14px; /* Compact icon size */
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.popup-menu-item {
+  padding: .3em 1em; /* Compact padding */
+  spacing: .6em; /* Compact spacing */
+}
+
+.popup-menu-item:active {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.popup-menu-item:active .popup-menu-icon,
+.popup-menu-item:active StIcon {
+  color: #fff;
+}
+
+.popup-menu-item:active .popup-menu-item-dot {
+  background-color: #ff0055; /* Neon Red */
+  color: rgba(0, 0, 0, 0);
+}
+
+.popup-menu-item:insensitive {
+  font-weight: normal;
+  color: rgba(238, 238, 238, 0.3);
+}
+
+.popup-menu-item:insensitive .popup-menu-icon,
+.popup-menu-item:insensitive StIcon {
+  color: rgba(238, 238, 238, 0.3);
+}
+
+.popup-menu-item-dot {
+  background-color: #00ffcc; /* Neon Aqua */
+  color: rgba(0, 0, 0, 0);
+}
+
+.popup-sub-menu {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: none;
+  background-color: #13131a; /* Darker background */
+  padding: 10px 0;
+  color: #eee;
+}
+
+.popup-sub-menu .popup-menu-item:active {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.popup-separator-menu-item {
+  -gradient-height: 1px;
+  background-color: #1c1c1c; /* Dark separator */
+  height: 10px; /* Compact height */
+}
+
+.popup-slider-menu-item {
+  -slider-height: 0.3em;
+  -slider-background-color: #13131a; /* Darker background */
+  -slider-border-color: #00eaff; /* Neon Blue */
+  -slider-active-background-color: #00ffcc; /* Neon Aqua */
+  -slider-active-border-color: #00ffcc; /* Neon Aqua */
+  -slider-border-width: 1px;
+  -slider-handle-radius: 0.5em;
+  height: 1em;
+  min-width: 12em; /* Compact width */
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+/* Right click in scale (show all windows) */
+.popup-combo-menu {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: .6em .2em; /* Compact padding */
+  color: #eee;
+}
+
+.popup-inactive-menu-item {
+  color: rgba(238, 238, 238, 0.65);
+}
+
+.popup-subtitle-menu-item {
+  font-weight: bold;
+}
+
+/* used in power applet */
+.popup-device-menu-item {
+  spacing: .6em; /* Compact spacing */
+}
+
+.popup-device-menu-item .popup-inactive-menu-item {
+  color: #03a9f4; /* Bright Cyan */
+}
+
+/* ======================================
+ * ! Panel
+ * ====================================== */
+.panel-top {
+  font-size: 11px; /* Compact font size */
+  width: 30px; /* Compact width */
+  height: 24px; /* Compact height */
+  border: 1px solid #00eaff; /* Neon Blue */
+  background-color: #13131a; /* Darker background */
+}
+
+.panel-top:highlight {
+  border: none;
+  background-color: rgba(0, 255, 204, 0.5); /* Neon Aqua */
+}
+
+.panel-top .panelLeft:dnd,
+.panel-top .panelRight:dnd,
+.panel-top .panelLeft.vertical:dnd,
+.panel-top .panelRight.vertical:dnd {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+}
+
+.panel-top .panelCenter:dnd,
+.panel-top .panelCenter.vertical:dnd {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.panel-bottom {
+  font-size: 11px; /* Compact font size */
+  width: 30px; /* Compact width */
+  height: 24px; /* Compact height */
+  border: 1px solid #00eaff; /* Neon Blue */
+  background-color: #13131a; /* Darker background */
+}
+
+.panel-bottom:highlight {
+  border: none;
+  background-color: rgba(0, 255, 204, 0.5); /* Neon Aqua */
+}
+
+.panel-bottom .panelLeft:dnd,
+.panel-bottom .panelRight:dnd,
+.panel-bottom .panelLeft.vertical:dnd,
+.panel-bottom .panelRight.vertical:dnd {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+}
+
+.panel-bottom .panelCenter:dnd,
+.panel-bottom .panelCenter.vertical:dnd {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.panel-left {
+  font-size: 11px; /* Compact font size */
+  width: 30px; /* Compact width */
+  height: 24px; /* Compact height */
+  border: 1px solid #00eaff; /* Neon Blue */
+  background-color: #13131a; /* Darker background */
+}
+
+.panel-left:highlight {
+  border: none;
+  background-color: rgba(0, 255, 204, 0.5); /* Neon Aqua */
+}
+
+.panel-left .panelLeft:dnd,
+.panel-left .panelRight:dnd,
+.panel-left .panelLeft.vertical:dnd,
+.panel-left .panelRight.vertical:dnd {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+}
+
+.panel-left .panelCenter:dnd,
+.panel-left .panelCenter.vertical:dnd {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.panel-right {
+  font-size: 11px; /* Compact font size */
+  width: 30px; /* Compact width */
+  height: 24px; /* Compact height */
+  border: 1px solid #00eaff; /* Neon Blue */
+  background-color: #13131a; /* Darker background */
+}
+
+.panel-right:highlight {
+  border: none;
+  background-color: rgba(0, 255, 204, 0.5); /* Neon Aqua */
+}
+
+.panel-right .panelLeft:dnd,
+.panel-right .panelRight:dnd,
+.panel-right .panelLeft.vertical:dnd,
+.panel-right .panelRight.vertical:dnd {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+}
+
+.panel-right .panelCenter:dnd,
+.panel-right .panelCenter.vertical:dnd {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.panel-dummy {
+  background-color: rgba(0, 255, 204, 0.5); /* Neon Aqua */
+}
+
+.panel-dummy:entered {
+  background-color: #00ffcc; /* Neon Aqua */
+}
+
+/* ======================================
+ * ! Expo view
+ * ====================================== */
+.expo-background {
+  background-color: #13131a; /* Darker background */
+  background-repeat: repeat;
+}
+
+.expo-workspace-thumbnail-frame {
+  border: 3px solid #00eaff; /* Neon Blue */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.expo-workspace-thumbnail-frame#active {
+  border: 3px solid #00ffcc; /* Neon Aqua */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.workspace-thumbnails {
+  spacing: 20px; /* Compact spacing */
+}
+
+/* This shades the workspace thumbnails */
+.workspace-thumbnails .workspace-overview-background-shade {
+  background-color: rgba(0, 0, 0, 0.6); /* Dark shade */
+}
+
+.expo-workspaces-name-entry {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 8px 10px; /* Compact padding */
+  text-align: center;
+  font-weight: bold;
+  color: #eee;
+  background-color: #13131a; /* Darker background */
+}
+
+.expo-workspaces-name-entry#selected {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #fff;
+}
+
+.expo-workspaces-name-entry:focus,
+.expo-workspaces-name-entry#selected:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  caret-color: #ff0055; /* Neon Red */
+  selection-background-color: #4e8378;
+}
+
+.workspace-close-button {
+  background-color: #ff0055; /* Neon Red */
+  background-size: 30px; /* Compact size */
+  width: 30px; /* Compact size */
+  height: 30px; /* Compact size */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.workspace-close-button:hover {
+  background-color: #ff3366; /* Lighter Neon Red */
+}
+
+.workspace-close-button:active {
+  background-color: #ff6699; /* Even lighter Neon Red */
+}
+
+.workspace-add-button {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  background-color: #00eaff; /* Neon Blue */
+  background-size: 22px 21px; /* Compact size */
+  height: 180px; /* Compact height */
+  width: 30px; /* Compact width */
+}
+
+.workspace-add-button:hover {
+  border: 1px solid #00eaff; /* Neon Blue */
+  background-color: #00ffcc; /* Neon Aqua */
+}
+
+.window-close-area {
+  border: 1px solid #ff0055; /* Neon Red */
+  background-color: #13131a; /* Darker background */
+  height: 90px; /* Compact height */
+  width: 320px; /* Compact width */
+}
+/* ======================================
+ * ! Windows overview
+ * ====================================== */
+/* The background for the scale view */
+.workspace-overview-background-shade {
+  background-color: rgba(19, 19, 26, 0.8); /* Darker background */
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.8); /* Neon Aqua shadow */
+}
+
+.window-caption {
+  border: 1px solid #00eaff; /* Neon Blue */
+  background-color: #13131a; /* Darker background */
+  color: #eee;
+  font-size: 11px; /* Compact font size */
+  font-weight: bold;
+  padding: 4px 6px; /* Compact padding */
+  spacing: 20px; /* Compact spacing */
+  -cinnamon-caption-spacing: 8px;
+}
+
+.window-caption#selected {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #fff;
+}
+
+.window-close {
+  background-image: url("img/controls/close.svg");
+  background-size: 30px; /* Compact size */
+  width: 30px; /* Compact size */
+  height: 30px; /* Compact size */
+  border-radius: 5px; /* Rounded corners */
+  -cinnamon-close-overlap: 20px;
+}
+
+.window-close:hover {
+  background-image: url("img/controls/close-hover.svg");
+}
+
+.window-close:active {
+  background-image: url("img/controls/close-pressed.svg");
+}
+
+/* ======================================
+ * ! Desklets
+ * ====================================== */
+.desklet {
+  color: #eee;
+}
+
+.desklet-with-borders {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  background-color: #13131a; /* Darker background */
+  color: #eee;
+  font-weight: bold;
+  padding: 5px; /* Compact padding */
+  box-shadow: 0 0 8px rgba(0, 255, 204, 0.8); /* Neon Aqua shadow */
+}
+
+.desklet-with-borders-and-header {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  background-color: #13131a; /* Darker background */
+  color: #eee;
+  padding: 5px; /* Compact padding */
+  font-weight: bold;
+  box-shadow: 0 0 8px rgba(0, 255, 204, 0.8); /* Neon Aqua shadow */
+}
+
+.desklet-header {
+  border: 1px solid #ff0055; /* Neon Red */
+  background-color: #1c1c24; /* Darker background */
+  font-size: 13px; /* Compact font size */
+  font-weight: bold;
+  text-shadow: none;
+  color: #eee;
+  padding: 5px; /* Compact padding */
+}
+
+.desklet-drag-placeholder {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  border-radius: 5px; /* Rounded corners */
+  background: #13131a; /* Darker background */
+}
+
+/* ======================================
+ * ! Clock
+ * ====================================== */
+.clock-desklet-label {
+  font-weight: bold;
+  padding: 8px; /* Compact padding */
+  color: #00eaff; /* Neon Blue */
+}
+
+/* ======================================
+ * ! Photoframe
+ * ====================================== */
+.photoframe-box {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  background-color: #13131a; /* Darker background */
+  padding: 8px; /* Compact padding */
+}
+
+/* ======================================
+ * ! Xkcd
+ * ====================================== */
+.xkcd-box {
+  padding: 8px; /* Compact padding */
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: none;
+  background-color: #13131a; /* Darker background */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* ======================================
+ * ! Notifications
+ * ====================================== */
+.url-highlighter {
+  link-color: #00eaff; /* Neon Blue */
+}
+
+#notification {
+  padding: 1em; /* Compact padding */
+  spacing-rows: .2em; /* Compact spacing */
+  spacing-columns: 8px; /* Compact spacing */
+  width: 30em; /* Compact width */
+  margin-from-right-edge-of-screen: 6px;
+  font-weight: bold;
+  font-size: 11px; /* Compact font size */
+  color: #eee;
+  border: 1px solid #00eaff; /* Neon Blue */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #13131a; /* Darker background */
+}
+
+#notification CinnamonGenericContainer * {
+  font-weight: normal;
+  font-size: 11px; /* Compact font size */
+  color: rgba(238, 238, 238, 0.65);
+}
+
+#notification CinnamonGenericContainer *:first-child {
+  font-weight: bold;
+  font-size: 11px; /* Compact font size */
+  padding-top: .2em; /* Compact padding */
+  color: #eee;
+}
+
+#notification CinnamonGenericContainer *:last-child {
+  padding-top: .2em; /* Compact padding */
+  color: #eee;
+}
+
+#notification-body {
+  font-weight: normal;
+  font-size: 11px; /* Compact font size */
+  padding-top: .4em; /* Compact padding */
+}
+
+#notification-actions {
+  spacing: .2em; /* Compact spacing */
+}
+
+#notification.notification-with-image {
+  min-height: 140px; /* Compact height */
+}
+
+.popup-menu-content #notification.notification-with-image {
+  min-height: 150px; /* Compact height */
+}
+
+#notification.notification-with-image #notification-body {
+  padding: 0;
+}
+
+.notification-button,
+.notification-icon-button {
+  background-color: rgba(0, 0, 0, 0);
+  background-gradient-direction: none;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+  border: 1px solid #00eaff; /* Neon Blue */
+  border-width: 0;
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold;
+  font-size: 11px; /* Compact font size */
+  color: #eee;
+  padding: 0.8em; /* Compact padding */
+}
+
+.notification-button StIcon,
+.notification-icon-button StIcon {
+  icon-size: 14px !important; /* Compact icon size */
+}
+
+.notification-button StIcon,
+.notification-icon-button StIcon {
+  color: #eee;
+}
+
+.notification-button:hover,
+.notification-icon-button:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #4e8378;
+}
+
+.notification-button:active,
+.notification-button:pressed,
+.notification-button:activate,
+.notification-button:checked,
+.notification-button:selected,
+.notification-icon-button:active,
+.notification-icon-button:pressed,
+.notification-icon-button:activate,
+.notification-icon-button:checked,
+.notification-icon-button:selected {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #4e8378;
+}
+
+.notification-button:focus,
+.notification-icon-button:focus {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #fff;
+}
+
+.notification-button:focus StIcon,
+.notification-icon-button:focus StIcon {
+  color: #fff;
+}
+
+.notification-button:grayed,
+.notification-button:disabled,
+.notification-button:insensitive,
+.notification-icon-button:grayed,
+.notification-icon-button:disabled,
+.notification-icon-button:insensitive {
+  border: 1px solid rgba(238, 238, 238, 0.3);
+  color: rgba(238, 238, 238, 0.3);
+}
+
+.notification-button:grayed StIcon,
+.notification-icon-button:grayed StIcon,
+.notification-button:disabled StIcon,
+.notification-icon-button:disabled StIcon,
+.notification-button:insensitive StIcon,
+.notification-icon-button:insensitive StIcon {
+  color: rgba(238, 238, 238, 0.3);
+}
+
+/* ======================================
+ * ! Notification applet
+ * ====================================== */
+#traycontainer {
+  padding: .3em; /* Compact padding */
+}
+
+#traycontainer StScrollBar {
+  padding: .3em 0 .3em .2em; /* Compact padding */
+}
+
+#traycontainer .notification-applet-padding {
+  padding: .3em 0; /* Compact padding */
+}
+
+#traycontainer #notification {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: .6em; /* Compact padding */
+}
+
+#traycontainer #notification.multi-line-notification {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+}
+
+#traycontainer #notification.notification-with-image {
+  border: 1px solid #ff0055; /* Neon Red */
+}
+
+/* ======================================
+ * ! Alt Tab
+ * ====================================== */
+#uiGroup > #altTabPopup {
+  padding: 0;
+  spacing: 3px; /* Compact spacing */
+}
+
+#uiGroup > #altTabPopup .switcher-list {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+  padding: 1px;
+  font-size: 12px; /* Compact font size */
+  font-weight: bold;
+}
+
+#uiGroup > #altTabPopup .switcher-list .item-box {
+  padding: 8px; /* Compact padding */
+}
+
+#uiGroup > #altTabPopup .switcher-list .item-box:selected {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #fff;
+}
+
+#uiGroup > #altTabPopup .switcher-list .item-box StLabel {
+  padding-top: .3em; /* Compact padding */
+}
+
+/* This styles the window name box when alt-tab is in 'coverflow' or 'timeline' modes */
+#uiGroup > StWidget > .switcher-list {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+}
+
+.switcher-list-item-container {
+  spacing: 0;
+}
+
+.thumbnail {
+  width: 230px; /* Compact width */
+}
+
+/* ======================================
+ * ! Lightbox + flashspot
+ * ====================================== */
+/* The background shade when a dialog appears */
+.lightbox {
+  background-color: rgba(0, 0, 0, 0.75); /* Darker background */
+}
+
+/* Among other places, appears when adding an applet */
+.flashspot {
+  background-color: rgba(255, 0, 85, 0.6); /* Neon Red */
+}
+
+/* ======================================
+ * ! Modal dialogs
+ * ====================================== */
+.modal-dialog {
+  border-radius: 5px; /* Rounded corners */
+  padding: 0;
+  color: #eee;
+  border: 1px solid #00eaff; /* Neon Blue */
+  background-color: #13131a; /* Darker background */
+}
+
+.modal-dialog > * {
+  padding: 20px; /* Compact padding */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.modal-dialog-button-box {
+  border: 1px solid #00eaff; /* Neon Blue */
+  spacing: 0;
+  padding: 6px; /* Compact padding */
+}
+
+.modal-dialog-button {
+  background-color: rgba(0, 0, 0, 0);
+  background-gradient-direction: none;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+  border: 1px solid #00eaff; /* Neon Blue */
+  border-width: 0;
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold;
+  font-size: 11px; /* Compact font size */
+  color: #eee;
+  padding: 0.8em; /* Compact padding */
+}
+
+.modal-dialog-button StIcon {
+  icon-size: 14px !important; /* Compact icon size */
+}
+
+.modal-dialog-button:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #4e8378;
+}
+
+.modal-dialog-button:active,
+.modal-dialog-button:pressed,
+.modal-dialog-button:activate,
+.modal-dialog-button:checked,
+.modal-dialog-button:selected {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #4e8378;
+}
+
+.modal-dialog-button:focus {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #fff;
+}
+
+.modal-dialog-button:grayed,
+.modal-dialog-button:disabled,
+.modal-dialog-button:insensitive {
+  border: 1px solid rgba(238, 238, 238, 0.3);
+  color: rgba(238, 238, 238, 0.3);
+}
+
+.modal-dialog-button:grayed StIcon,
+.modal-dialog-button:disabled StIcon,
+.modal-dialog-button:insensitive StIcon {
+  color: rgba(238, 238, 238, 0.3);
+}
+
+/* ======================================
+ * ! Run dialog
+ * ====================================== */
+.run-dialog > * {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 2px; /* Compact padding */
+}
+
+.run-dialog > .modal-dialog-button-box {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: none;
+  padding: 0;
+  height: 0;
+}
+
+.run-dialog-error-box {
+  padding: 10px 3px 5px 3px; /* Compact padding */
+  spacing: 1em;
+  color: #ff0055; /* Neon Red */
+  font-weight: bold;
+}
+
+.run-dialog-error-box StIcon {
+  width: 14px; /* Compact icon size */
+  height: 14px; /* Compact icon size */
+  color: #ff0055; /* Neon Red */
+}
+
+.run-dialog-completion-box {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 3px; /* Compact padding */
+  font-size: 12px; /* Compact font size */
+  padding: 0.8em .5em; /* Compact padding */
+  color: #eee;
+}
+
+.run-dialog-label {
+  font-size: 0;
+}
+
+.run-dialog-entry {
+  /*!*/
+}
+
+/* ======================================
+ * ! About Dialog
+ * ====================================== */
+.about-content {
+  width: 500px; /* Compact width */
+  height: 220px; /* Compact height */
+  spacing: 10px; /* Compact spacing */
+}
+
+.about-content > *:first-child > * {
+  spacing: .2em;
+}
+
+.about-content > *:first-child > * > * {
+  spacing: .7em;
+}
+
+.about-icon {
+  color: #eee;
+}
+
+.about-title {
+  font-size: 1.8em; /* Compact font size */
+  font-weight: bold;
+}
+
+.about-uuid {
+  font-size: 11px; /* Compact font size */
+  color: rgba(238, 238, 238, 0.65);
+}
+
+.about-version {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 5px; /* Compact padding */
+  font-size: 11px; /* Compact font size */
+  font-weight: bold;
+  color: #03a9f4;
+}
+
+.about-scrollBox {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 3px; /* Compact padding */
+  padding-right: 0;
+}
+
+.about-scrollBox-innerBox {
+  padding: 1em; /* Compact padding */
+  spacing: 1em; /* Compact spacing */
+}
+
+#about-website:hover StLabel {
+  text-decoration: underline;
+}
+
+/* ======================================
+ * ! On-screen Keyboard
+ * ====================================== */
+#keyboard {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.keyboard-layout {
+  spacing: 4px; /* Compact spacing */
+  padding: 6px; /* Compact padding */
+}
+
+.keyboard-row {
+  spacing: 4px; /* Compact spacing */
+}
+
+.keyboard-key {
+  background-color: rgba(0, 0, 0, 0);
+  background-gradient-direction: none;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+  border: 1px solid #00eaff; /* Neon Blue */
+  border-width: 0;
+  border-radius: 5px; /* Rounded corners */
+  font-weight: bold;
+  font-size: 11px; /* Compact font size */
+  color: #eee;
+  min-height: 26px; /* Compact height */
+  min-width: 26px; /* Compact width */
+  font-size: 16px; /* Compact font size */
+}
+
+.keyboard-key StIcon {
+  icon-size: 14px !important; /* Compact icon size */
+}
+
+.keyboard-key:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #4e8378;
+}
+
+.keyboard-key:active,
+.keyboard-key:pressed,
+.keyboard-key:activate,
+.keyboard-key:checked,
+.keyboard-key:selected {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #4e8378;
+}
+
+.keyboard-key:focus {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #fff;
+}
+
+.keyboard-key:grayed,
+.keyboard-key:disabled,
+.keyboard-key:insensitive {
+  border: 1px solid rgba(238, 238, 238, 0.3);
+  color: rgba(238, 238, 238, 0.3);
+}
+
+/* Appears when long-pressing certain keys */
+.keyboard-subkeys {
+  -arrow-border-radius: 5px; /* Rounded corners */
+  -arrow-background-color: rgba(0, 0, 0, 0);
+  -arrow-border-color: rgba(0, 0, 0, 0);
+  -arrow-border-width: 0;
+  -arrow-base: 10px; /* Compact size */
+  -arrow-rise: 5px; /* Compact size */
+  -boxpointer-gap: 0;
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+/* ======================================
+ * ! Applets
+ * ====================================== */
+.applet-icon,
+.system-status-icon {
+  icon-size: 14px; /* Compact icon size */
+  padding: 0;
+  spacing: 0;
+}
+
+/* This is pretty much only used by the keyboard applet */
+.panel-status-button {
+  color: #eee;
+  font-weight: bold;
+  height: inherit;
+}
+
+.panel-top .panel-status-button,
+.panel-bottom .panel-status-button {
+  padding: 0 1px; /* Compact padding */
+}
+
+.panel-left .panel-status-button,
+.panel-right .panel-status-button {
+  height: 1.6em; /* Compact height */
+}
+
+.applet-label {
+  font-weight: bold;
+}
+
+.panel-top .applet-separator,
+.panel-bottom .applet-separator {
+  padding: 0 5px; /* Compact padding */
+}
+
+.panel-left .applet-separator,
+.panel-right .applet-separator {
+  padding: 5px 0; /* Compact padding */
+}
+
+.applet-separator-line {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 1px;
+}
+
+.applet-separator-line-vertical {
+  border: 0 rgba(0, 0, 0, 0.65);
+  border-bottom-width: 1px;
+}
+
+.applet-box {
+  padding: 0px;
+  color: #eee;
+}
+
+.applet-box.vertical {
+  padding: 1px 0; /* Compact padding */
+}
+
+.panel-top .applet-box {
+  padding-left: 2px; /* Compact padding */
+  padding-right: 2px; /* Compact padding */
+  text-align: center;
+}
+
+.panel-top .applet-box:hover {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.panel-top .applet-box:checked {
+  color: #fff;
+}
+
+.panel-top .applet-box.xapp-status-cinnamon-org-applet {
+  border: none;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.panel-bottom .applet-box {
+  padding-left: 2px; /* Compact padding */
+  padding-right: 2px; /* Compact padding */
+  text-align: center;
+}
+
+.panel-bottom .applet-box:hover {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.panel-bottom .applet-box:checked {
+  color: #fff;
+}
+
+.panel-bottom .applet-box.xapp-status-cinnamon-org-applet {
+  border: none;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.panel-left .applet-box {
+  padding-top: 2px; /* Compact padding */
+  padding-bottom: 2px; /* Compact padding */
+}
+
+.panel-left .applet-box:hover {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.panel-left .applet-box:checked {
+  color: #fff;
+}
+
+.panel-left .applet-box.xapp-status-cinnamon-org-applet {
+  border: none;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.panel-right .applet-box {
+  padding-top: 2px; /* Compact padding */
+  padding-bottom: 2px; /* Compact padding */
+}
+
+.panel-right .applet-box:hover {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.panel-right .applet-box:checked {
+  color: #fff;
+}
+
+.panel-right .applet-box.xapp-status-cinnamon-org-applet {
+  border: none;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+.applet-box.show-desktop-cinnamon-org-applet,
+.applet-box.sw-mohammad-sn-applet,
+.applet-box.clean-show-desktop-filipetorresbr-applet {
+  border: 1px solid #00eaff; /* Neon Blue */
+  width: 0.8em !important; /* Compact size */
+  height: 0.8em !important; /* Compact size */
+}
+
+.applet-box.show-desktop-cinnamon-org-applet:hover,
+.applet-box.sw-mohammad-sn-applet:hover,
+.applet-box.clean-show-desktop-filipetorresbr-applet:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+}
+
+.applet-box.show-desktop-cinnamon-org-applet .applet-icon,
+.applet-box.sw-mohammad-sn-applet .applet-icon,
+.applet-box.clean-show-desktop-filipetorresbr-applet .applet-icon {
+  width: 0;
+  height: 0;
+}
+
+/* ======================================
+ * ! Calendar
+ * ====================================== */
+.calendar-day {
+  /*!*/
+}
+
+.calendar-day-top {
+  /*!*/
+}
+
+.calendar-day-left {
+  /*!*/
+}
+
+.datemenu-date-label {
+  padding: .6em 1em .3em 1em; /* Compact padding */
+  font-size: 11px; /* Compact font size */
+  font-weight: bold;
+  text-align: center;
+  color: #eee;
+}
+
+.calendar {
+  padding: .6em 1em .5em 1em; /* Compact padding */
+  spacing-rows: 2px; /* Compact spacing */
+  spacing-columns: 2px; /* Compact spacing */
+}
+
+.calendar-month-label {
+  padding-top: 2px;
+  font-size: 11px; /* Compact font size */
+  font-weight: bold;
+  color: rgba(238, 238, 238, 0.65);
+  padding: .4em; /* Compact padding */
+}
+
+.calendar-change-month-back,
+.calendar-change-month-forward:rtl {
+  background-image: url("img/controls/calendar-arrow-left.svg");
+  background-size: 14px; /* Compact size */
+  width: 14px; /* Compact size */
+  height: 14px; /* Compact size */
+  padding: 0 .2em;
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.calendar-change-month-back:hover,
+.calendar-change-month-forward:rtl:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+}
+
+.calendar-change-month-forward,
+.calendar-change-month-back:rtl {
+  background-image: url("img/controls/calendar-arrow-right.svg");
+  background-size: 14px; /* Compact size */
+  width: 14px; /* Compact size */
+  height: 14px; /* Compact size */
+  padding: 0 .2em;
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.calendar-change-month-forward:hover,
+.calendar-change-month-back:rtl:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+}
+
+.calendar-day-base {
+  font-size: 11px; /* Compact font size */
+  font-weight: bold;
+  text-align: center;
+  padding: 1px 0 0 1px;
+  width: 2.3em; /* Compact width */
+  height: 2.3em; /* Compact height */
+}
+
+.calendar-day-heading {
+  color: #eee;
+  padding: 1em 0 .5em 0; /* Compact padding */
+  height: 1.3em; /* Compact height */
+}
+
+.calendar-day-heading.calendar-work-day,
+.calendar-day-heading.calendar-nonwork-day {
+  border: none;
+}
+
+.calendar-work-day {
+  border: 1px solid #00eaff; /* Neon Blue */
+  border: none;
+  color: #eee;
+}
+
+.calendar-nonwork-day {
+  border: 1px solid #00eaff; /* Neon Blue */
+  border: none;
+  color: rgba(238, 238, 238, 0.65);
+}
+
+.calendar-today {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #fff;
+  font-weight: bold;
+}
+
+.calendar-other-month-day {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: rgba(238, 238, 238, 0.3);
+  font-weight: normal;
+}
+
+.calendar-week-number {
+  color: rgba(238, 238, 238, 0.65);
+  font-size: 11px; /* Compact font size */
+  font-weight: normal;
+  width: 1.2em; /* Compact width */
+  height: 1.4em; /* Compact height */
+  padding-top: .6em; /* Compact padding */
+  padding-right: .5em; /* Compact padding */
+}
+
+/* ======================================
+ * ! Window list
+ * ====================================== */
+.window-list-box {
+  spacing: 0;
+  font-weight: bold;
+}
+
+.window-list-box #appMenuIcon {
+  padding: 0 0 0 1px;
+}
+
+.window-list-box .window-list-item-box {
+  padding: 0 1px;
+  max-width: 9em; /* Compact width */
+}
+
+.window-list-box.vertical #appMenuIcon {
+  padding: 7px 0 0 0; /* Compact padding */
+}
+
+.window-list-box.vertical .window-list-item-box {
+  padding: 0;
+}
+
+.panel-top .window-list-item-box {
+  color: #00eaff; /* Neon Blue */
+}
+
+.panel-top .window-list-item-box:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.panel-top .window-list-item-box:active,
+.panel-top .window-list-item-box:checked,
+.panel-top .window-list-item-box:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-top .window-list-item-box:hover:active,
+.panel-top .window-list-item-box:hover:checked,
+.panel-top .window-list-item-box:hover:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-top .window-list-item-demands-attention {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.panel-bottom .window-list-item-box {
+  color: #00eaff; /* Neon Blue */
+}
+
+.panel-bottom .window-list-item-box:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.panel-bottom .window-list-item-box:active,
+.panel-bottom .window-list-item-box:checked,
+.panel-bottom .window-list-item-box:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-bottom .window-list-item-box:hover:active,
+.panel-bottom .window-list-item-box:hover:checked,
+.panel-bottom .window-list-item-box:hover:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-bottom .window-list-item-demands-attention {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.panel-left .window-list-item-box {
+  color: #00eaff; /* Neon Blue */
+}
+
+.panel-left .window-list-item-box:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.panel-left .window-list-item-box:active,
+.panel-left .window-list-item-box:checked,
+.panel-left .window-list-item-box:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-left .window-list-item-box:hover:active,
+.panel-left .window-list-item-box:hover:checked,
+.panel-left .window-list-item-box:hover:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-left .window-list-item-demands-attention {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.panel-right .window-list-item-box {
+  color: #00eaff; /* Neon Blue */
+}
+
+.panel-right .window-list-item-box:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.panel-right .window-list-item-box:active,
+.panel-right .window-list-item-box:checked,
+.panel-right .window-list-item-box:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-right .window-list-item-box:hover:active,
+.panel-right .window-list-item-box:hover:checked,
+.panel-right .window-list-item-box:hover:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-right .window-list-item-demands-attention {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+/*
+ * The window list thumbnail shares a class
+ * with the alt-tab switcher, but it is
+ * the direct child of the top container.
+ *
+ * Hopefully a 'switcher-list' doesn't appear
+ * anywhere else as the direct child of '#uiGroup'.
+ */
+#uiGroup > .switcher-list {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 5px; /* Compact padding */
+  color: #eee;
+  font-size: 11px; /* Compact font size */
+  font-weight: bold;
+}
+
+#uiGroup > .switcher-list > StBoxLayout {
+  spacing: .3em; /* Compact spacing */
+}
+
+#uiGroup > .switcher-list > StBoxLayout > StBoxLayout {
+  spacing: .3em; /* Compact spacing */
+}
+
+/* ======================================
+ * ! Window list
+ * ====================================== */
+.grouped-window-list-box {
+  spacing: 0;
+  font-weight: bold;
+}
+
+.grouped-window-list-box #appMenuIcon {
+  padding: 0 0 0 1px;
+}
+
+.grouped-window-list-box .grouped-window-list-item-box {
+  padding: 0 1px;
+  max-width: 9em; /* Compact width */
+}
+
+.grouped-window-list-box.vertical #appMenuIcon {
+  padding: 7px 0 0 0; /* Compact padding */
+}
+
+.grouped-window-list-box.vertical .grouped-window-list-item-box {
+  padding: 0;
+}
+
+.top.grouped-window-list-thumbnail-menu {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.top.grouped-window-list-thumbnail-menu .item-box {
+  color: #eee;
+  font-size: 11px; /* Compact font size */
+  font-weight: bold;
+}
+
+.top.grouped-window-list-thumbnail-menu .item-box:selected {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.top.grouped-window-list-thumbnail-menu .item-box:outlined {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.top.grouped-window-list-thumbnail-menu .item-box:outlined:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-top .grouped-window-list-item-box {
+  color: #00eaff; /* Neon Blue */
+}
+
+.panel-top .grouped-window-list-item-box:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.panel-top .grouped-window-list-item-box:active,
+.panel-top .grouped-window-list-item-box:checked,
+.panel-top .grouped-window-list-item-box:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-top .grouped-window-list-item-box:hover:active,
+.panel-top .grouped-window-list-item-box:hover:checked,
+.panel-top .grouped-window-list-item-box:hover:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-top .grouped-window-list-badge {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+}
+
+.panel-top .grouped-window-list-thumbnail-menu {
+  background-color: #13131a; /* Darker background */
+}
+
+.panel-top .grouped-window-list-thumbnail-menu .item-box {
+  background-color: #13131a; /* Darker background */
+}
+
+.panel-top .grouped-window-list-item-demands-attention {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.panel-top .grouped-window-list-item-box .progress {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.bottom.grouped-window-list-thumbnail-menu {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.bottom.grouped-window-list-thumbnail-menu .item-box {
+  color: #eee;
+  font-size: 11px; /* Compact font size */
+  font-weight: bold;
+}
+
+.bottom.grouped-window-list-thumbnail-menu .item-box:selected {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.bottom.grouped-window-list-thumbnail-menu .item-box:outlined {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.bottom.grouped-window-list-thumbnail-menu .item-box:outlined:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-bottom .grouped-window-list-item-box {
+  color: #00eaff; /* Neon Blue */
+}
+
+.panel-bottom .grouped-window-list-item-box:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.panel-bottom .grouped-window-list-item-box:active,
+.panel-bottom .grouped-window-list-item-box:checked,
+.panel-bottom .grouped-window-list-item-box:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-bottom .grouped-window-list-item-box:hover:active,
+.panel-bottom .grouped-window-list-item-box:hover:checked,
+.panel-bottom .grouped-window-list-item-box:hover:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-bottom .grouped-window-list-badge {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+}
+
+.panel-bottom .grouped-window-list-thumbnail-menu {
+  background-color: #13131a; /* Darker background */
+}
+
+.panel-bottom .grouped-window-list-thumbnail-menu .item-box {
+  background-color: #13131a; /* Darker background */
+}
+
+.panel-bottom .grouped-window-list-item-demands-attention {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.panel-bottom .grouped-window-list-item-box .progress {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.left.grouped-window-list-thumbnail-menu {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.left.grouped-window-list-thumbnail-menu .item-box {
+  color: #eee;
+  font-size: 11px; /* Compact font size */
+  font-weight: bold;
+}
+
+.left.grouped-window-list-thumbnail-menu .item-box:selected {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.left.grouped-window-list-thumbnail-menu .item-box:outlined {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.left.grouped-window-list-thumbnail-menu .item-box:outlined:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-left .grouped-window-list-item-box {
+  color: #00eaff; /* Neon Blue */
+}
+
+.panel-left .grouped-window-list-item-box:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.panel-left .grouped-window-list-item-box:active,
+.panel-left .grouped-window-list-item-box:checked,
+.panel-left .grouped-window-list-item-box:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-left .grouped-window-list-item-box:hover:active,
+.panel-left .grouped-window-list-item-box:hover:checked,
+.panel-left .grouped-window-list-item-box:hover:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-left .grouped-window-list-badge {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+}
+
+.panel-left .grouped-window-list-thumbnail-menu {
+  background-color: #13131a; /* Darker background */
+}
+
+.panel-left .grouped-window-list-thumbnail-menu .item-box {
+  background-color: #13131a; /* Darker background */
+}
+
+.panel-left .grouped-window-list-item-demands-attention {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.panel-left .grouped-window-list-item-box .progress {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.right.grouped-window-list-thumbnail-menu {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.right.grouped-window-list-thumbnail-menu .item-box {
+  color: #eee;
+  font-size: 11px; /* Compact font size */
+  font-weight: bold;
+}
+
+.right.grouped-window-list-thumbnail-menu .item-box:selected {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.right.grouped-window-list-thumbnail-menu .item-box:outlined {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.right.grouped-window-list-thumbnail-menu .item-box:outlined:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-right .grouped-window-list-item-box {
+  color: #00eaff; /* Neon Blue */
+}
+
+.panel-right .grouped-window-list-item-box:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #00ffcc; /* Neon Aqua */
+}
+
+.panel-right .grouped-window-list-item-box:active,
+.panel-right .grouped-window-list-item-box:checked,
+.panel-right .grouped-window-list-item-box:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-right .grouped-window-list-item-box:hover:active,
+.panel-right .grouped-window-list-item-box:hover:checked,
+.panel-right .grouped-window-list-item-box:hover:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #ff0055; /* Neon Red */
+}
+
+.panel-right .grouped-window-list-badge {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+}
+
+.panel-right .grouped-window-list-thumbnail-menu {
+  background-color: #13131a; /* Darker background */
+}
+
+.panel-right .grouped-window-list-thumbnail-menu .item-box {
+  background-color: #13131a; /* Darker background */
+}
+
+.panel-right .grouped-window-list-item-demands-attention {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.panel-right .grouped-window-list-item-box .progress {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+/* ======================================
+ * ! Sound Applet
+ * ====================================== */
+.sound-player {
+  padding: 0 1px;
+}
+
+.sound-player > StBoxLayout:first-child {
+  padding: .3em 1em; /* Compact padding */
+  spacing: .3em; /* Compact spacing */
+  font-weight: bold;
+}
+
+.sound-player StButton:small {
+  width: 18px; /* Compact size */
+  height: 18px; /* Compact size */
+}
+
+.sound-player StButton:small StIcon {
+  icon-size: 14px; /* Compact icon size */
+}
+
+.sound-player StButton:small:hover * {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #00ffcc !important; /* Neon Aqua */
+}
+
+.sound-player-generic-coverart {
+  padding: 0 2px;
+}
+
+.sound-player-overlay {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 1em; /* Compact padding */
+  spacing: .4em; /* Compact spacing */
+  color: #eee !important;
+}
+
+.sound-player-overlay StButton {
+  background-color: rgba(0, 0, 0, 0);
+  background-gradient-direction: none;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 rgba(0, 0, 0, 0);
+  border: none;
+  border-width: 0;
+  border-radius: 0;
+  font-weight: bold;
+  font-size: 11px; /* Compact font size */
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+  padding: .8em; /* Compact padding */
+}
+
+.sound-player-overlay StButton StIcon {
+  icon-size: 14px !important; /* Compact icon size */
+}
+
+.sound-player-overlay StButton StIcon {
+  color: #eee;
+}
+
+.sound-player-overlay StButton:hover,
+.sound-player-overlay StButton:active,
+.sound-player-overlay StButton:checked,
+.sound-player-overlay StButton:activate,
+.sound-player-overlay StButton:pressed,
+.sound-player-overlay StButton:selected {
+  color: #4e8378;
+}
+
+.sound-player-overlay StButton:hover StIcon,
+.sound-player-overlay StButton:active StIcon,
+.sound-player-overlay StButton:checked StIcon,
+.sound-player-overlay StButton:activate StIcon,
+.sound-player-overlay StButton:pressed StIcon,
+.sound-player-overlay StButton:selected StIcon {
+  color: #4e8378;
+}
+
+.sound-player-overlay StButton:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+}
+
+.sound-player-overlay StButton:active,
+.sound-player-overlay StButton:pressed,
+.sound-player-overlay StButton:activate,
+.sound-player-overlay StButton:checked,
+.sound-player-overlay StButton:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+}
+
+.sound-player-overlay StButton:focus {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #fff;
+}
+
+.sound-player-overlay StButton:focus StIcon {
+  color: #fff;
+}
+
+.sound-player-overlay StButton:focus:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+}
+
+.sound-player-overlay StButton:focus:active,
+.sound-player-overlay StButton:focus:pressed,
+.sound-player-overlay StButton:focus:activate,
+.sound-player-overlay StButton:focus:checked,
+.sound-player-overlay StButton:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+}
+
+.sound-player-overlay StButton:grayed,
+.sound-player-overlay StButton:disabled,
+.sound-player-overlay StButton:insensitive,
+.sound-player-overlay StButton:focus:grayed,
+.sound-player-overlay StButton:focus:disabled,
+.sound-player-overlay StButton:focus:insensitive {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: rgba(238, 238, 238, 0.3);
+}
+
+.sound-player-overlay StButton:grayed StIcon,
+.sound-player-overlay StButton:disabled StIcon,
+.sound-player-overlay StButton:insensitive StIcon,
+.sound-player-overlay StButton:focus:grayed StIcon,
+.sound-player-overlay StButton:focus:disabled StIcon,
+.sound-player-overlay StButton:focus:insensitive StIcon {
+  color: rgba(238, 238, 238, 0.3);
+}
+
+.sound-player-overlay StButton:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #eee !important;
+}
+
+.sound-player-overlay StBoxLayout {
+  padding-top: .2em; /* Compact padding */
+  spacing: .3em; /* Compact spacing */
+}
+
+.sound-player .slider {
+  padding-top: 1px;
+  height: 4px; /* Compact height */
+  min-width: 12em; /* Compact width */
+  -slider-background-color: #525252;
+  -slider-active-background-color: #4e8378;
+  -slider-handle-radius: 0;
+}
+
+/* ======================================
+ * ! Number-mode Workspace Switcher applet
+ * ====================================== */
+.workspace-switcher {
+  padding: 0;
+}
+
+.panel-left .workspace-switcher,
+.panel-right .workspace-switcher {
+  padding: 0;
+}
+
+.workspace-button {
+  width: 18px; /* Compact size */
+  height: 8px; /* Compact size */
+  padding: 0 1px;
+  color: rgba(238, 238, 238, 0.65);
+  font-weight: bold;
+}
+
+.panel-top .workspace-button:outlined {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+}
+
+.panel-top .workspace-button:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #eee;
+}
+
+.panel-top .workspace-button:outlined:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #eee;
+}
+
+.panel-bottom .workspace-button:outlined {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+}
+
+.panel-bottom .workspace-button:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #eee;
+}
+
+.panel-bottom .workspace-button:outlined:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #eee;
+}
+
+.panel-left .workspace-button:outlined {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+}
+
+.panel-left .workspace-button:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #eee;
+}
+
+.panel-left .workspace-button:outlined:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #eee;
+}
+
+.panel-right .workspace-button:outlined {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+}
+
+.panel-right .workspace-button:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  color: #eee;
+}
+
+.panel-right .workspace-button:outlined:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #eee;
+}
+
+/* ======================================
+ * ! Visual-mode Workspace Switcher applet
+ * ====================================== */
+.workspace-graph {
+  padding: 0 4px; /* Compact padding */
+}
+
+.panel-left .workspace-graph,
+.panel-right .workspace-graph {
+  padding: 4px 0; /* Compact padding */
+}
+
+.panel-top .workspace {
+  background-color: #222;
+  border: 1px solid #111;
+}
+
+.panel-top .workspace:active {
+  border: 1px solid #4e8378;
+}
+
+.panel-top .workspace .windows {
+  -active-window-background: #525252;
+  -active-window-border: #111;
+  -inactive-window-background: #525252;
+  -inactive-window-border: #111;
+}
+
+.panel-bottom .workspace {
+  background-color: #222;
+  border: 1px solid #111;
+}
+
+.panel-bottom .workspace:active {
+  border: 1px solid #4e8378;
+}
+
+.panel-bottom .workspace .windows {
+  -active-window-background: #525252;
+  -active-window-border: #111;
+  -inactive-window-background: #525252;
+  -inactive-window-border: #111;
+}
+
+.panel-left .workspace {
+  background-color: #222;
+  border: 1px solid #111;
+}
+
+.panel-left .workspace:active {
+  border: 1px solid #4e8378;
+}
+
+.panel-left .workspace .windows {
+  -active-window-background: #525252;
+  -active-window-border: #111;
+  -inactive-window-background: #525252;
+  -inactive-window-border: #111;
+}
+
+.panel-right .workspace {
+  background-color: #222;
+  border: 1px solid #111;
+}
+
+.panel-right .workspace:active {
+  border: 1px solid #4e8378;
+}
+
+.panel-right .workspace .windows {
+  -active-window-background: #525252;
+  -active-window-border: #111;
+  -inactive-window-background: #525252;
+  -inactive-window-border: #111;
+}
+
+/* ======================================
+ * ! Panel Launchers Applet
+ * ====================================== */
+.panel-launchers {
+  spacing: 0;
+}
+
+.launcher {
+  padding: 0 1px;
+}
+
+.vertical .launcher {
+  padding: 1px 0;
+}
+
+.panel-top .launcher:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+}
+
+.panel-bottom .launcher:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+}
+
+.panel-left .launcher:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+}
+
+.panel-right .launcher:hover {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+}
+
+/* ======================================
+ * ! User Applet
+ * ====================================== */
+.user-box {
+  padding: .7em 1em; /* Compact padding */
+  spacing: 8px; /* Compact spacing */
+}
+
+.user-icon {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 1px;
+  width: 28px; /* Compact size */
+  height: 28px; /* Compact size */
+  border: 0 rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.user-label {
+  color: #eee;
+  font-size: 12px; /* Compact font size */
+  font-weight: bold;
+}
+
+/* ======================================
+ * ! App menu applet
+ * ====================================== */
+.menu-favorites-box {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 0.4em; /* Compact padding */
+}
+
+.menu-favorites-button {
+  padding: 7px 8px; /* Compact padding */
+}
+
+.menu-favorites-button:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.menu-places-box {
+  margin: auto;
+  padding: 7px; /* Compact padding */
+  border: 0 solid #eee;
+}
+
+.menu-places-button {
+  padding: 9px; /* Compact padding */
+}
+
+.menu-categories-box {
+  padding: 9px 25px; /* Compact padding */
+  font-weight: bold;
+  border: 1px solid #00eaff; /* Neon Blue */
+  margin: 8px; /* Compact margin */
+}
+
+.menu-applications-inner-box {
+  border: 1px solid #00eaff; /* Neon Blue */
+  margin: 8px; /* Compact margin */
+}
+
+.menu-category-button {
+  padding: .5em; /* Compact padding */
+  font-weight: bold;
+}
+
+.menu-category-button-greyed {
+  padding: .5em; /* Compact padding */
+  color: rgba(238, 238, 238, 0.3);
+  font-weight: bold;
+}
+
+.menu-category-button-selected {
+  padding: .5em; /* Compact padding */
+  border: 1px solid #ff0055; /* Neon Red */
+  font-weight: bold;
+  color: #fff;
+}
+
+.menu-category-button-label:ltr {
+  padding-left: 4px; /* Compact padding */
+}
+
+.menu-category-button-label:rtl {
+  padding-right: 4px; /* Compact padding */
+}
+
+.menu-applications-inner-box,
+.menu-applications-outer-box {
+  padding: 7px; /* Compact padding */
+  padding-bottom: 0;
+}
+
+.menu-applications-inner-box .popup-menu-content,
+.menu-applications-outer-box .popup-menu-content {
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.menu-application-button {
+  padding: .5em; /* Compact padding */
+}
+
+.menu-application-button-selected {
+  padding: .5em; /* Compact padding */
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.menu-application-button:highlighted {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  font-weight: bold;
+}
+
+.menu-application-button-selected:highlighted {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.menu-application-button-label:ltr {
+  padding-left: 4px; /* Compact padding */
+}
+
+.menu-application-button-label:rtl {
+  padding-right: 4px; /* Compact padding */
+}
+
+.menu-selected-app-box {
+  padding-top: 9px; /* Compact padding */
+  padding-right: 25px; /* Compact padding */
+  padding-left: 25px; /* Compact padding */
+  text-align: right;
+  height: 2.5em; /* Compact height */
+}
+
+.menu-selected-app-title {
+  font-weight: bold;
+}
+
+.menu-selected-app-description {
+  max-width: 130px; /* Compact width */
+}
+
+.menu-search-box {
+  padding-left: 25px; /* Compact padding */
+}
+
+/* The right click menu */
+.menu-applications-inner-box StScrollView {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 1px;
+}
+
+/* ======================================
+ * ! Windows Quick List applet
+ * ====================================== */
+/* Windows that are visible on all workspaces */
+.window-sticky {
+  font-weight: bold;
+  color: #03a9f4;
+}
+
+.popup-menu-item:active .window-sticky {
+  color: rgba(238, 238, 238, 0.65);
+}
+
+/* ======================================
+ * ! Hot corners icons
+ * ====================================== */
+#overview-corner {
+  background-image: url("img/controls/hotcorner-icon.svg");
+}
+
+#overview-corner:hover {
+  background-image: url("img/controls/hotcorner-icon-hover.svg");
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+/* ======================================
+ * ! Hot corner ripple
+ * ====================================== */
+.ripple-box {
+  width: 20px; /* Compact size */
+  height: 20px; /* Compact size */
+  background-image: url("img/misc/corner-ripple.svg");
+  box-shadow: 0 0 10px #ff0055; /* Neon Red Glow */
+}
+
+/* ======================================
+ * ! OSD
+ * ====================================== */
+.info-osd {
+  border: 1px solid #00eaff; /* Neon Blue */
+  spacing: .3em; /* Compact spacing */
+  padding: .5em; /* Compact padding */
+  color: #eee;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px; /* Compact font size */
+  box-shadow: 0 0 10px #00eaff; /* Neon Blue Glow */
+}
+
+.osd-window {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  spacing: 0.8em; /* Compact spacing */
+  padding: 0.1em;
+  color: #eee;
+  box-shadow: 0 0 10px #00ffcc; /* Neon Aqua Glow */
+}
+
+.osd-window .level {
+  background-color: #333;
+  border-radius: 2px;
+  height: .6em; /* Compact height */
+  color: #4e8378;
+}
+
+.workspace-osd {
+  border: 1px solid #ff0055; /* Neon Red */
+  padding: .5em; /* Compact padding */
+  color: #eee;
+  font-weight: bold;
+  font-size: 20px; /* Compact font size */
+  box-shadow: 0 0 10px #ff0055; /* Neon Red Glow */
+}
+
+#LookingGlassDialog {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  padding: 1em; /* Compact padding */
+  spacing: .3em; /* Compact spacing */
+  color: #eee;
+  box-shadow: 0 0 10px #00ffcc; /* Neon Aqua Glow */
+}
+
+#LookingGlassDialog StLabel:first-child {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#LookingGlassDialog StLabel:last-child {
+  padding-top: .3em; /* Compact padding */
+  color: rgba(238, 238, 238, 0.65);
+  font-size: 12px;
+}
+
+/* ======================================
+ * ! Magnifier
+ * ====================================== */
+.magnifier-zoom-region {
+  border: 2px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 10px #ff0055; /* Neon Red Glow */
+}
+
+.magnifier-zoom-region.full-screen {
+  border: none;
+}
+
+/* ======================================
+ * ! Tile Previews
+ * ====================================== */
+.tile-preview, .tile-hud {
+  background-color: rgba(34, 34, 34, 0.9);
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 10px #00eaff; /* Neon Blue Glow */
+}
+
+.tile-preview.snap, .tile-hud.snap {
+  background-color: rgba(78, 131, 120, 0.75);
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 10px #00ffcc; /* Neon Aqua Glow */
+}
+
+.applet-box.cinnamenu-json-applet {
+  border: 2px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 10px #00ffcc; /* Neon Aqua Glow */
+}
+
+/* The right click menu */
+.menu-context-menu {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 1px;
+  box-shadow: 0 0 10px #00eaff; /* Neon Blue Glow */
+}
+
+/* ======================================
+ * ! Weather applet
+ * ====================================== */
+.weather-menu .popup-menu-content {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  padding: 0px;
+  box-shadow: 0 0 10px #00ffcc; /* Neon Aqua Glow */
+}
+
+.weather-menu .popup-separator-menu-item {
+  background-image: none;
+  height: 0;
+}
+
+.weather-icon,
+.weather-icon-rtl {
+  padding: 0;
+}
+
+.current {
+  padding: 1em 1.5em; /* Compact padding */
+}
+
+.current * {
+  padding: 0;
+}
+
+.weather-current-location-link {
+  font-size: 16px; /* Compact font size */
+}
+
+.weather-current-location-link:selected,
+.weather-current-location-link:hover {
+  background-gradient-direction: vertical;
+  background-gradient-start: rgba(255, 255, 255, 0);
+  background-gradient-end: rgba(255, 255, 255, 0);
+  color: #4e8378;
+  text-decoration: underline;
+}
+
+.weather-current-summarybox {
+  padding: 0 1.5em; /* Compact padding */
+  spacing: .1em;
+}
+
+.weather-current-summary {
+  font-size: 24px; /* Compact font size */
+  color: #eee;
+}
+
+.weather-current-icon {
+  color: #eee;
+}
+
+.weather-current-databox {
+  font-size: 12px;
+  spacing: .3em;
+}
+
+.weather-current-databox > * {
+  spacing: .3em;
+}
+
+.weather-current-databox-captions {
+  color: rgba(238, 238, 238, 0.65);
+  text-align: right;
+}
+
+.weather-current-databox-values {
+  color: #eee;
+}
+
+.weather-current-astronomy {
+  color: rgba(238, 238, 238, 0.65);
+  font-size: 12px;
+}
+
+.forecast {
+  padding: 1em 0; /* Compact padding */
+}
+
+.weather-forecast-icon {
+  padding: 0 .5em 0 1.5em; /* Compact padding */
+  color: #eee;
+}
+
+.weather-forecast-databox {
+  padding: 0 1.5em 0 .5em; /* Compact padding */
+  spacing: .3em;
+}
+
+.weather-forecast-databox > *:last-child {
+  color: #eee;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.weather-forecast-day {
+  color: #eee;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ======================================
+ * ! Configurable menu
+ * ====================================== */
+.menu-main-box {
+  padding-top: 2px; /* Compact padding */
+  padding-left: 8px; /* Compact padding */
+  padding-right: 8px; /* Compact padding */
+  padding-bottom: 0;
+}
+
+.menu-control-button {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  padding: 6px; /* Compact padding */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.menu-control-button-selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  padding: 6px; /* Compact padding */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.menu-control-button:open {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 6px; /* Compact padding */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.menu-control-button-selected:open {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 6px; /* Compact padding */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+/* Fixes for stylized & classic layouts */
+.menu-main-box-stylized,
+.menu-main-box-classic {
+  padding-top: 2px; /* Compact padding */
+  padding-left: 8px; /* Compact padding */
+  padding-right: 2px; /* Compact padding */
+  padding-bottom: 0;
+}
+
+.menu-categories-box-stylized,
+.menu-categories-box-classic,
+.menu-top-box-stylized,
+.menu-top-box-classic {
+  padding-left: 8px; /* Compact padding */
+}
+
+.menu-search-box-stylized,
+.menu-search-box-classic {
+  padding-left: 0;
+  padding-top: 0;
+}
+
+/*--- Favorites box ---*/
+.menu-favorites-box-stylized,
+.menu-favorites-box-classic {
+  padding: .2em; /* Compact padding */
+}
+
+/*--- Right-click menu box ---*/
+.menu-main-box-stylized .menu-context-menu,
+.menu-main-box-classic .menu-context-menu {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: .4em .1em; /* Compact padding */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+/* ======================================
+ * ! Slingshot
+ * ====================================== */
+.slingshot {
+  padding: 0;
+}
+
+/* Separator */
+.slingshot .separator {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+/* Entry */
+.slingshot .entry {
+  background-gradient-direction: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  border-radius: 0;
+  color: rgba(238, 238, 238, 0.65);
+  padding: .2em .5em; /* Compact padding */
+  width: 200px; /* Compact width */
+  height: 2em; /* Compact height */
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.slingshot .entry:focus {
+  background-gradient-direction: none;
+  background-gradient-start: transparent;
+  background-gradient-end: transparent;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .entry:focus,
+.slingshot .entry:active,
+.slingshot .entry:pressed {
+  border: 1px solid #ff0055; /* Neon Red */
+  font-weight: bold;
+  color: #eee;
+  caret-color: #eee;
+  caret-size: 2px;
+  selected-color: #fff;
+  selection-background-color: #4e8378;
+}
+
+.slingshot .entry StIcon {
+  color: rgba(238, 238, 238, 0.65);
+  icon-size: 16px;
+}
+
+.slingshot .entry:focus > StIcon,
+.slingshot .entry:active > StIcon,
+.slingshot .entry:pressed > StIcon {
+  color: #eee;
+}
+
+/* Paginator */
+.slingshot .button {
+  background-gradient-direction: none;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  border-radius: 0;
+  font-size: 12px;
+  color: rgba(238, 238, 238, 0.65);
+  font-weight: bold;
+  padding: .5em; /* Compact padding */
+}
+
+.slingshot .button:hover,
+.slingshot .button:active,
+.slingshot .button:checked,
+.slingshot .button:hover:checked,
+.slingshot .button:hover:active {
+  background-gradient-direction: none;
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.slingshot .button StIcon {
+  icon-size: 16px !important;
+}
+
+.slingshot .button StIcon {
+  color: #eee;
+}
+
+.slingshot .button:hover,
+.slingshot .button:active,
+.slingshot .button:checked,
+.slingshot .button:activate,
+.slingshot .button:pressed,
+.slingshot .button:selected {
+  color: #4e8378;
+}
+
+.slingshot .button:hover StIcon,
+.slingshot .button:active StIcon,
+.slingshot .button:checked StIcon,
+.slingshot .button:activate StIcon,
+.slingshot .button:pressed StIcon,
+.slingshot .button:selected StIcon {
+  color: #4e8378;
+}
+
+.slingshot .button:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .button:active,
+.slingshot .button:pressed,
+.slingshot .button:activate,
+.slingshot .button:checked,
+.slingshot .button:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .button:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.slingshot .button:focus StIcon {
+  color: #fff;
+}
+
+.slingshot .button:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .button:focus:active,
+.slingshot .button:focus:pressed,
+.slingshot .button:focus:activate,
+.slingshot .button:focus:checked,
+.slingshot .button:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .button:grayed,
+.slingshot .button:disabled,
+.slingshot .button:insensitive,
+.slingshot .button:focus:grayed,
+.slingshot .button:focus:disabled,
+.slingshot .button:focus:insensitive {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  color: rgba(238, 238, 238, 0.3);
+}
+
+.slingshot .button:grayed StIcon,
+.slingshot .button:disabled StIcon,
+.slingshot .button:insensitive StIcon,
+.slingshot .button:focus:grayed StIcon,
+.slingshot .button:focus:disabled StIcon,
+.slingshot .button:focus:insensitive StIcon {
+  color: rgba(238, 238, 238, 0.3);
+}
+
+/* Applications */
+.slingshot .button.app {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+  border-width: 0;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0;
+}
+
+.slingshot .button.app:hover,
+.slingshot .button.app:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+  background-color: rgba(0, 0, 0, 0);
+  color: #eee;
+}
+
+/* Categories */
+.slingshot .sidebar {
+  padding-left: 6px; /* Compact padding */
+  padding-right: 3px; /* Compact padding */
+}
+
+.slingshot .sidebar .button {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+  padding: 4px; /* Compact padding */
+  border-radius: 0;
+  font-size: 12px;
+  padding-top: 6px; /* Compact padding */
+  padding-bottom: 6px; /* Compact padding */
+  font-weight: normal;
+}
+
+.slingshot .sidebar .button:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+  background-color: rgba(0, 0, 0, 0);
+  color: #eee;
+}
+
+.slingshot .sidebar .button:active,
+.slingshot .sidebar .button:hover:active {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+  color: #eee;
+}
+
+.slingshot .sidebar .button:checked {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  background-color: rgba(0, 0, 0, 0);
+  color: #eee;
+  font-weight: bold;
+}
+
+.slingshot .sidebar .button:hover:checked {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+  color: #eee;
+}
+
+/* Linked buttons */
+.slingshot .linked .button {
+  background-color: rgba(0, 0, 0, 0);
+  background-gradient-direction: none;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  font-weight: bold;
+  font-size: 12px;
+  padding: .5em; /* Compact padding */
+}
+
+.slingshot .linked .button StIcon {
+  icon-size: 16px !important;
+}
+
+.slingshot .linked .button StIcon {
+  color: #eee;
+}
+
+.slingshot .linked .button:hover,
+.slingshot .linked .button:active,
+.slingshot .linked .button:checked,
+.slingshot .linked .button:activate,
+.slingshot .linked .button:pressed,
+.slingshot .linked .button:selected {
+  color: #4e8378;
+}
+
+.slingshot .linked .button:hover StIcon,
+.slingshot .linked .button:active StIcon,
+.slingshot .linked .button:checked StIcon,
+.slingshot .linked .button:activate StIcon,
+.slingshot .linked .button:pressed StIcon,
+.slingshot .linked .button:selected StIcon {
+  color: #4e8378;
+}
+
+.slingshot .linked .button:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:active,
+.slingshot .linked .button:pressed,
+.slingshot .linked .button:activate,
+.slingshot .linked .button:checked,
+.slingshot .linked .button:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.slingshot .linked .button:focus StIcon {
+  color: #fff;
+}
+
+.slingshot .linked .button:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:focus:active,
+.slingshot .linked .button:focus:pressed,
+.slingshot .linked .button:focus:activate,
+.slingshot .linked .button:focus:checked,
+.slingshot .linked .button:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:grayed,
+.slingshot .linked .button:disabled,
+.slingshot .linked .button:insensitive,
+.slingshot .linked .button:focus:grayed,
+.slingshot .linked .button:focus:disabled,
+.slingshot .linked .button:focus:insensitive {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  color: #eee;
+}
+
+.slingshot .linked .button:grayed StIcon,
+.slingshot .linked .button:disabled StIcon,
+.slingshot .linked .button:insensitive StIcon,
+.slingshot .linked .button:focus:grayed StIcon,
+.slingshot .linked .button:focus:disabled StIcon,
+.slingshot .linked .button:focus:insensitive StIcon {
+  color: #eee;
+}
+
+.slingshot .linked .button:first-child {
+  background-color: rgba(0, 0, 0, 0);
+  background-gradient-direction: none;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  border: 1px solid #00eaff; /* Neon Blue */
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.slingshot .linked .button:first-child StIcon {
+  icon-size: 16px !important;
+}
+
+.slingshot .linked .button:first-child StIcon {
+  color: #eee;
+}
+
+.slingshot .linked .button:first-child:hover,
+.slingshot .linked .button:first-child:active,
+.slingshot .linked .button:first-child:checked,
+.slingshot .linked .button:first-child:activate,
+.slingshot .linked .button:first-child:pressed,
+.slingshot .linked .button:first-child:selected {
+  color: #4e8378;
+}
+
+.slingshot .linked .button:first-child:hover StIcon,
+.slingshot .linked .button:first-child:active StIcon,
+.slingshot .linked .button:first-child:checked StIcon,
+.slingshot .linked .button:first-child:activate StIcon,
+.slingshot .linked .button:first-child:pressed StIcon,
+.slingshot .linked .button:first-child:selected StIcon {
+  color: #4e8378;
+}
+
+.slingshot .linked .button:first-child:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:first-child:active,
+.slingshot .linked .button:first-child:pressed,
+.slingshot .linked .button:first-child:activate,
+.slingshot .linked .button:first-child:checked,
+.slingshot .linked .button:first-child:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:first-child:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.slingshot .linked .button:first-child:focus StIcon {
+  color: #fff;
+}
+
+.slingshot .linked .button:first-child:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:first-child:focus:active,
+.slingshot .linked .button:first-child:focus:pressed,
+.slingshot .linked .button:first-child:focus:activate,
+.slingshot .linked .button:first-child:focus:checked,
+.slingshot .linked .button:first-child:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:first-child:grayed,
+.slingshot .linked .button:first-child:disabled,
+.slingshot .linked .button:first-child:insensitive,
+.slingshot .linked .button:first-child:focus:grayed,
+.slingshot .linked .button:first-child:focus:disabled,
+.slingshot .linked .button:first-child:focus:insensitive {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+  color: #eee;
+}
+
+.slingshot .linked .button:first-child:grayed StIcon,
+.slingshot .linked .button:first-child:disabled StIcon,
+.slingshot .linked .button:first-child:insensitive StIcon,
+.slingshot .linked .button:first-child:focus:grayed StIcon,
+.slingshot .linked .button:first-child:focus:disabled StIcon,
+.slingshot .linked .button:first-child:focus:insensitive StIcon {
+  color: #eee;
+}
+
+.slingshot .linked .button:last-child {
+  background-color: rgba(0, 0, 0, 0);
+  background-gradient-direction: none;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.slingshot .linked .button:last-child StIcon {
+  icon-size: 16px !important;
+}
+
+.slingshot .linked .button:last-child StIcon {
+  color: #eee;
+}
+
+.slingshot .linked .button:last-child:hover,
+.slingshot .linked .button:last-child:active,
+.slingshot .linked .button:last-child:checked,
+.slingshot .linked .button:last-child:activate,
+.slingshot .linked .button:last-child:pressed,
+.slingshot .linked .button:last-child:selected {
+  color: #4e8378;
+}
+
+.slingshot .linked .button:last-child:hover StIcon,
+.slingshot .linked .button:last-child:active StIcon,
+.slingshot .linked .button:last-child:checked StIcon,
+.slingshot .linked .button:last-child:activate StIcon,
+.slingshot .linked .button:last-child:pressed StIcon,
+.slingshot .linked .button:last-child:selected StIcon {
+  color: #4e8378;
+}
+
+.slingshot .linked .button:last-child:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:last-child:active,
+.slingshot .linked .button:last-child:pressed,
+.slingshot .linked .button:last-child:activate,
+.slingshot .linked .button:last-child:checked,
+.slingshot .linked .button:last-child:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:last-child:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.slingshot .linked .button:last-child:focus StIcon {
+  color: #fff;
+}
+
+.slingshot .linked .button:last-child:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:last-child:focus:active,
+.slingshot .linked .button:last-child:focus:pressed,
+.slingshot .linked .button:last-child:focus:activate,
+.slingshot .linked .button:last-child:focus:checked,
+.slingshot .linked .button:last-child:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:last-child:grayed,
+.slingshot .linked .button:last-child:disabled,
+.slingshot .linked .button:last-child:insensitive,
+.slingshot .linked .button:last-child:focus:grayed,
+.slingshot .linked .button:last-child:focus:disabled,
+.slingshot .linked .button:last-child:focus:insensitive {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  color: #eee;
+}
+
+.slingshot .linked .button:last-child:grayed StIcon,
+.slingshot .linked .button:last-child:disabled StIcon,
+.slingshot .linked .button:last-child:insensitive StIcon,
+.slingshot .linked .button:last-child:focus:grayed StIcon,
+.slingshot .linked .button:last-child:focus:disabled StIcon,
+.slingshot .linked .button:last-child:focus:insensitive StIcon {
+  color: #eee;
+}
+
+.slingshot .linked .button:last-child:first-child {
+  background-color: rgba(0, 0, 0, 0);
+  background-gradient-direction: none;
+  background-gradient-start: rgba(0, 0, 0, 0);
+  background-gradient-end: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  border: 1px solid #00eaff; /* Neon Blue */
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.slingshot .linked .button:last-child:first-child StIcon {
+  icon-size: 16px !important;
+}
+
+.slingshot .linked .button:last-child:first-child StIcon {
+  color: #eee;
+}
+
+.slingshot .linked .button:last-child:first-child:hover,
+.slingshot .linked .button:last-child:first-child:active,
+.slingshot .linked .button:last-child:first-child:checked,
+.slingshot .linked .button:last-child:first-child:activate,
+.slingshot .linked .button:last-child:first-child:pressed,
+.slingshot .linked .button:last-child:first-child:selected {
+  color: #4e8378;
+}
+
+.slingshot .linked .button:last-child:first-child:hover StIcon,
+.slingshot .linked .button:last-child:first-child:active StIcon,
+.slingshot .linked .button:last-child:first-child:checked StIcon,
+.slingshot .linked .button:last-child:first-child:activate StIcon,
+.slingshot .linked .button:last-child:first-child:pressed StIcon,
+.slingshot .linked .button:last-child:first-child:selected StIcon {
+  color: #4e8378;
+}
+
+.slingshot .linked .button:last-child:first-child:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:last-child:first-child:active,
+.slingshot .linked .button:last-child:first-child:pressed,
+.slingshot .linked .button:last-child:first-child:activate,
+.slingshot .linked .button:last-child:first-child:checked,
+.slingshot .linked .button:last-child:first-child:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:last-child:first-child:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+}
+
+.slingshot .linked .button:last-child:first-child:focus StIcon {
+  color: #fff;
+}
+
+.slingshot .linked .button:last-child:first-child:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:last-child:first-child:focus:active,
+.slingshot .linked .button:last-child:first-child:focus:pressed,
+.slingshot .linked .button:last-child:first-child:focus:activate,
+.slingshot .linked .button:last-child:first-child:focus:checked,
+.slingshot .linked .button:last-child:first-child:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.slingshot .linked .button:last-child:first-child:grayed,
+.slingshot .linked .button:last-child:first-child:disabled,
+.slingshot .linked .button:last-child:first-child:insensitive,
+.slingshot .linked .button:last-child:first-child:focus:grayed,
+.slingshot .linked .button:last-child:first-child:focus:disabled,
+.slingshot .linked .button:last-child:first-child:focus:insensitive {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+  color: #eee;
+}
+
+.slingshot .linked .button:last-child:first-child:grayed StIcon,
+.slingshot .linked .button:last-child:first-child:disabled StIcon,
+.slingshot .linked .button:last-child:first-child:insensitive StIcon,
+.slingshot .linked .button:last-child:first-child:focus:grayed StIcon,
+.slingshot .linked .button:last-child:first-child:focus:disabled StIcon,
+.slingshot .linked .button:last-child:first-child:focus:insensitive StIcon {
+  color: #eee;
+}
+
+.slingshot .linked .button:active:last-child,
+.slingshot .linked .button:active:hover:last-child,
+.slingshot .linked .button:insensitive:last-child {
+  border-right-width: 0px;
+}
+
+/* ======================================
+ * ! Xcenter
+ * ====================================== */
+/* Use to override the '.popup-menu-content' selector */
+.xCenter-menu .popup-menu-content {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 2px;
+  max-height: 500px;
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.xCenter-menu .popup-menu-item {
+  padding: .3em 1em; /* Compact padding */
+}
+
+.xCenter-menu .popup-menu-item:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.xCenter-mainBox StIcon {
+  color: #eee;
+  padding-bottom: 1px;
+}
+
+.xCenter-title {
+  border: 0 rgba(0, 0, 0, 0);
+  border-bottom-width: 2px; /* Compact border */
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.xCenter-pane {
+  padding: .3em .1em; /* Compact padding */
+}
+
+.xCenter-menuItemLabel {
+  max-width: 10em; /* Compact width */
+}
+
+/* ======================================
+ * ! Stopwatch
+ * ====================================== */
+.stopwatch-ready,
+.stopwatch-ready:hover,
+.stopwatch-running,
+.stopwatch-running:hover,
+.stopwatch-paused,
+.stopwatch-day-exceeded,
+.stopwatch-running-day-exceeded,
+.stopwatch-paused-day-exceeded {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 2px 4px; /* Compact padding */
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.panel-top .stopwatch-ready:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-top .stopwatch-running {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  color: #eee;
+}
+
+.panel-top .stopwatch-running:hover,
+.panel-top .stopwatch-paused:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+  color: #eee;
+}
+
+.panel-top .stopwatch-paused,
+.panel-top .stopwatch-day-exceeded,
+.panel-top .stopwatch-running-day-exceeded,
+.panel-top .stopwatch-paused-day-exceeded {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+  color: rgba(238, 238, 238, 0.65);
+}
+
+.panel-bottom .stopwatch-ready:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-bottom .stopwatch-running {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  color: #eee;
+}
+
+.panel-bottom .stopwatch-running:hover,
+.panel-bottom .stopwatch-paused:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+  color: #eee;
+}
+
+.panel-bottom .stopwatch-paused,
+.panel-bottom .stopwatch-day-exceeded,
+.panel-bottom .stopwatch-running-day-exceeded,
+.panel-bottom .stopwatch-paused-day-exceeded {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+  color: rgba(238, 238, 238, 0.65);
+}
+
+.panel-left .stopwatch-ready:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-left .stopwatch-running {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  color: #eee;
+}
+
+.panel-left .stopwatch-running:hover,
+.panel-left .stopwatch-paused:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+  color: #eee;
+}
+
+.panel-left .stopwatch-paused,
+.panel-left .stopwatch-day-exceeded,
+.panel-left .stopwatch-running-day-exceeded,
+.panel-left .stopwatch-paused-day-exceeded {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+  color: rgba(238, 238, 238, 0.65);
+}
+
+.panel-right .stopwatch-ready:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-right .stopwatch-running {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  color: #eee;
+}
+
+.panel-right .stopwatch-running:hover,
+.panel-right .stopwatch-paused:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+  color: #eee;
+}
+
+.panel-right .stopwatch-paused,
+.panel-right .stopwatch-day-exceeded,
+.panel-right .stopwatch-running-day-exceeded,
+.panel-right .stopwatch-paused-day-exceeded {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+  color: rgba(238, 238, 238, 0.65);
+}
+
+.stopwatch-ready * {
+  color: rgba(238, 238, 238, 0.65);
+}
+
+.stopwatch-ready:hover * {
+  color: #eee;
+}
+
+/* ======================================
+ * ! Color Picker applet
+ * ====================================== */
+.color-inspector {
+  padding: 4px 8px 8px 8px; /* Compact padding */
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+  spacing: 8px; /* Compact spacing */
+}
+
+.color-entry {
+  min-width: 120px; /* Compact width */
+}
+
+.color-spectrum {
+  min-width: 10px; /* Compact width */
+  min-height: 80px; /* Compact height */
+  padding: 0 3px 3px 3px; /* Compact padding */
+}
+
+.color-gradient {
+  padding: 6px 10px 10px 10px; /* Compact padding */
+  min-width: 80px; /* Compact width */
+  min-height: 80px; /* Compact height */
+}
+
+.color-cursor {
+  width: 14px; /* Compact size */
+  height: 14px; /* Compact size */
+}
+
+.color-palette {
+  padding: 8px 8px; /* Compact padding */
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.color-button .color-button-box {
+  border-radius: 0;
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.color-button,
+.color-button:disabled,
+.color-button:hover {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.icon-button {
+  padding: 2px;
+  border-radius: 0;
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.popup-scale-menu-item {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+/* ======================================
+ * ! Desktop Capture applet
+ * ====================================== */
+/* Panel icon */
+StBoxLayout.applet-box.desktop-capture StBin {
+  min-width: 20px; /* Compact width */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+/* Display of preview image in notifications */
+.screenshot-thumbnail {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  padding: 5px; /* Compact padding */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.screenshot-thumbnail-hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+/* Window capture mode */
+.capture-outline-background {
+  background-color: rgba(78, 131, 120, 0.8);
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+}
+
+.capture-outline-frame {
+  border: 1px solid #00eaff; /* Neon Blue */
+  border-radius: 4px;
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.capture-outline-frame.desktop {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+/* App icon (window capture mode) */
+.overlay-icon {
+  padding: 4px; /* Compact padding */
+  border: 1px solid #ff0055; /* Neon Red */
+  width: 28px; /* Compact size */
+  height: 28px; /* Compact size */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.overlay-label-title {
+  padding-top: 3px; /* Compact padding */
+  color: #eee;
+  text-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  font-weight: bold;
+  text-align: center;
+}
+
+.overlay-label-size {
+  color: #eee;
+  text-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+  text-align: center;
+  vertical-align: top;
+  font-family: Roboto, Noto Sans, Sans-Serif;
+  font-size: 12px; /* Compact font size */
+  font-weight: bold;
+  clear: both;
+}
+
+.capture-countdown-timer {
+  border: 1px solid #00eaff; /* Neon Blue */
+  width: 28px; /* Compact size */
+  height: 28px; /* Compact size */
+  font-size: 28px; /* Compact font size */
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  color: #eee;
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+/* Dashed border in area selection */
+.border-h, .border-v {
+  background-color: #000;
+  border: 1px dashed #00eaff; /* Neon Blue Dashed Border */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.handle {
+  border: 1px solid #ff0055; /* Neon Red */
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.capture-area-selection {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+/* Desktop overlay */
+.cover {
+  background-color: rgba(0, 0, 0, 0.65);
+  box-shadow: inset 0 0 5px #4e8378; /* Neon Green Glow */
+}
+
+/* Instructions dialog */
+.instructions-container {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.instructions-label-header {
+  text-align: center;
+  font-size: 20px; /* Compact font size */
+  font-weight: bold;
+  color: #eee;
+  text-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.instructions-label-text {
+  color: #eee;
+  text-align: center;
+  font-size: 16px; /* Compact font size */
+  text-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.menuitem-detail {
+  color: rgba(238, 238, 238, 0.65);
+}
+
+.popup-menu-item:active .menuitem-detail {
+  color: rgba(238, 238, 238, 0.65);
+}
+
+/* Use to add extra border around thumbnail or adjust the distance from the panel.  can be used for aero effect */
+.thumbnail-popup-content {
+  padding: 0;
+}
+
+/* Padding can only be set between 1px and 10px otherwise it will default to 5px */
+.thumbnail-row {
+  padding: 2px;
+  border: 1px solid #ff0055; /* Neon Red */
+  background: none;
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+/* the padding can only be set between 2px and 10px otherwise it will default to 10; border-width is fixed :( */
+.thumbnail-row .thumbnail-box {
+  padding: 8px; /* Compact padding */
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.thumbnail-row .thumbnail-box:outlined {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #fff;
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.thumbnail-row .thumbnail-box:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+/* the pseudo are not being overridden so I can't do a hover. that will need to be added to themes */
+.thumbnail-row .thumbnail-alerts {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.thumbnail-icon {
+  width: 14px; /* Compact size */
+  height: 14px; /* Compact size */
+}
+
+.thumbnail-label {
+  color: #eee;
+  font-weight: bold;
+}
+
+/*  Careful with the calculation of background position or you will have too much dead space.*/
+.thumbnail-close {
+  background-image: url("img/controls/close-simple-active.svg");
+  background-size: 20px; /* Compact size */
+  background-position: 0 -4px;
+  width: 14px; /* Compact size */
+  height: 14px; /* Compact size */
+}
+
+/*AppMenu*/
+.pin-item {
+  background-image: url("pin-item.png");
+  background-size: 14px; /* Compact size */
+  width: 14px; /* Compact size */
+  height: 14px; /* Compact size */
+}
+
+.unpin-item {
+  background-image: url("unpin-item.png");
+  background-size: 14px; /* Compact size */
+  width: 14px; /* Compact size */
+  height: 14px; /* Compact size */
+}
+
+/*App List Padding is set in the applet settings
+use to override window-list-item-box */
+.app-list-item-box {
+  font-weight: bold;
+  z-index: -9;
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.panel-top .app-list-item-box:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-bottom .app-list-item-box:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-left .app-list-item-box:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-right .app-list-item-box:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.app-list-item-box .app-button-label {
+  padding-left: 2px; /* Compact padding */
+  color: rgba(238, 238, 238, 0.65);
+}
+
+.app-list-item-box:hover .app-button-label, .app-list-item-box:focus .app-button-label {
+  color: #eee;
+}
+
+/* use to override panel-launcher */
+/* NumLabel */
+.window-icon-list-numlabel {
+  z-index: 99;
+  color: #4e8378;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  width: 12px; /* Compact size */
+  height: 12px; /* Compact size */
+  padding: 1px 0 0 1px;
+  font-size: 12px; /* Compact font size */
+  font-weight: bold;
+}
+
+/* Non-grouped container */
+.window-icon-list-buttonbox {
+  spacing: 2px;
+}
+
+/* ======================================
+ * ! Timepp applet
+ * ====================================== */
+.panel-top .timepp-panel-box .applet-box.on {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.panel-top .timepp-panel-box .applet-box.on StLabel, .panel-top .timepp-panel-box .applet-box.on StIcon {
+  color: #eee;
+}
+
+.panel-top .timepp-panel-box .applet-box.on:hover, .panel-top .timepp-panel-box .applet-box.on:checked {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-top .timepp-panel-box .applet-box {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.panel-top .timepp-panel-box .applet-box:hover, .panel-top .timepp-panel-box .applet-box:checked {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-top .timepp-panel-box .applet-box:hover StLabel, .panel-top .timepp-panel-box .applet-box:hover StIcon, .panel-top .timepp-panel-box .applet-box:checked StLabel, .panel-top .timepp-panel-box .applet-box:checked StIcon {
+  color: #eee;
+}
+
+.panel-bottom .timepp-panel-box .applet-box.on {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.panel-bottom .timepp-panel-box .applet-box.on StLabel, .panel-bottom .timepp-panel-box .applet-box.on StIcon {
+  color: #eee;
+}
+
+.panel-bottom .timepp-panel-box .applet-box.on:hover, .panel-bottom .timepp-panel-box .applet-box.on:checked {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-bottom .timepp-panel-box .applet-box {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.panel-bottom .timepp-panel-box .applet-box:hover, .panel-bottom .timepp-panel-box .applet-box:checked {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-bottom .timepp-panel-box .applet-box:hover StLabel, .panel-bottom .timepp-panel-box .applet-box:hover StIcon, .panel-bottom .timepp-panel-box .applet-box:checked StLabel, .panel-bottom .timepp-panel-box .applet-box:checked StIcon {
+  color: #eee;
+}
+
+.panel-left .timepp-panel-box .applet-box.on {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.panel-left .timepp-panel-box .applet-box.on StLabel, .panel-left .timepp-panel-box .applet-box.on StIcon {
+  color: #eee;
+}
+
+.panel-left .timepp-panel-box .applet-box.on:hover, .panel-left .timepp-panel-box .applet-box.on:checked {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-left .timepp-panel-box .applet-box {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.panel-left .timepp-panel-box .applet-box:hover, .panel-left .timepp-panel-box .applet-box:checked {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-left .timepp-panel-box .applet-box:hover StLabel, .panel-left .timepp-panel-box .applet-box:hover StIcon, .panel-left .timepp-panel-box .applet-box:checked StLabel, .panel-left .timepp-panel-box .applet-box:checked StIcon {
+  color: #eee;
+}
+
+.panel-right .timepp-panel-box .applet-box.on {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.panel-right .timepp-panel-box .applet-box.on StLabel, .panel-right .timepp-panel-box .applet-box.on StIcon {
+  color: #eee;
+}
+
+.panel-right .timepp-panel-box .applet-box.on:hover, .panel-right .timepp-panel-box .applet-box.on:checked {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-right .timepp-panel-box .applet-box {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.panel-right .timepp-panel-box .applet-box:hover, .panel-right .timepp-panel-box .applet-box:checked {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.panel-right .timepp-panel-box .applet-box:hover StLabel, .panel-right .timepp-panel-box .applet-box:hover StIcon, .panel-right .timepp-panel-box .applet-box:checked StLabel, .panel-right .timepp-panel-box .applet-box:checked StIcon {
+  color: #eee;
+}
+
+.timepp-panel-box .applet-box.todo-panel-item.done StLabel, .timepp-panel-box .applet-box.todo-panel-item.done StIcon {
+  color: #4caf50;
+}
+
+.timepp-menu .numpicker {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  spacing: 0;
+  padding: 0;
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.timepp-menu .numpicker-counter {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 0 .5em; /* Compact padding */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.timepp-menu .numpicker-arrow-box {
+  border: 1px solid #ff0055; /* Neon Red */
+  padding: .2em .2em; /* Compact padding */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .numpicker-arrow:hover StIcon, .timepp-menu .numpicker-arrow:focus StIcon {
+  color: #4e8378;
+}
+
+.timepp-menu .settings-icon:focus, .timepp-menu .settings-icon:hover {
+  color: #4e8378;
+}
+
+.timepp-menu .timer-section .timer-header {
+  min-height: 16px; /* Compact height */
+}
+
+.timepp-menu .pomo-section .settings-item:first-child {
+  color: #f44336;
+  font-weight: bold;
+}
+
+.timepp-menu .alarm-section .alarm-item {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  max-width: 220px;
+  padding: .6em .6em .6em 1em; /* Compact padding */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.timepp-menu .alarm-section .day {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+  border: 1px solid #00eaff; /* Neon Blue */
+  font-weight: bold;
+  font-size: 12px; /* Compact font size */
+  color: #eee;
+  padding: .8em 0; /* Compact padding */
+}
+
+.timepp-menu .alarm-section .day StIcon {
+  icon-size: 16px !important;
+}
+
+.timepp-menu .alarm-section .day StIcon {
+  color: #eee;
+}
+
+.timepp-menu .alarm-section .day:hover, .timepp-menu .alarm-section .day:active, .timepp-menu .alarm-section .day:checked, .timepp-menu .alarm-section .day:activate, .timepp-menu .alarm-section .day:pressed, .timepp-menu .alarm-section .day:selected {
+  color: #4e8378;
+}
+
+.timepp-menu .alarm-section .day:hover StIcon, .timepp-menu .alarm-section .day:active StIcon, .timepp-menu .alarm-section .day:checked StIcon, .timepp-menu .alarm-section .day:activate StIcon, .timepp-menu .alarm-section .day:pressed StIcon, .timepp-menu .alarm-section .day:selected StIcon {
+  color: #4e8378;
+}
+
+.timepp-menu .alarm-section .day:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:active, .timepp-menu .alarm-section .day:pressed, .timepp-menu .alarm-section .day:activate, .timepp-menu .alarm-section .day:checked, .timepp-menu .alarm-section .day:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:focus StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:focus:active, .timepp-menu .alarm-section .day:focus:pressed, .timepp-menu .alarm-section .day:focus:activate, .timepp-menu .alarm-section .day:focus:checked, .timepp-menu .alarm-section .day:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:grayed, .timepp-menu .alarm-section .day:disabled, .timepp-menu .alarm-section .day:insensitive, .timepp-menu .alarm-section .day:focus:grayed, .timepp-menu .alarm-section .day:focus:disabled, .timepp-menu .alarm-section .day:focus:insensitive {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.timepp-menu .alarm-section .day:grayed StIcon, .timepp-menu .alarm-section .day:disabled StIcon, .timepp-menu .alarm-section .day:insensitive StIcon, .timepp-menu .alarm-section .day:focus:grayed StIcon, .timepp-menu .alarm-section .day:focus:disabled StIcon, .timepp-menu .alarm-section .day:focus:insensitive StIcon {
+  color: #eee;
+}
+
+.timepp-menu .alarm-section .day:first-child {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+  border: 1px solid #00eaff; /* Neon Blue */
+  font-weight: bold;
+  font-size: 12px; /* Compact font size */
+  color: #eee;
+  padding: .8em 0; /* Compact padding */
+}
+
+.timepp-menu .alarm-section .day:first-child StIcon {
+  icon-size: 16px !important;
+}
+
+.timepp-menu .alarm-section .day:first-child StIcon {
+  color: #eee;
+}
+
+.timepp-menu .alarm-section .day:first-child:hover, .timepp-menu .alarm-section .day:first-child:active, .timepp-menu .alarm-section .day:first-child:checked, .timepp-menu .alarm-section .day:first-child:activate, .timepp-menu .alarm-section .day:first-child:pressed, .timepp-menu .alarm-section .day:first-child:selected {
+  color: #4e8378;
+}
+
+.timepp-menu .alarm-section .day:first-child:hover StIcon, .timepp-menu .alarm-section .day:first-child:active StIcon, .timepp-menu .alarm-section .day:first-child:checked StIcon, .timepp-menu .alarm-section .day:first-child:activate StIcon, .timepp-menu .alarm-section .day:first-child:pressed StIcon, .timepp-menu .alarm-section .day:first-child:selected StIcon {
+  color: #4e8378;
+}
+
+.timepp-menu .alarm-section .day:first-child:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:first-child:active, .timepp-menu .alarm-section .day:first-child:pressed, .timepp-menu .alarm-section .day:first-child:activate, .timepp-menu .alarm-section .day:first-child:checked, .timepp-menu .alarm-section .day:first-child:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:first-child:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:first-child:focus StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:first-child:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:first-child:focus:active, .timepp-menu .alarm-section .day:first-child:focus:pressed, .timepp-menu .alarm-section .day:first-child:focus:activate, .timepp-menu .alarm-section .day:first-child:focus:checked, .timepp-menu .alarm-section .day:first-child:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:first-child:grayed, .timepp-menu .alarm-section .day:first-child:disabled, .timepp-menu .alarm-section .day:first-child:insensitive, .timepp-menu .alarm-section .day:first-child:focus:grayed, .timepp-menu .alarm-section .day:first-child:focus:disabled, .timepp-menu .alarm-section .day:first-child:focus:insensitive {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.timepp-menu .alarm-section .day:first-child:grayed StIcon, .timepp-menu .alarm-section .day:first-child:disabled StIcon, .timepp-menu .alarm-section .day:first-child:insensitive StIcon, .timepp-menu .alarm-section .day:first-child:focus:grayed StIcon, .timepp-menu .alarm-section .day:first-child:focus:disabled StIcon, .timepp-menu .alarm-section .day:first-child:focus:insensitive StIcon {
+  color: #eee;
+}
+
+.timepp-menu .alarm-section .day:last-child {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+  border: 1px solid #00eaff; /* Neon Blue */
+  font-weight: bold;
+  font-size: 12px; /* Compact font size */
+  color: #eee;
+  padding: .8em 0; /* Compact padding */
+}
+
+.timepp-menu .alarm-section .day:last-child StIcon {
+  icon-size: 16px !important;
+}
+
+.timepp-menu .alarm-section .day:last-child StIcon {
+  color: #eee;
+}
+
+.timepp-menu .alarm-section .day:last-child:hover, .timepp-menu .alarm-section .day:last-child:active, .timepp-menu .alarm-section .day:last-child:checked, .timepp-menu .alarm-section .day:last-child:activate, .timepp-menu .alarm-section .day:last-child:pressed, .timepp-menu .alarm-section .day:last-child:selected {
+  color: #4e8378;
+}
+
+.timepp-menu .alarm-section .day:last-child:hover StIcon, .timepp-menu .alarm-section .day:last-child:active StIcon, .timepp-menu .alarm-section .day:last-child:checked StIcon, .timepp-menu .alarm-section .day:last-child:activate StIcon, .timepp-menu .alarm-section .day:last-child:pressed StIcon, .timepp-menu .alarm-section .day:last-child:selected StIcon {
+  color: #4e8378;
+}
+
+.timepp-menu .alarm-section .day:last-child:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:last-child:active, .timepp-menu .alarm-section .day:last-child:pressed, .timepp-menu .alarm-section .day:last-child:activate, .timepp-menu .alarm-section .day:last-child:checked, .timepp-menu .alarm-section .day:last-child:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:last-child:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:last-child:focus StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:last-child:focus:active, .timepp-menu .alarm-section .day:last-child:focus:pressed, .timepp-menu .alarm-section .day:last-child:focus:activate, .timepp-menu .alarm-section .day:last-child:focus:checked, .timepp-menu .alarm-section .day:last-child:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:last-child:grayed, .timepp-menu .alarm-section .day:last-child:disabled, .timepp-menu .alarm-section .day:last-child:insensitive, .timepp-menu .alarm-section .day:last-child:focus:grayed, .timepp-menu .alarm-section .day:last-child:focus:disabled, .timepp-menu .alarm-section .day:last-child:focus:insensitive {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.timepp-menu .alarm-section .day:last-child:grayed StIcon, .timepp-menu .alarm-section .day:last-child:disabled StIcon, .timepp-menu .alarm-section .day:last-child:insensitive StIcon, .timepp-menu .alarm-section .day:last-child:focus:grayed StIcon, .timepp-menu .alarm-section .day:last-child:focus:disabled StIcon, .timepp-menu .alarm-section .day:last-child:focus:insensitive StIcon {
+  color: #eee;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+  border: 1px solid #00eaff; /* Neon Blue */
+  font-weight: bold;
+  font-size: 12px; /* Compact font size */
+  color: #eee;
+  padding: .8em 0; /* Compact padding */
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child StIcon {
+  icon-size: 16px !important;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child StIcon {
+  color: #eee;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:hover, .timepp-menu .alarm-section .day:last-child:first-child:active, .timepp-menu .alarm-section .day:last-child:first-child:checked, .timepp-menu .alarm-section .day:last-child:first-child:activate, .timepp-menu .alarm-section .day:last-child:first-child:pressed, .timepp-menu .alarm-section .day:last-child:first-child:selected {
+  color: #4e8378;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:hover StIcon, .timepp-menu .alarm-section .day:last-child:first-child:active StIcon, .timepp-menu .alarm-section .day:last-child:first-child:checked StIcon, .timepp-menu .alarm-section .day:last-child:first-child:activate StIcon, .timepp-menu .alarm-section .day:last-child:first-child:pressed StIcon, .timepp-menu .alarm-section .day:last-child:first-child:selected StIcon {
+  color: #4e8378;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:active, .timepp-menu .alarm-section .day:last-child:first-child:pressed, .timepp-menu .alarm-section .day:last-child:first-child:activate, .timepp-menu .alarm-section .day:last-child:first-child:checked, .timepp-menu .alarm-section .day:last-child:first-child:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:focus StIcon {
+  color: #fff;
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:focus:active, .timepp-menu .alarm-section .day:last-child:first-child:focus:pressed, .timepp-menu .alarm-section .day:last-child:first-child:focus:activate, .timepp-menu .alarm-section .day:last-child:first-child:focus:checked, .timepp-menu .alarm-section .day:last-child:first-child:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:grayed, .timepp-menu .alarm-section .day:last-child:first-child:disabled, .timepp-menu .alarm-section .day:last-child:first-child:insensitive, .timepp-menu .alarm-section .day:last-child:first-child:focus:grayed, .timepp-menu .alarm-section .day:last-child:first-child:focus:disabled, .timepp-menu .alarm-section .day:last-child:first-child:focus:insensitive {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: #eee;
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.timepp-menu .alarm-section .day:last-child:first-child:grayed StIcon, .timepp-menu .alarm-section .day:last-child:first-child:disabled StIcon, .timepp-menu .alarm-section .day:last-child:first-child:insensitive StIcon, .timepp-menu .alarm-section .day:last-child:first-child:focus:grayed StIcon, .timepp-menu .alarm-section .day:last-child:first-child:focus:disabled StIcon, .timepp-menu .alarm-section .day:last-child:first-child:focus:insensitive StIcon {
+  color: #eee;
+}
+
+.timepp-menu .alarm-section .day:focus {
+  outline: 0;
+}
+
+.timepp-menu .todo-section {
+  context-color: #4caf50;
+  project-color: #03a9f4;
+  link-color: #4e8378;
+}
+
+.timepp-menu .todo-section .delete-complete-tasks-label,
+.timepp-menu .todo-section .no-todo-file-msg {
+  color: #f44336;
+}
+
+.timepp-menu .todo-section .loading-msg {
+  color: #03a9f4;
+}
+
+.timepp-menu .todo-section .due-date-label {
+  color: #f44336;
+}
+
+.timepp-menu .todo-section .date-label,
+.timepp-menu .todo-section .task-item.completed .due-date-label {
+  color: rgba(238, 238, 238, 0.65);
+}
+
+.timepp-menu .todo-section .tracker-pause-icon, .timepp-menu .todo-section .filter-icon.active {
+  color: #eea84c;
+}
+
+.timepp-menu .todo-section .header StButton:hover, .timepp-menu .todo-section .header StButton:focus {
+  color: #4e8378;
+}
+
+.timepp-menu .todo-section .task-item {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.timepp-menu .todo-section .task-item.completed {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.timepp-menu .todo-section .task-item.A {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.timepp-menu .todo-section .task-item.A .priority-label {
+  color: #4e8378;
+}
+
+.timepp-menu .todo-section .task-item.B {
+  border: 1px solid #eea84c; /* Neon Yellow */
+  box-shadow: 0 0 5px #eea84c; /* Neon Yellow Glow */
+}
+
+.timepp-menu .todo-section .task-item.B .priority-label {
+  color: #eea84c;
+}
+
+.timepp-menu .todo-section .task-item.C {
+  border: 1px solid #03a9f4; /* Neon Blue */
+  box-shadow: 0 0 5px #03a9f4; /* Neon Blue Glow */
+}
+
+.timepp-menu .todo-section .task-item.C .priority-label {
+  color: #03a9f4;
+}
+
+.timepp-menu .todo-section .task-item.D {
+  border: 1px solid #4caf50; /* Neon Green */
+  box-shadow: 0 0 5px #4caf50; /* Neon Green Glow */
+}
+
+.timepp-menu .todo-section .task-item.D .priority-label {
+  color: #4caf50;
+}
+
+.timepp-menu .todo-section .task-item.hidden {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+/* ======================================
+ * ! Sticky Notes desklet
+ * ====================================== */
+#sticky-scrollview StScrollBar {
+  padding: 0;
+  padding-left: 2px;
+}
+
+.sticky-button {
+  width: 20px; /* Compact size */
+  height: 20px; /* Compact size */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.sticky-button-selected {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  height: 20px; /* Compact size */
+  width: 20px; /* Compact size */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.sticky-button-selected * {
+  color: #4e8378;
+}
+
+.sticky-button-box {
+  padding: 0;
+  height: 20px; /* Compact size */
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+}
+
+.sticky-main-box-staples {
+  border: 1px solid #00eaff; /* Neon Blue */
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  text-shadow: none;
+  min-width: 180px; /* Compact width */
+  padding: 4px 8px; /* Compact padding */
+  padding-top: 0;
+  font-weight: bold;
+  color: #eee;
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.sticky-main-box-none {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 4px;
+  text-shadow: none;
+  min-width: 180px; /* Compact width */
+  padding: 4px 8px; /* Compact padding */
+  padding-top: 0;
+  font-weight: bold;
+  color: #eee;
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.sticky-top-box {
+  font-weight: bold;
+  color: #eee;
+}
+
+.sticky-bottom-box {
+  font-weight: bold;
+  color: #eee;
+}
+
+.sticky-title-label {
+  padding: 0 4px 0 4px;
+  max-width: 80px; /* Compact width */
+  text-align: center;
+}
+
+.sticky-information-label {
+  padding: 0 4px 0 4px;
+}
+
+.sticky-text-box {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: rgba(238, 238, 238, 0.65);
+  padding: .3em .7em;
+  font-size: 12px;
+  font-weight: normal;
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.sticky-text-box:focus, .sticky-text-box:active, .sticky-text-box:pressed {
+  border: 1px solid #ff0055; /* Neon Red */
+  font-weight: bold;
+  color: #eee;
+  caret-color: #eee;
+  caret-size: 2px;
+  selected-color: #fff;
+  selection-background-color: #4e8378;
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.sticky-text-box StIcon {
+  color: rgba(238, 238, 238, 0.65);
+  icon-size: 16px;
+}
+
+.sticky-text-box:focus > StIcon, .sticky-text-box:active > StIcon, .sticky-text-box:pressed > StIcon {
+  color: #eee;
+}
+
+.sticky-text-box, .sticky-text-box:active {
+  background-gradient-direction: none;
+  border: 1px solid #00eaff; /* Neon Blue */
+  border-width: 0;
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+  border-radius: 0;
+  padding: 4px; /* Compact padding */
+}
+
+#sticky-note-entry {
+  color: #eee;
+  selected-color: #eee;
+  caret-color: #eee;
+  caret-size: 1px;
+  selection-background-color: #4e8378;
+}
+
+/* ======================================
+ * ! Reddit reader
+ * ====================================== */
+.reddit-reader {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  padding: 4px;
+  color: #eee;
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.reddit-reader StScrollBar {
+  padding-right: 0;
+}
+
+/* Title */
+.reddit-title-bar {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 8px; /* Compact padding */
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.reddit-header-icon {
+  padding-right: 4px; /* Compact padding */
+  icon-size: 16px;
+  color: #eee;
+}
+
+.reddit-title {
+  padding-right: 4px; /* Compact padding */
+  font-size: 20px; /* Compact font size */
+}
+
+.reddit-subtitle {
+  color: rgba(238, 238, 238, 0.65);
+  font-size: 12px; /* Compact font size */
+}
+
+/* Posts */
+.reddit-posts-box {
+  spacing: 4px;
+  padding: 0;
+}
+
+.reddit-post {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  padding: 6px; /* Compact padding */
+  color: #eee;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.reddit-post:hover {
+  color: #4e8378;
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+}
+
+.reddit-info-box {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 6px; /* Compact padding */
+  font-size: 12px;
+  color: rgba(238, 238, 238, 0.65);
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+/* ======================================
+ * ! Calculator
+ * ====================================== */
+.calc-mainBox {
+  padding: 0;
+  spacing: 5px; /* Compact spacing */
+}
+
+.calc-displayArea {
+  padding: 0;
+}
+
+.calc-displayWindow {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  padding: 6px; /* Compact padding */
+  padding-top: 4px;
+  padding-bottom: 1em; /* Compact padding */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.calc-displayWindow-rpn {
+  border: 1px solid #00eaff; /* Neon Blue */
+  padding: 6px; /* Compact padding */
+  padding-top: 4px;
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.calc-displayText-primary {
+  font-size: 24px; /* Compact font size */
+  color: #eee;
+  text-align: right;
+}
+
+.calc-displayText-secondary {
+  font-size: 12px; /* Compact font size */
+  color: #03a9f4;
+  text-align: right;
+  padding-bottom: 6px; /* Compact padding */
+}
+
+.calc-displayText-operation {
+  color: #03a9f4;
+}
+
+.calc-displayText-status {
+  font-size: 12px; /* Compact font size */
+  color: rgba(238, 238, 238, 0.65);
+}
+
+.calc-displayText-rpn {
+  color: #eee;
+  font-size: 12px; /* Compact font size */
+}
+
+.calc-stackArea {
+  height: 75px; /* Compact height */
+  padding-top: .8em;
+  padding-bottom: 0;
+}
+
+.calc-navigation-box {
+  padding: 0 0 0 6px; /* Compact padding */
+  width: 14px; /* Compact size */
+  border: none;
+}
+
+.calc-navigation-icon {
+  color: #eee;
+  icon-size: 16px;
+}
+
+.calc-navigation-button {
+  border: none;
+}
+
+.calc-navigation-button:hover .calc-navigation-icon {
+  color: #4e8378;
+}
+
+.calc-button {
+  background-color: rgba(0, 0, 0, 0);
+  background-gradient-direction: none;
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+  border: 1px solid #00eaff; /* Neon Blue */
+  font-weight: bold;
+  font-size: 12px;
+  border-image: url("img/buttons/button-primary__s.svg") 10;
+  color: #eee;
+  width: 3.6em; /* Compact width */
+  height: 2.8em; /* Compact height */
+}
+
+.calc-button StIcon {
+  icon-size: 16px !important;
+}
+
+.calc-button StIcon {
+  color: #eee;
+}
+
+.calc-button:hover, .calc-button:active, .calc-button:checked, .calc-button:activate, .calc-button:pressed, .calc-button:selected {
+  color: #4e8378;
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+}
+
+.calc-button:hover StIcon, .calc-button:active StIcon, .calc-button:checked StIcon, .calc-button:activate StIcon, .calc-button:pressed StIcon, .calc-button:selected StIcon {
+  color: #4e8378;
+}
+
+.calc-button:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.calc-button:active, .calc-button:pressed, .calc-button:activate, .calc-button:checked, .calc-button:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.calc-button:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.calc-button:focus StIcon {
+  color: #fff;
+}
+
+.calc-button:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.calc-button:focus:active, .calc-button:focus:pressed, .calc-button:focus:activate, .calc-button:focus:checked, .calc-button:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.calc-button:grayed, .calc-button:disabled, .calc-button:insensitive, .calc-button:focus:grayed, .calc-button:focus:disabled, .calc-button:focus:insensitive {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: rgba(238, 238, 238, 0.3);
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.calc-button:grayed StIcon, .calc-button:disabled StIcon, .calc-button:insensitive StIcon, .calc-button:focus:grayed StIcon, .calc-button:focus:disabled StIcon, .calc-button:focus:insensitive StIcon {
+  color: rgba(238, 238, 238, 0.3);
+}
+
+.calc-button-padding {
+  padding: .1em;
+}
+
+/* ======================================
+ * ! G-tile
+ * ====================================== */
+.grid-panel {
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  width: 200px; /* Compact width */
+  padding: 4px;
+  spacing: 0;
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.grid-title {
+  padding: 4px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #eee;
+  text-align: center;
+  text-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.table {
+  padding: 6px; /* Compact padding */
+}
+
+.table-element {
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.table-element:hover, .table-element:activate {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.top-box {
+  padding: 6px; /* Compact padding */
+}
+
+.bottom-box {
+  padding: 0 6px; /* Compact padding */
+  spacing: 0;
+}
+
+.bottom-box:last-child {
+  spacing: 0;
+  padding: 6px; /* Compact padding */
+  padding-top: 2px;
+}
+
+.grid-preview {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #00ffcc; /* Neon Aqua */
+  box-shadow: 0 0 5px #00ffcc; /* Neon Aqua Glow */
+}
+
+.grid-preview:activate {
+  background-color: rgba(78, 131, 120, 0.75);
+  border: 1px solid #4e8378; /* Neon Green */
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+}
+
+.close-button {
+  background-image: url("img/controls/close-simple-active.svg");
+}
+
+.close-button:hover {
+  background-image: url("img/controls/close-simple-hover.svg");
+}
+
+/* buttons */
+.settings-button {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+  border: 1px solid #00eaff; /* Neon Blue */
+  font-weight: bold;
+  font-size: 12px;
+  color: #eee;
+  width: 20px; /* Compact size */
+  height: 20px; /* Compact size */
+  min-width: 40px; /* Compact size */
+}
+
+.settings-button StIcon {
+  icon-size: 16px !important;
+  color: #eee;
+}
+
+.settings-button:hover, .settings-button:active, .settings-button:checked, .settings-button:activate, .settings-button:pressed, .settings-button:selected {
+  color: #4e8378;
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+}
+
+.settings-button:hover StIcon, .settings-button:active StIcon, .settings-button:checked StIcon, .settings-button:activate StIcon, .settings-button:pressed StIcon, .settings-button:selected StIcon {
+  color: #4e8378;
+}
+
+.settings-button:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:active, .settings-button:pressed, .settings-button:activate, .settings-button:checked, .settings-button:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:focus StIcon {
+  color: #fff;
+}
+
+.settings-button:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:focus:active, .settings-button:focus:pressed, .settings-button:focus:activate, .settings-button:focus:checked, .settings-button:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:grayed, .settings-button:disabled, .settings-button:insensitive, .settings-button:focus:grayed, .settings-button:focus:disabled, .settings-button:focus:insensitive {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: rgba(238, 238, 238, 0.3);
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.settings-button:grayed StIcon, .settings-button:disabled StIcon, .settings-button:insensitive StIcon, .settings-button:focus:grayed StIcon, .settings-button:focus:disabled StIcon, .settings-button:focus:insensitive StIcon {
+  color: rgba(238, 238, 238, 0.3);
+}
+
+.settings-button:first-child {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+  border: 1px solid #00eaff; /* Neon Blue */
+  font-weight: bold;
+  font-size: 12px;
+  color: #eee;
+}
+
+.settings-button:first-child StIcon {
+  icon-size: 16px !important;
+  color: #eee;
+}
+
+.settings-button:first-child:hover, .settings-button:first-child:active, .settings-button:first-child:checked, .settings-button:first-child:activate, .settings-button:first-child:pressed, .settings-button:first-child:selected {
+  color: #4e8378;
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+}
+
+.settings-button:first-child:hover StIcon, .settings-button:first-child:active StIcon, .settings-button:first-child:checked StIcon, .settings-button:first-child:activate StIcon, .settings-button:first-child:pressed StIcon, .settings-button:first-child:selected StIcon {
+  color: #4e8378;
+}
+
+.settings-button:first-child:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:first-child:active, .settings-button:first-child:pressed, .settings-button:first-child:activate, .settings-button:first-child:checked, .settings-button:first-child:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:first-child:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:first-child:focus StIcon {
+  color: #fff;
+}
+
+.settings-button:first-child:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:first-child:focus:active, .settings-button:first-child:focus:pressed, .settings-button:first-child:focus:activate, .settings-button:first-child:focus:checked, .settings-button:first-child:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:first-child:grayed, .settings-button:first-child:disabled, .settings-button:first-child:insensitive, .settings-button:first-child:focus:grayed, .settings-button:first-child:focus:disabled, .settings-button:first-child:focus:insensitive {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: rgba(238, 238, 238, 0.3);
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.settings-button:first-child:grayed StIcon, .settings-button:first-child:disabled StIcon, .settings-button:first-child:insensitive StIcon, .settings-button:first-child:focus:grayed StIcon, .settings-button:first-child:focus:disabled StIcon, .settings-button:first-child:focus:insensitive StIcon {
+  color: rgba(238, 238, 238, 0.3);
+}
+
+.settings-button:last-child {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+  border: 1px solid #00eaff; /* Neon Blue */
+  font-weight: bold;
+  font-size: 12px;
+  color: #eee;
+}
+
+.settings-button:last-child StIcon {
+  icon-size: 16px !important;
+  color: #eee;
+}
+
+.settings-button:last-child:hover, .settings-button:last-child:active, .settings-button:last-child:checked, .settings-button:last-child:activate, .settings-button:last-child:pressed, .settings-button:last-child:selected {
+  color: #4e8378;
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+}
+
+.settings-button:last-child:hover StIcon, .settings-button:last-child:active StIcon, .settings-button:last-child:checked StIcon, .settings-button:last-child:activate StIcon, .settings-button:last-child:pressed StIcon, .settings-button:last-child:selected StIcon {
+  color: #4e8378;
+}
+
+.settings-button:last-child:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:last-child:active, .settings-button:last-child:pressed, .settings-button:last-child:activate, .settings-button:last-child:checked, .settings-button:last-child:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:last-child:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:last-child:focus StIcon {
+  color: #fff;
+}
+
+.settings-button:last-child:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:last-child:focus:active, .settings-button:last-child:focus:pressed, .settings-button:last-child:focus:activate, .settings-button:last-child:focus:checked, .settings-button:last-child:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:last-child:grayed, .settings-button:last-child:disabled, .settings-button:last-child:insensitive, .settings-button:last-child:focus:grayed, .settings-button:last-child:focus:disabled, .settings-button:last-child:focus:insensitive {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: rgba(238, 238, 238, 0.3);
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.settings-button:last-child:grayed StIcon, .settings-button:last-child:disabled StIcon, .settings-button:last-child:insensitive StIcon, .settings-button:last-child:focus:grayed StIcon, .settings-button:last-child:focus:disabled StIcon, .settings-button:last-child:focus:insensitive StIcon {
+  color: rgba(238, 238, 238, 0.3);
+}
+
+.settings-button:last-child:first-child {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+  border: 1px solid #00eaff; /* Neon Blue */
+  font-weight: bold;
+  font-size: 12px;
+  color: #eee;
+}
+
+.settings-button:last-child:first-child StIcon {
+  icon-size: 16px !important;
+  color: #eee;
+}
+
+.settings-button:last-child:first-child:hover, .settings-button:last-child:first-child:active, .settings-button:last-child:first-child:checked, .settings-button:last-child:first-child:activate, .settings-button:last-child:first-child:pressed, .settings-button:last-child:first-child:selected {
+  color: #4e8378;
+  box-shadow: 0 0 5px #4e8378; /* Neon Green Glow */
+}
+
+.settings-button:last-child:first-child:hover StIcon, .settings-button:last-child:first-child:active StIcon, .settings-button:last-child:first-child:checked StIcon, .settings-button:last-child:first-child:activate StIcon, .settings-button:last-child:first-child:pressed StIcon, .settings-button:last-child:first-child:selected StIcon {
+  color: #4e8378;
+}
+
+.settings-button:last-child:first-child:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:last-child:first-child:active, .settings-button:last-child:first-child:pressed, .settings-button:last-child:first-child:activate, .settings-button:last-child:first-child:checked, .settings-button:last-child:first-child:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:last-child:first-child:focus {
+  border: 1px solid #ff0055; /* Neon Red */
+  color: #fff;
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:last-child:first-child:focus StIcon {
+  color: #fff;
+}
+
+.settings-button:last-child:first-child:focus:hover {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:last-child:first-child:focus:active, .settings-button:last-child:first-child:focus:pressed, .settings-button:last-child:first-child:focus:activate, .settings-button:last-child:first-child:focus:checked, .settings-button:last-child:first-child:focus:selected {
+  border: 1px solid #ff0055; /* Neon Red */
+  box-shadow: 0 0 5px #ff0055; /* Neon Red Glow */
+}
+
+.settings-button:last-child:first-child:grayed, .settings-button:last-child:first-child:disabled, .settings-button:last-child:first-child:insensitive, .settings-button:last-child:first-child:focus:grayed, .settings-button:last-child:first-child:focus:disabled, .settings-button:last-child:first-child:focus:insensitive {
+  border: 1px solid #00eaff; /* Neon Blue */
+  color: rgba(238, 238, 238, 0.3);
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.settings-button:last-child:first-child:grayed StIcon, .settings-button:last-child:first-child:disabled StIcon, .settings-button:last-child:first-child:insensitive StIcon, .settings-button:last-child:first-child:focus:grayed StIcon, .settings-button:last-child:first-child:focus:disabled StIcon, .settings-button:last-child:first-child:focus:insensitive StIcon {
+  color: rgba(238, 238, 238, 0.3);
+}
+
+.settings-button:hover, .settings-button:activate, .settings-button:activate:hover {
+  width: 20px; /* Compact size */
+  height: 20px; /* Compact size */
+  min-width: 40px; /* Compact size */
+}
+
+.settings-button:hover .animation-icon, .settings-button:activate .animation-icon, .settings-button:activate:hover .animation-icon {
+  background-image: url("img/misc/animation__active.svg");
+}
+
+.settings-button:hover .auto-close-icon, .settings-button:activate .auto-close-icon, .settings-button:activate:hover .auto-close-icon {
+  background-image: url("img/controls/close-simple-hover.svg");
+}
+
+.settings-button:hover .action-main-list, .settings-button:activate .action-main-list, .settings-button:activate:hover .action-main-list {
+  background-image: url("img/misc/auto-tile-1__active.svg");
+}
+
+.settings-button:hover .action-two-list, .settings-button:activate .action-two-list, .settings-button:activate:hover .action-two-list {
+  background-image: url("img/misc/auto-tile-2__active.svg");
+}
+
+/* button-icons */
+.tiling-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.animation-icon {
+  background-image: url("img/misc/animation.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.auto-close-icon {
+  background-image: url("img/controls/close-simple-active.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.action-main-list {
+  background-image: url("img/misc/auto-tile-1.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.action-two-list {
+  background-image: url("img/misc/auto-tile-2.svg");
+  width: 16px;
+  height: 16px;
+}
+
+.action-scale {
+  width: 16px;
+  height: 16px;
+}
+
+
+/****************
+ * Scrollbars *
+ ****************/
+StScrollView.vfade {
+  -st-vfade-offset: 0px;
+}
+
+StScrollView.hfade {
+  -st-hfade-offset: 0px;
+}
+
+StScrollBar {
+  padding: 8px;
+}
+
+StScrollView StScrollBar {
+  min-width: 5px;
+  min-height: 5px;
+}
+
+StScrollBar StBin#trough {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+}
+
+StScrollBar StButton#vhandle,
+StScrollBar StButton#hhandle {
+  border-radius: 9999px;
+  background-color: #00FFFF; /* Neon Cyan */
+  border: 0px solid;
+  margin: 0px;
+}
+
+StScrollBar StButton#vhandle:hover,
+StScrollBar StButton#hhandle:hover {
+  background-color: #00FF00; /* Neon Green */
+}
+
+StScrollBar StButton#vhandle:active,
+StScrollBar StButton#hhandle:active {
+  background-color: #FF00FF; /* Neon Pink */
+}
+
+StScrollBar StButton#vhandle.magenta,
+StScrollBar StButton#hhandle.magenta {
+  background-color: #FF00FF; /* Neon Magenta */
+}
+
+StScrollBar StButton#vhandle.magenta:hover,
+StScrollBar StButton#hhandle.magenta:hover {
+  background-color: #00FF00; /* Neon Green */
+}
+
+StScrollBar StButton#vhandle.magenta:active,
+StScrollBar StButton#hhandle.magenta:active {
+  background-color: #00FFFF; /* Neon Cyan */
+}
+
+/****************
+ * Separators *
+ ****************/
+.separator {
+  -gradient-height: 1px;
+  -gradient-start: rgba(0, 255, 255, 0.3); /* Neon Cyan Gradient Start */
+  -gradient-end: rgba(0, 255, 255, 0.3); /* Neon Cyan Gradient End */
+  -margin-horizontal: 1.5em;
+  height: 1em;
+}
+
+.separator.magenta {
+  -gradient-start: rgba(255, 0, 255, 0.3); /* Neon Magenta Gradient Start */
+  -gradient-end: rgba(255, 0, 255, 0.3); /* Neon Magenta Gradient End */
+}
+
+/****************
+ * Sliders *
+ ****************/
+.popup-slider-menu-item,
+.slider {
+  -slider-height: 4px;
+  -slider-background-color: rgba(0, 0, 0, 0.12);
+  -slider-border-color: transparent;
+  -slider-active-background-color: #00FFFF; /* Neon Cyan */
+  -slider-active-border-color: transparent;
+  -slider-border-width: 0;
+  -slider-handle-radius: 4px;
+  height: 18px;
+  min-width: 15em;
+  border: 0 solid transparent;
+  border-right-width: 1px;
+  border-left-width: 5px;
+  color: transparent;
+}
+
+.slider.magenta {
+  -slider-active-background-color: #FF00FF; /* Neon Magenta */
+}
+
+/* ======================================
+ * ! Window List Box
+ * ====================================== */
+.panel-bottom .window-list-box:ltr,
+.panel-top .window-list-box:ltr {
+  padding: 0 0 0 8px;
+}
+
+.panel-bottom .window-list-box:rtl,
+.panel-top .window-list-box:rtl {
+  padding: 0 8px 0 0;
+}
+
+.window-list-box.vertical {
+  padding: 6px 0 0 0;
+}
+
+.window-list-box.vertical #appMenuIcon {
+  padding-top: 2px;
+}
+
+.window-list-box:highlight {
+  background-color: rgba(0, 255, 255, 0.5); /* Neon Cyan */
+}
+
+.window-list-item-label {
+  font-weight: normal;
+  width: 15em;
+  min-width: 5px;
+}
+
+.window-list-item-box {
+  font-weight: normal;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 255, 255, 0.87); /* Neon Cyan */
+  border-radius: 4px;
+  border: 1px solid #00ff00; /* Neon Green */
+  box-shadow: 0 0 5px #00ff00; /* Neon Green Glow */
+  transition-duration: 100ms;
+}
+
+.panel-bottom .window-list-item-box StLabel,
+.panel-top .window-list-item-box StLabel {
+  padding-left: 6px;
+}
+
+.panel-left .window-list-item-box StLabel,
+.panel-right .window-list-item-box StLabel {
+  padding-top: 6px;
+}
+
+.panel-top .window-list-item-box {
+  border-top: 2px solid #ff007f; /* Neon Pink */
+}
+
+.panel-top .window-list-item-box StIcon,
+.panel-top .window-list-item-box StBin,
+.panel-top .window-list-item-box #appMenuIcon {
+  padding: 2px;
+  padding-top: 0;
+}
+
+.panel-bottom .window-list-item-box {
+  border-bottom: 2px solid #ff007f; /* Neon Pink */
+}
+
+.panel-bottom .window-list-item-box StIcon,
+.panel-bottom .window-list-item-box StBin,
+.panel-bottom .window-list-item-box #appMenuIcon {
+  padding: 2px;
+  padding-bottom: 0;
+}
+
+.panel-left .window-list-item-box {
+  border-left: 2px solid #ff007f; /* Neon Pink */
+}
+
+.panel-left .window-list-item-box StIcon,
+.panel-left .window-list-item-box StBin,
+.panel-left .window-list-item-box #appMenuIcon {
+  padding: 2px;
+  padding-left: 0;
+}
+
+.panel-right .window-list-item-box {
+  border-right: 2px solid #ff007f; /* Neon Pink */
+}
+
+.panel-right .window-list-item-box StIcon,
+.panel-right .window-list-item-box StBin,
+.panel-right .window-list-item-box #appMenuIcon {
+  padding: 2px;
+  padding-right: 0;
+}
+
+.window-list-item-box:hover {
+  color: #00eaff; /* Neon Blue */
+  background-color: rgba(0, 255, 255, 0.15); /* Neon Cyan */
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.window-list-item-box:active,
+.window-list-item-box:checked,
+.window-list-item-box:running {
+  color: #00eaff; /* Neon Blue */
+  background-color: rgba(0, 255, 255, 0.25); /* Neon Cyan */
+  border: 1px solid rgba(0, 255, 255, 0.3); /* Neon Cyan */
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.3); /* Neon Cyan Glow */
+}
+
+.window-list-item-box:active:hover,
+.window-list-item-box:checked:hover,
+.window-list-item-box:running:hover {
+  background-color: rgba(0, 255, 255, 0.3); /* Neon Cyan */
+}
+
+.window-list-item-box:focus {
+  color: #00eaff; /* Neon Blue */
+  background-image: radial-gradient(
+    5px 5px 45deg,
+    circle cover,
+    rgba(0, 255, 255, 0.2) 0%,
+    rgba(0, 255, 255, 0.2) 100%
+  ); /* Neon Cyan */
+  border: 2px solid #ff00ff; /* Neon Magenta */
+  background-color: rgba(0, 255, 255, 0.2); /* Neon Cyan */
+  box-shadow: 0 0 8px #ff00ff; /* Neon Magenta Glow */
+}
+
+.window-list-item-box:focus:hover {
+  background-color: rgba(0, 255, 255, 0.3); /* Neon Cyan */
+}
+
+.panel-top .window-list-item-box:focus {
+  background-position: top center;
+}
+
+.panel-bottom .window-list-item-box:focus {
+  background-position: bottom center;
+}
+
+.panel-left .window-list-item-box:focus {
+  background-position: left center;
+}
+
+.panel-right .window-list-item-box:focus {
+  background-position: right center;
+}
+
+.window-list-item-box.right,
+.window-list-item-box.left {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.window-list-item-box .progress {
+  background-gradient-direction: vertical;
+  background-gradient-start: #00ff00; /* Neon Green */
+  background-gradient-end: #00ff00; /* Neon Green */
+  border-radius: 2px;
+  box-shadow: 0 0 5px #00ff00; /* Neon Green Glow */
+}
+
+.window-list-item-demands-attention {
+  background-gradient-start: #ff007f; /* Neon Pink */
+  background-gradient-end: #ff007f; /* Neon Pink */
+}
+
+.window-list-preview {
+  padding: 12px;
+  spacing: 6px;
+  border: 1px solid #ff007f; /* Neon Pink */
+  background-color: rgba(0, 0, 0, 0.98);
+  border-radius: 4px;
+  color: #00eaff; /* Neon Blue */
+  box-shadow: 0 3px 5px rgba(0, 255, 255, 0.15),
+    0 3px 12px rgba(0, 255, 255, 0.1); /* Neon Cyan */
+}
+
+.grouped-window-list-thumbnail-label {
+  padding-left: 4px;
+}
+
+.grouped-window-list-thumbnail-alert {
+  background-color: rgba(0, 255, 255, 0.5); /* Neon Cyan */
+}
+
+.grouped-window-list-thumbnail-menu {
+  padding: 6px;
+  color: #00eaff; /* Neon Blue */
+  background-color: rgba(0, 0, 0, 0.98);
+  border-radius: 4px;
+  margin: 6px;
+  border: 1px solid #ff007f; /* Neon Pink */
+  box-shadow: 0 5px 12px rgba(0, 255, 255, 0.15); /* Neon Cyan */
+}
+
+.grouped-window-list-thumbnail-menu .item-box {
+  padding: 6px;
+  border-radius: 4px;
+  spacing: 6px;
+  margin: 1px;
+  border: 1px solid #ff007f; /* Neon Pink */
+}
+
+.grouped-window-list-thumbnail-menu .item-box:outlined {
+  background-color: rgba(0, 255, 255, 0.1); /* Neon Cyan */
+}
+
+.grouped-window-list-thumbnail-menu .item-box:hover {
+  background-color: rgba(0, 255, 255, 0.15); /* Neon Cyan */
+}
+
+.grouped-window-list-thumbnail-menu .thumbnail {
+  width: 256px;
+}
+
+.grouped-window-list-thumbnail-menu .separator {
+  width: 1px;
+  background-color: rgba(0, 255, 255, 0.12); /* Neon Cyan */
+}
+
+.grouped-window-list-number-label {
+  z-index: 120;
+  text-shadow: 0 0 3px #ff00ff; /* Neon Magenta Glow */
+  color: rgba(255, 255, 255, 0.9);
+  padding: 0;
+}
+
+.grouped-window-list-button-label {
+  padding-left: 2px;
+}
+
+.grouped-window-list-badge {
+  border-radius: 256px;
+  background-color: #ff00ff; /* Neon Magenta */
+}
+
+.grouped-window-list-item-box {
+  font-weight: normal;
+  transition-duration: 100ms;
+  border: 1px solid #ff007f; /* Neon Pink */
+  margin: 0;
+  color: #00eaff; /* Neon Blue */
+  border-radius: 4px;
+  spacing: 6px;
+  border-bottom: 2px solid transparent;
+}
+
+.grouped-window-list-item-box.top,
+.grouped-window-list-item-box.bottom {
+  padding: 0 2px;
+}
+
+.grouped-window-list-item-box:hover {
+  color: #00eaff; /* Neon Blue */
+  background-color: rgba(0, 255, 255, 0.15); /* Neon Cyan */
+  border: 1px solid #00eaff; /* Neon Blue */
+}
+
+.grouped-window-list-item-box:active {
+  color: #00eaff; /* Neon Blue */
+  background-color: transparent;
+  border: 1px solid rgba(0, 255, 255, 0.3); /* Neon Cyan */
+}
+
+.grouped-window-list-item-box:active:hover {
+  background-color: rgba(0, 255, 255, 0.15); /* Neon Cyan */
+}
+
+.grouped-window-list-item-box:focus {
+  color: #00eaff; /* Neon Blue */
+  background-color: rgba(0, 255, 255, 0.2); /* Neon Cyan */
+  border: 2px solid #ff00ff; /* Neon Magenta */
+}
+
+.grouped-window-list-item-box:focus:hover {
+  background-color: rgba(0, 255, 255, 0.3); /* Neon Cyan */
+}
+
+.grouped-window-list-item-box .progress {
+  background-gradient-direction: vertical;
+  background-gradient-start: #00ff00; /* Neon Green */
+  background-gradient-end: #00ff00; /* Neon Green */
+  border-radius: 2px;
+  box-shadow: 0 0 5px #00ff00; /* Neon Green Glow */
+}
+
+.grouped-window-list-item-demands-attention {
+  background-gradient-start: #ff007f; /* Neon Pink */
+  background-gradient-end: #ff007f; /* Neon Pink */
+}
+
+/* ======================================
+ * ! Sound Player Styles
+ * ====================================== */
+.sound-button {
+  width: 22px;
+  height: 13px;
+  padding: 8px;
+  border: 1px solid #ff007f; /* Neon Pink */
+  box-shadow: 0 0 3px #ff007f; /* Neon Pink Glow */
+}
+
+.sound-button-container {
+  padding-right: 3px;
+  padding-left: 3px;
+}
+
+.sound-button StIcon {
+  icon-size: 1.4em;
+}
+
+.sound-track-infos {
+  padding: 5px;
+}
+
+.sound-track-info {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.sound-track-info StIcon {
+  icon-size: 16px;
+}
+
+.sound-track-info StLabel {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.sound-track-box {
+  padding-left: 15px;
+  padding-right: 15px;
+  max-width: 220px;
+  border: 1px solid #ff007f; /* Neon Pink */
+}
+
+.sound-seek-box {
+  padding-left: 15px;
+  border: 1px solid #ff007f; /* Neon Pink */
+}
+
+.sound-seek-box StLabel {
+  padding-top: 2px;
+}
+
+.sound-seek-box StIcon {
+  icon-size: 16px;
+}
+
+.sound-seek-slider {
+  width: 140px;
+  border: 1px solid #ff007f; /* Neon Pink */
+}
+
+.sound-volume-menu-item {
+  padding: 0.4em 1.75em;
+  border: 1px solid #ff007f; /* Neon Pink */
+}
+
+.sound-volume-menu-item StIcon {
+  icon-size: 1.14em;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.sound-playback-control {
+  padding: 5px 10px 10px 10px;
+  border: 1px solid #ff007f; /* Neon Pink */
+}
+
+.sound-player {
+  padding: 0 0;
+  margin-top: 6px;
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #00eaff; /* Neon Blue */
+  border: 1px solid #ff007f; /* Neon Pink */
+  box-shadow: 0 0 5px #ff007f; /* Neon Pink Glow */
+}
+
+.sound-player > StBoxLayout:first-child {
+  padding: 5px 10px 10px 10px;
+  spacing: 0.5em;
+}
+
+.sound-player > StBoxLayout:first-child StButton:small {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+}
+
+.sound-player > StBoxLayout:first-child StButton:small:hover {
+  background-color: rgba(0, 255, 255, 0.12); /* Neon Cyan */
+}
+
+.sound-player > StBoxLayout:first-child StButton:small:active {
+  background-color: rgba(0, 255, 255, 0.26); /* Neon Cyan */
+}
+
+.sound-player > StBoxLayout:first-child StButton:small StIcon {
+  icon-size: 16px;
+}
+
+.sound-player-generic-coverart {
+  background: rgba(0, 255, 255, 0.2); /* Neon Cyan */
+}
+
+.sound-player-overlay {
+  width: 290px;
+  height: 80px;
+  padding: 12px 18px;
+  spacing: 6px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ff007f; /* Neon Pink */
+  border-radius: 0 0 4px 4px;
+  color: #00eaff; /* Neon Blue */
+}
+
+.sound-player-overlay StButton {
+  width: 16px;
+  height: 16px;
+  padding: 8px;
+  margin: 0 6px 6px;
+  color: #00eaff; /* Neon Blue */
+  border-radius: 9999px;
+  border: 1px solid #ff007f; /* Neon Pink */
+}
+
+.sound-player-overlay StButton StIcon {
+  icon-size: 16px;
+}
+
+.sound-player-overlay StButton:hover {
+  background-color: rgba(0, 255, 255, 0.1); /* Neon Cyan */
+}
+
+.sound-player-overlay StButton:active {
+  background-color: rgba(0, 255, 255, 0.25); /* Neon Cyan */
+}
+
+.sound-player-overlay StButton:insensitive {
+  opacity: 0.35;
+  color: rgba(0, 255, 255, 0.35); /* Neon Cyan */
+}
+
+.sound-player-overlay StLabel {
+  padding: 0 6px;
+}
+
+.sound-player-overlay StBoxLayout {
+  padding-top: 2px;
+}
+
+.sound-player .slider {
+  height: 0.5em;
+  padding: 0;
+  border: 0px solid rgba(34, 34, 34, 0.9);
+  border-bottom: 1px solid #ff007f; /* Neon Pink */
+  -slider-height: 0.5em;
+  -slider-background-color: rgba(0, 255, 255, 0.12); /* Neon Cyan */
+  -slider-border-color: transparent;
+  -slider-active-background-color: #00eaff; /* Neon Blue */
+  -slider-active-border-color: transparent;
+  -slider-border-width: 0px;
+  -slider-handle-radius: 0px;
+}
+
+/* ======================================
+ * ! Panel Launchers
+ * ====================================== */
+#panel-launchers-box {
+  padding: 0 6px;
+}
+
+#panel-launchers-box.vertical {
+  padding: 3px 0;
+}
+
+.panel-launcher {
+  padding: 2px;
+  transition-duration: 200ms;
+  border-radius: 4px;
+  border: 1px solid #00ff00; /* Neon Green */
+  box-shadow: 0 0 5px #00ff00; /* Neon Green Glow */
+}
+
+.panel-launcher:hover {
+  background-gradient-direction: none;
+  background-color: rgba(0, 255, 255, 0.1); /* Neon Cyan */
+}
+
+.panel-launcher:active {
+  background-color: rgba(0, 255, 255, 0.2); /* Neon Cyan */
+}
+
+.launcher {
+  padding: 2px;
+  spacing: 2px;
+  transition-duration: 0.2s;
+  border-radius: 4px;
+  border: 1px solid #00ff00; /* Neon Green */
+  box-shadow: 0 0 5px #00ff00; /* Neon Green Glow */
+}
+
+.launcher:hover {
+  background-gradient-direction: none;
+  background-color: rgba(0, 255, 255, 0.1); /* Neon Cyan */
+}
+
+.launcher:active {
+  background-color: rgba(0, 255, 255, 0.2); /* Neon Cyan */
+}
+
+.launcher .icon-box {
+  padding: 2px;
+}
+
+.applet-separator {
+  padding: 1px 4px;
+  border: 1px solid #00ff00; /* Neon Green */
+  box-shadow: 0 0 3px #00ff00; /* Neon Green Glow */
+}
+
+.applet-separator-line {
+  width: 1px;
+  background: rgba(0, 255, 255, 0.1); /* Neon Cyan */
+}
+
+.applet-box {
+  padding: 0 8px;
+  color: #00eaff; /* Neon Blue */
+  text-shadow: none;
+  transition-duration: 100ms;
+  border-radius: 4px;
+  border: 1px solid #00ff00; /* Neon Green */
+  box-shadow: 0 0 5px #00ff00; /* Neon Green Glow */
+}
+
+.applet-box.vertical {
+  padding: 8px 0;
+}
+
+.applet-box:hover {
+  color: #00eaff; /* Neon Blue */
+  background-color: rgba(0, 255, 255, 0.15); /* Neon Cyan */
+  border: 1px solid #00eaff; /* Neon Blue */
+  box-shadow: 0 0 5px #00eaff; /* Neon Blue Glow */
+}
+
+.applet-box:checked,
+.applet-box:checked:hover {
+  color: #00eaff; /* Neon Blue */
+  background-color: rgba(0, 255, 255, 0.25); /* Neon Cyan */
+  border: 1px solid rgba(0, 255, 255, 0.3); /* Neon Cyan */
+  box-shadow: 0 0 5px rgba(0, 255, 255, 0.3); /* Neon Cyan Glow */
+}
+
+.applet-box:highlight {
+  background-image: none;
+  border-image: none;
+  background-color: rgba(255, 0, 255, 0.5); /* Neon Magenta */
+}
+
+.applet-label {
+  font-weight: bold;
+  color: #00eaff; /* Neon Blue */
+}
+
+.applet-box:checked .applet-label {
+  color: #00eaff; /* Neon Blue */
+  text-shadow: none;
+}
+
+.applet-icon {
+  color: #00eaff; /* Neon Blue */
+  icon-size: 16px;
+}
+
+.applet-box:checked .applet-icon {
+  color: #00eaff; /* Neon Blue */
+  text-shadow: none;
+}
+
+.user-icon {
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
+  border: 1px solid #00ff00; /* Neon Green */
+  border-radius: 4px;
+  box-shadow: 0 0 5px #00ff00; /* Neon Green Glow */
+}
+
+.user-label {
+  color: #00eaff; /* Neon Blue */
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0px;
+}
+
+.desklet {
+  color: #00eaff; /* Neon Blue */
+  border: 1px solid #00ff00; /* Neon Green */
+}
+
+.desklet:highlight {
+  background-color: rgba(255, 0, 255, 0.5); /* Neon Magenta */
+}
+
+.desklet-with-borders {
+  color: #00eaff; /* Neon Blue */
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 12px;
+  padding-bottom: 16px;
+  border: 1px solid #00ff00; /* Neon Green */
+}
+
+.desklet-with-borders:highlight {
+  background-color: rgba(255, 0, 255, 0.5); /* Neon Magenta */
+}
+
+.desklet-with-borders-and-header {
+  color: #00eaff; /* Neon Blue */
+  background-color: rgba(0, 0, 0, 0.95);
+  border-radius: 6px;
+  border-radius-topleft: 0;
+  border-radius-topright: 0;
+  padding: 12px;
+  padding-bottom: 17px;
+  border: 1px solid #00ff00; /* Neon Green */
+}
+
+.desklet-with-borders-and-header:highlight {
+  background-color: rgba(255, 0, 255, 0.5); /* Neon Magenta */
+}
+
+.desklet-header {
+  color: #00eaff; /* Neon Blue */
+  background-color: rgba(0, 0, 0, 0.95);
+  border-radius: 0;
+  border-radius-topleft: 6px;
+  border-radius-topright: 6px;
+  font-size: 1em;
+  padding: 12px;
+  padding-bottom: 6px;
+  border: 1px solid #00ff00; /* Neon Green */
+}
+
+.desklet-drag-placeholder {
+  border: 2px solid #ff00ff; /* Neon Magenta */
+  background-color: rgba(255, 0, 255, 0.3); /* Neon Magenta */
+}
+
+.photoframe-box {
+  color: #00eaff; /* Neon Blue */
+  background-color: rgba(0, 0, 0, 0.95);
+  padding: 12px;
+  padding-bottom: 16px;
+  border: 1px solid #00ff00; /* Neon Green */
+}
+
+.workspace-osd {
+  text-shadow: 0 0 5px #000;
+  font-weight: bold;
+  font-size: 48pt;
+  border: 1px solid #00ff00; /* Neon Green */
+}
+
+.notification-applet-padding {
+  padding: 0.5em 1em;
+  border: 1px solid #00ff00; /* Neon Green */
+}
+
+.notification-applet-container {
+  max-height: 9999px;
+  border: 1px solid #00ff00; /* Neon Green */
+}
+
+.tile-preview,
+.tile-preview.snap,
+.tile-hud,
+.tile-hud.snap {
+  background-color: rgba(255, 0, 255, 0.3); /* Neon Magenta */
+  border: 1px solid #ff00ff; /* Neon Magenta */
+  box-shadow: 0 0 5px #ff00ff; /* Neon Magenta Glow */
+}
+
+.xkcd-box {
+  padding: 6px;
+  border: 1px solid #00ff00; /* Neon Green */
+  background-color: transparent;
+  border-radius: 4px;
+}
+

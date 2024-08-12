@@ -1,0 +1,63 @@
+/* Define Variables */
+$bg_color: #0a0a0a;
+$fg_color: #e0e0e0;
+$accent_color: #00ffcc;
+$accent_color_dark: #008080;
+$error_color: #ff0044;
+$warning_color: #F27835;
+$success_color: #00ff00;
+$selection_bg_color: #005577;
+$selection_fg_color: #ffffff;
+$hover_color: #333333;
+$active_color: #00ff00;
+$insensitive_bg_color: #1e2127;
+$insensitive_fg_color: #797e86;
+$magenta: #ff00ff;
+$cyan: #00ffff;
+$yellow: #ffff00;
+
+$header_bg_light: #e0e0e0;
+$header_bg_dark: #0a0a0a;
+$highlight_color: $magenta;
+$cyan_color: #00ccff;
+$variant: 'dark';
+$transparency: 'true';
+
+$header_bg: red;
+
+$base_font_size: 11pt;      // font size
+$base_padding: 6px;         // internal padding of elements
+$base_margin: 4px;          // margin between elements
+$base_border_radius: 8px;   // radii on all elements
+
+// Radius used to make sure elements that have rounded corners stay as such.
+// This is a workaround for 50% not working.
+$forced_circular_radius: 999px;
+
+// radii of things that display over other things, e.g. popovers
+$modal_radius: $base_border_radius * 2;
+
+// Chroma key to flag when a background-color is always occluded, not visible.
+// This allows any box-shadow behind it to be rendered more efficiently by
+// omitting the middle rectangle.
+$invisible_occluded_bg_color: rgba(3,2,1,0);
+
+// Fixed icon sizes
+$base_icon_size: 16px;
+$medium_icon_size: $base_icon_size * 1.5; // 24px
+$large_icon_size: $base_icon_size * 2; // 32px
+
+// Scaled values
+// Used in elements that follow text scaling factors
+$scaled_padding: 6px / 16px * 1em; // same as $base_padding
+
+// Used for symbolic icons that scale
+$scalable_icon_size: 16px / 16px * 1em;
+$medium_scalable_icon_size: 24px / 16px * 1em;
+$large_scalable_icon_size: 32px / 16px * 1em;
+
+// animation definition
+$ease_out_quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$contrast: 'medium';
+
+

@@ -1,0 +1,30 @@
+@import 'colors';
+// overview.scss
+
+#overview {
+    background-color: $dark_5;
+    color: $light_1;
+}
+
+#overview .window {
+    border: 2px solid $blue_1;
+    padding: 4px;
+    margin: 4px;
+}
+
+#overview .window .title {
+    color: $blue_2;
+    font-size: 14pt;
+}
+
+#overview .window .close-button {
+    background-color: $red_1;
+    color: $dark_5;
+    border-radius: 50%;
+    padding: 2px 4px;
+}
+
+#overview .window .close-button:hover {
+    background-color: $red_2;
+}
+

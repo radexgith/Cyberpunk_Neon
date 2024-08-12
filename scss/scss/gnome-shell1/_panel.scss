@@ -1,0 +1,39 @@
+// panel.scss
+
+@import 'colors';
+#panel {
+    background-color: $dark_5;
+    border-bottom: 2px solid $blue_1;
+    height: 24px;
+    font-size: 12pt;
+}
+
+#panel button {
+    color: $green_1;
+    background-color: $dark_5;
+    border: none;
+    padding: 8px;
+}
+
+#panel button:hover {
+    background-color: $blue_3;
+}
+
+#panel .activities {
+    background-color: $green_1;
+    color: $dark_5;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+#panel .activities:hover {
+    background-color: $blue_4;
+    color: $light_1;
+}
+
+#panel .clock-display {
+    color: $blue_1;
+    padding: 0 8px;
+}
+

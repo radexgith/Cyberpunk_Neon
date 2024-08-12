@@ -1,0 +1,135 @@
+# Alacritty Configuration File in Cyberpunk Style
+
+import = [
+    "~/.config/alacritty/base16-dark.toml",
+    "~/.config/alacritty/keybindings.toml",
+]
+
+[shell]
+program = "/bin/bash"
+args = ["-l"]
+
+[window]
+dimensions = { columns = 120, lines = 30 }
+padding = { x = 10, y = 10 }
+dynamic_padding = true
+decorations = "Full"
+opacity = 0.85
+blur = true
+startup_mode = "Windowed"
+title = "Cyberpunk Terminal"
+dynamic_title = true
+decorations_theme_variant = "Dark"
+resize_increments = true
+
+[scrolling]
+history = 10000
+multiplier = 3
+[font]
+normal = { family = "OCRAStd", style = "Regular" }
+bold = { family = "OCRAStd", style = "Bold" }
+italic = { family = "OCRAStd", style = "Italic" }
+bold_italic = { family = "OCRAStd", style = "Bold Italic" }
+size = 14.0
+offset = { x = 0, y = 0 }
+glyph_offset = { x = 0, y = 0 }
+builtin_box_drawing = true
+
+
+# Cyberpunk primary colors
+[colors.primary]
+foreground = "#00ffcc"
+background = "#0f0f0f"
+
+# Cursor colors
+[cursor]
+style = { shape = "Block", blinking = "On" }
+vi_mode_style = { shape = "Underline", blinking = "Off" }
+blink_interval = 500
+blink_timeout = 0
+unfocused_hollow = true
+thickness = 0.2
+# Search colors
+[colors.search]
+matches = { foreground = "#0f0f0f", background = "#ff0066" }
+focused_match = { foreground = "#0f0f0f", background = "#ff33cc" }
+
+# Hint colors
+[colors.hints]
+start = { foreground = "#0f0f0f", background = "#ff33cc" }
+end = { foreground = "#0f0f0f", background = "#ff0066" }
+
+# Normal colors
+[colors.normal]
+black = "#0f0f0f"
+red = "#ff0066"
+green = "#00ffcc"
+yellow = "#ffcc00"
+blue = "#0066ff"
+magenta = "#cc00ff"
+cyan = "#00ccff"
+white = "#f2f2f2"
+
+# Bright colors
+[colors.bright]
+black = "#4d4d4d"
+red = "#ff3399"
+green = "#33ffcc"
+yellow = "#ffdb4d"
+blue = "#3399ff"
+magenta = "#db4dff"
+cyan = "#4dffff"
+white = "#ffffff"
+
+# Dim colors
+[colors.dim]
+black = "#0d0d0d"
+red = "#b30047"
+green = "#00b38f"
+yellow = "#b38f00"
+blue = "#0047b3"
+magenta = "#8f00b3"
+cyan = "#008fb3"
+white = "#d9d9d9"
+
+
+
+[bell]
+animation = "EaseOutExpo"
+duration = 150
+color = "#ff0066"
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+save_to_clipboard = true
+
+
+
+
+[terminal]
+osc52 = "CopyPaste"
+
+
+
+[hints]
+alphabet = "asdfjklqwertyuiop"
+enabled = [
+    { regex = "https?://[\\w.-]+", action = "Copy" },
+    { regex = "\\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Z|a-z]{2,}\\b", action = "Copy" },
+]
+
+[keyboard]
+bindings = [
+    { key = "N", mods = "Control|Shift", action = "SpawnNewInstance" },
+    { key = "L", mods = "Control|Shift", chars = "l" },
+    { key = "Plus", mods = "Control", action = "IncreaseFontSize" },
+    { key = "Minus", mods = "Control", action = "DecreaseFontSize" },
+]
+
+[debug]
+render_timer = false
+persistent_logging = false
+log_level = "Warn"
+print_events = false
+highlight_damage = false
+prefer_egl = false

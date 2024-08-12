@@ -1,0 +1,361 @@
+@use 'sass:math';
+@import 'drawing';
+@import 'variables';
+
+
+// Fixed icon sizes
+$base_icon_size: 16px;
+$medium_icon_size: $base_icon_size * 1.5; // 24px
+$large_icon_size: $base_icon_size * 2; // 32px
+
+// Scaled values
+// Used in elements that follow text scaling factors
+$scaled_padding: math.div(6px, 16px) * 1em; // same as $base_padding
+
+// Used for symbolic icons that scale
+$scalable_icon_size: math.div(16px, 16px) * 1em;
+$medium_scalable_icon_size: math.div(24px, 16px) * 1em;
+$large_scalable_icon_size: math.div(32px, 16px) * 1em;
+
+// animation definition
+$ease_out_quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+
+
+// Stage
+stage {
+  @include fontsize($base_font_size);
+  color: $fg_color;
+}
+
+/* Common Stylings */
+%reset {
+  background: none;
+  box-shadow: none;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+}
+
+// icon tiles
+%tile {
+  border-radius: $base_border_radius * 2;
+  padding: $base_padding;
+  spacing: $base_padding;
+  text-align: center;
+  transition-duration: 100ms;
+}
+
+// common button styling
+%button_common {
+  border-radius: $base_border_radius;
+  padding: $base_padding * .5 $base_padding * 4;
+  font-weight: bold;
+  transition: border-width 300ms $ease_out_quad,
+              box-shadow 300ms $ease_out_quad;
+}
+
+%button {
+  @extend %button_common;
+  background-color: $accent_color;
+  color: $fg_color;
+  &:focus { background-color: lighten($accent_color, 10%);}
+  &:hover { background-color: lighten($accent_color, 10%);}
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+  &:selected,
+  &:active { background-color: $accent_color_dark;}
+  &:checked { background-color: $accent_color_dark;}
+}
+
+%flat_button {
+  background-color: transparent;
+  border: 1px solid $accent_color;
+  &:focus { background-color: lighten($accent_color, 10%);}
+  &:hover { background-color: lighten($accent_color, 10%);}
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+  &:selected,
+  &:active { background-color: $accent_color_dark;}
+  &:checked { background-color: $accent_color_dark;}
+}
+
+%default_button {
+  background-color: $accent_color;
+  color: $selection_fg_color;
+  &:focus { background-color: lighten($accent_color, 10%);}
+  &:hover { background-color: lighten($accent_color, 10%);}
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+  &:active { background-color: $accent_color_dark;}
+}
+
+// items in popover menus
+%menuitem {
+  font-weight: normal;
+  spacing: $base_padding;
+  transition-duration: 100ms;
+  padding: $base_padding * 1.5 $base_padding * 2;
+}
+
+// common style for card elements
+%card_common {
+  border-radius: $base_border_radius * 1.5;
+  padding: $scaled_padding * 2;
+  margin: $base_margin;
+  background-color: $bg_color;
+  box-shadow: 0 1px 2px 0 rgba($fg_color, 0.2);
+  border: 1px solid rgba($fg_color, 0.2);
+
+  @if $contrast == 'high' {
+    border-color: transparent;
+    box-shadow: none;
+  }
+}
+
+%card {
+  @extend %card_common;
+  background-color: $bg_color;
+  color: $fg_color;
+  &:hover { background-color: lighten($bg_color, 10%);}
+  &:active { background-color: darken($bg_color, 10%);}
+  &:focus { background-color: lighten($bg_color, 10%);}
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+}
+
+%card_flat {
+  @extend %card_common;
+  border: 1px solid transparent !important;
+  background-color: transparent;
+  &:hover { background-color: lighten($bg_color, 10%);}
+  &:active { background-color: darken($bg_color, 10%);}
+  &:focus { background-color: lighten($bg_color, 10%);}
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+}
+
+// normal entry style
+%entry_common {
+  border-radius: $base_border_radius;
+  padding: $base_padding * 1.5 $base_padding * 1.5;
+  selection-background-color: $selection_bg_color;
+  selected-color: $selection_fg_color;
+}
+
+%entry {
+  @extend %entry_common;
+  background-color: $bg_color;
+  color: $fg_color;
+  &:hover { background-color: lighten($bg_color, 10%);}
+  &:focus { background-color: lighten($bg_color, 10%);}
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+
+  StLabel.hint-text {
+    color: transparentize($fg_color, 0.3);
+  }
+}
+
+// buttons in dialogs/notifications
+// lighter in color and have a greater radius
+%bubble_button {
+  padding: $base_padding * 2;
+  font-weight: bold !important;
+
+  &:ltr {margin-right: 1px;}
+  &:rtl {margin-left: 1px;}
+
+  $bubble_button_radius: $modal_radius - 1px;
+
+  background-color: $accent_color;
+  color: $fg_color;
+  &:focus { background-color: lighten($accent_color, 10%);}
+  &:hover { background-color: lighten($accent_color, 10%);}
+  &:active { background-color: $accent_color_dark;}
+  &:checked { background-color: $accent_color_dark;}
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+
+  &:first-child:ltr {
+    border-radius: 0 0 0 $bubble_button_radius;
+  }
+
+  &:last-child:ltr {
+    border-radius: 0 0 $bubble_button_radius;
+    margin-right: 0 !important;
+  }
+
+  &:first-child:rtl {
+    border-radius: 0 0 $bubble_button_radius;
+  }
+
+  &:last-child:rtl {
+    border-radius: 0 0 0 $bubble_button_radius;
+    margin-left: 0 !important;
+  }
+
+  &:first-child:last-child {
+    border-radius: 0 0 $bubble_button_radius $bubble_button_radius;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+// tooltip
+%tooltip {
+  background-color: transparentize(black, 0.1);
+  border: 1px solid transparentize($fg_color, 0.9);
+  color: $fg_color;
+
+  border-radius: $forced_circular_radius;
+  padding: $base_padding $base_padding * 2;
+  text-align: center;
+
+  @if $contrast == 'high' {
+    background-color: black;
+    border-color: $fg_color;
+  }
+}
+
+/* General Typography */
+%large_title {
+  font-weight: 300;
+  @include fontsize(24pt);
+}
+
+%title_1 {
+  font-weight: 800;
+  @include fontsize(20pt);
+}
+
+%title_2 {
+  font-weight: 800;
+  @include fontsize(15pt);
+}
+
+%title_3 {
+  font-weight: 700;
+  @include fontsize(15pt);
+}
+
+%title_4 {
+  font-weight: 700;
+  @include fontsize(13pt);
+}
+
+%heading {
+  font-weight: 700;
+  @include fontsize(11pt);
+}
+
+%caption_heading {
+  font-weight: 700;
+  @include fontsize(9pt);
+}
+
+%caption {
+  font-weight: 400;
+  @include fontsize(9pt);
+}
+
+%smaller {
+  font-weight: 400;
+  @include fontsize(9pt);
+}
+
+%monospace {font-family: monospace;}
+%numeric { font-feature-settings: "tnum";}
+
+/* OSD Elements */
+%osd_panel {
+  color: $fg_color;
+  background-color: $bg_color;
+  border: 1px solid $fg_color;
+  border-radius: $forced_circular_radius;
+  padding: $base_padding * 2;
+  @if $contrast == 'high' {
+    @include draw_hc_inset($width: 2px,$border: true);
+  }
+}
+
+// entries
+%osd_entry {
+  @extend %entry_common;
+  background-color: $bg_color;
+  color: $fg_color;
+  &:hover { background-color: lighten($bg_color, 10%);}
+  &:focus { background-color: lighten($bg_color, 10%);}
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+
+  StLabel.hint-text {color: transparentize($fg_color, 0.3); }
+}
+
+// buttons on OSD elements
+%osd_button {
+  @extend %button_common;
+  background-color: $bg_color;
+  color: $fg_color;
+  &:focus { background-color: lighten($bg_color, 10%);}
+  &:hover { background-color: lighten($bg_color, 10%);}
+  &:active { background-color: darken($bg_color, 10%);}
+  &:checked { background-color: darken($bg_color, 10%);}
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+}
+
+%osd_button_flat {
+  @extend %button_common;
+  background-color: transparent;
+  border: 1px solid $fg_color;
+  &:focus { background-color: lighten($bg_color, 10%);}
+  &:hover { background-color: lighten($bg_color, 10%);}
+  &:active { background-color: darken($bg_color, 10%);}
+  &:checked { background-color: darken($bg_color, 10%);}
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+}
+
+/* System Elements */
+
+// entries
+%system_entry {
+  @extend %entry_common;
+  background-color: $bg_color;
+  color: $fg_color;
+  &:hover { background-color: lighten($bg_color, 10%);}
+  &:focus { background-color: lighten($bg_color, 10%);}
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+
+  StLabel.hint-text { color: transparentize($fg_color, 0.3);}
+}
+
+// buttons
+%system_button {
+  background-color: $bg_color;
+  color: $fg_color;
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+  &:focus { background-color: lighten($bg_color, 10%);}
+  &:hover { background-color: lighten($bg_color, 10%);}
+  &:active { background-color: darken($bg_color, 10%);}
+  &:checked { background-color: darken($bg_color, 10%);}
+}
+
+/* Lockscreen Elements */
+
+// buttons
+%lockscreen_button {
+  @extend %button_common;
+  background-color: $bg_color;
+  color: $fg_color;
+  &:focus { background-color: lighten($bg_color, 10%);}
+  &:hover { background-color: lighten($bg_color, 10%);}
+  &:active { background-color: darken($bg_color, 10%);}
+  &:checked { background-color: darken($bg_color, 10%);}
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+}
+
+// entries
+%lockscreen_entry {
+  @extend %entry_common;
+  background-color: $bg_color;
+  color: $fg_color;
+  &:hover { background-color: lighten($bg_color, 10%);}
+  &:focus { background-color: lighten($bg_color, 10%);}
+  &:insensitive { background-color: $insensitive_bg_color; color: $insensitive_fg_color;}
+
+  StLabel.hint-text { color: transparentize($fg_color, 0.3);}
+}
+

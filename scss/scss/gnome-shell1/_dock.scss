@@ -1,0 +1,108 @@
+/* Cyberpunk 2077 Dock */
+
+$neon_blue: #00bfff;
+$neon_green: #39ff14;
+$neon_yellow: #ffff00;
+$neon_red: #ff073a;
+$neon_magenta: #ff00ff;
+$background_color: #000000;
+$border_color: $neon_blue;
+$highlight_color: $neon_yellow;
+$icon_size: 48px;
+$padding: 10px;
+$border_radius: 12px;
+$transition_duration: 0.3s;
+$box_shadow: 0 0 10px rgba($neon_blue, 0.5);
+
+#dash {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $background_color;
+  border: 2px solid $border_color;
+  border-radius: $border_radius;
+  padding: $padding;
+  box-shadow: $box_shadow;
+  display: flex;
+  align-items: center;
+  transition: all $transition_duration;
+
+  .dash-item-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 $padding;
+
+    .dash-item {
+      width: $icon_size;
+      height: $icon_size;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 0 $padding;
+      border-radius: $border_radius;
+      transition: all $transition_duration;
+      box-shadow: 0 0 5px rgba($neon_blue, 0.3);
+
+      &:hover {
+        background-color: $highlight_color;
+        box-shadow: 0 0 15px rgba($highlight_color, 0.8);
+      }
+
+      &:active {
+        transform: scale(0.95);
+        box-shadow: 0 0 20px rgba($highlight_color, 1);
+      }
+    }
+
+    .dash-separator {
+      width: 2px;
+      height: $icon_size;
+      background-color: $neon_blue;
+      margin: 0 $padding;
+    }
+
+    .show-apps {
+      width: $icon_size;
+      height: $icon_size;
+      background-color: $neon_red;
+      border-radius: $border_radius;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all $transition_duration;
+      box-shadow: 0 0 10px rgba($neon_red, 0.5);
+
+      &:hover {
+        background-color: $highlight_color;
+        box-shadow: 0 0 15px rgba($highlight_color, 0.8);
+      }
+
+      &:active {
+        transform: scale(0.95);
+        box-shadow: 0 0 20px rgba($highlight_color, 1);
+      }
+
+      .icon {
+        width: 60%;
+        height: 60%;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+
+// OSD Tooltip
+.dash-label {
+  background-color: $neon_blue;
+  color: $background_color;
+  padding: $padding;
+  border-radius: $border_radius;
+  box-shadow: 0 0 10px rgba($neon_blue, 0.5);
+  transition: all $transition_duration;
+  text-align: center;
+  transform: translateY(-50%);
+  opacity: 0.9;
+}
+

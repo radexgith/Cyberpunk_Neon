@@ -1,0 +1,19 @@
+@import 'colors';
+// notifications.scss
+
+.notification-banner {
+    background-color: $dark_4;
+    color: $light_1;
+    border-left: 4px solid $red_1;
+    padding: 8px;
+}
+
+.notification-banner .title {
+    color: $red_2;
+    font-weight: bold;
+}
+
+.notification-banner .body {
+    color: $light_2;
+}
+

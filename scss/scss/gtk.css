@@ -1,0 +1,529 @@
+@charset "UTF-8";
+/* gtk-4.scss */
+/* Base Styles */
+* {
+  background-color: rgba(10, 10, 10, 0.4);
+  color: #e0e0e0;
+  font-family: "OCR A Std", monospace; /* Technische Schriftart */
+}
+
+headerbar, .header-bar {
+  background: rgba(10, 10, 10, 0.4);
+  color: #ffff00;
+  border-bottom: 2px solid #ffff00;
+}
+
+/* Default Button */
+button {
+  background: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogIDxyZWN0IHg9IjUiIHk9IjUiIHdpZHRoPSIxOTAiIGhlaWdodD0iNDAiIHJ4PSI1IiByeT0iNSIgCiAgICAgICAgc3R5bGU9ImZpbGw6cmdiYSgxMCwgMTAsIDEwLCAwLjgpO3N0cm9rZTojMDBmZmNjO3N0cm9rZS13aWR0aDoyO2ZpbGwtb3BhY2l0eToxOyIgLz4KICAKPC9zdmc+Cgo=") no-repeat center;
+  background-size: contain;
+  color: transparent; /* Text wird vom SVG überlagert */
+  padding: 10px 20px;
+  min-width: 40px;
+  min-height: 20px;
+  cursor: pointer;
+  outline: none; /* Entferne Standardumrandung */
+  border: none;
+}
+
+button:hover {
+  border-color: rgba(0, 255, 204, 0.8);
+  color: #00ffcc;
+  box-shadow: 0 0 20px #00ffcc;
+  filter: brightness(1.2);
+  color: transparent;
+}
+
+button:active, button:checked {
+  background: url("data:image/svg+xml;base64,PCEtLSBjeWJlcnB1bmtfYnV0dG9uLnN2ZyAtLT4KPHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjUwIiB2aWV3Qm94PSIwIDAgMjAwIDUwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPGRlZnM+CiAgICAgICAgPGZpbHRlciBpZD0ibmVvbiIgeD0iLTUwJSIgeT0iLTUwJSIgd2lkdGg9IjIwMCUiIGhlaWdodD0iMjAwJSI+CiAgICAgICAgICAgIDxmZUdhdXNzaWFuQmx1ciBpbj0iU291cmNlR3JhcGhpYyIgc3RkRGV2aWF0aW9uPSIzIiByZXN1bHQ9ImJsdXIiLz4KICAgICAgICAgICAgPGZlQmxlbmQgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iYmx1ciIgbW9kZT0ic2NyZWVuIi8+CiAgICAgICAgPC9maWx0ZXI+CiAgICA8L2RlZnM+CiAgICA8cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMjAwIiBoZWlnaHQ9IjUwIiByeD0iMTAiIHJ5PSIxMCIgZmlsbD0icmdiYSgyMCwgMjAsIDIwLCAwLjgpIiBzdHJva2U9InJnYmEoMCwgMjU1LCAyMDQsIDEpIiBzdHJva2Utd2lkdGg9IjIiIGZpbHRlcj0idXJsKCNuZW9uKSIvPgogICAgCjwvc3ZnPgoK") no-repeat center;
+  background-size: contain;
+  color: transparent;
+  box-shadow: 0 0 15px #008080;
+  filter: brightness(1.5);
+}
+
+/* Primary Button */
+button.primary {
+  background-color: #00ffcc;
+  border: 2px solid #008080;
+  color: #0a0a0a;
+}
+
+button.primary:hover {
+  background-color: #33ffd6;
+  border-color: #00b3b3;
+}
+
+button.primary:active, button.primary:checked {
+  background-color: #008080;
+  border-color: #004d4d;
+  color: #ffffff;
+}
+
+/* Secondary Button */
+button.secondary {
+  background-color: #0a0a0a;
+  border: 2px solid #e0e0e0;
+  color: #e0e0e0;
+}
+
+button.secondary:hover {
+  background-color: #333333;
+  border-color: #fafafa;
+}
+
+button.secondary:active, button.secondary:checked {
+  background-color: #1a1a1a;
+  border-color: #c7c7c7;
+  color: #ffffff;
+}
+
+/* Success Button */
+button.success {
+  background-color: #00ff00;
+  border: 2px solid #00cc00;
+  color: #0a0a0a;
+}
+
+button.success:hover {
+  background-color: #33ff33;
+  border-color: lime;
+}
+
+button.success:active, button.success:checked {
+  background-color: #00cc00;
+  border-color: #009900;
+  color: #ffffff;
+}
+
+/* Destructive Button */
+button.destructive {
+  background-color: #ff0044;
+  border: 2px solid #cc0036;
+  color: #0a0a0a;
+}
+
+button.destructive:hover {
+  background-color: #ff3369;
+  border-color: #ff0044;
+}
+
+button.destructive:active, button.destructive:checked {
+  background-color: #cc0036;
+  border-color: #990029;
+  color: #ffffff;
+}
+
+/* Disabled Button */
+button:disabled {
+  background-color: #1e2127;
+  border: 2px solid #797e86;
+  color: #797e86;
+}
+
+/* Tabs and Navigation Buttons */
+tab, .nav-button {
+  background-color: #0a0a0a;
+  border: 2px solid #00ffcc;
+  color: #e0e0e0;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+tab:hover, .nav-button:hover {
+  background-color: #333333;
+  border-color: #00ffcc;
+  color: #00ffcc;
+}
+
+tab:active, tab:checked, .nav-button:active, .nav-button:checked {
+  background-color: #00ff00;
+  border-color: #008080;
+  color: #ffffff;
+}
+
+/* GTK Scale and Slider */
+scale, slider {
+  background-color: #0a0a0a;
+  border: 2px solid #00ffcc;
+  color: #e0e0e0;
+  border-radius: 4px;
+  padding: 5px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+scale trough, slider trough {
+  background-color: #1e2127;
+  transition: background-color 75ms cubic-bezier(0, 0, 0.2, 0.4);
+  outline: none;
+}
+
+scale > trough > highlight {
+  transition: background-image 75ms cubic-bezier(0, 0, 0.2, 1);
+  background-image: linear-gradient(to right, #ff00ff, #00ffff, #ffff00);
+}
+
+/* Animation for progressbar and sliders */
+scale > trough > highlight, slider highlight {
+  background-image: linear-gradient(to right, #ff00ff, #00ffff, #ffff00);
+  transition: background-image 75ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+progressbar.horizontal > trough {
+  min-width: 150px;
+}
+progressbar.horizontal > trough, progressbar.horizontal > trough > progress {
+  min-height: 2px;
+}
+progressbar.vertical > trough {
+  min-height: 80px;
+}
+progressbar.vertical > trough, progressbar.vertical > trough > progress {
+  min-width: 2px;
+}
+progressbar.horizontal > trough > progress {
+  margin: 0 -1px;
+}
+progressbar.vertical > trough > progress {
+  margin: -1px 0;
+}
+
+progressbar > trough > progress {
+  background-image: linear-gradient(to right, #0057ff, #008cff, #00bfff, #00e4ff, #00ffff);
+  transition: background-image 75ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+scale:hover, slider:hover {
+  background-color: #333333;
+  border-color: #00ffcc;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+scale slider:hover, slider slider:hover {
+  background-color: #33ffd6;
+  border-color: #00b3b3;
+  box-shadow: 0 0 10px #00ffcc;
+}
+
+scale slider, slider slider {
+  background-color: #00ffcc;
+  border: 2px solid #008080;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+
+scale:hover, slider:hover {
+  background-color: #333333;
+  border-color: #00ffcc;
+}
+
+scale slider:hover, slider slider:hover {
+  background-color: #33ffd6;
+  border-color: #00b3b3;
+}
+
+scale:active, slider:active, scale:checked, slider:checked {
+  background-color: #00ff00;
+  border-color: #008080;
+  color: #ffffff;
+}
+
+scale slider:active, slider slider:active, scale slider:checked, slider slider:checked {
+  background-color: #00cca3;
+  border-color: #004d4d;
+}
+
+/* Horizontal and Vertical Adjustments */
+scale.horizontal, slider.horizontal {
+  min-height: 30px;
+}
+
+scale.vertical, slider.vertical {
+  min-width: 30px;
+}
+
+/* TextView */
+textview {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+  padding: 10px;
+}
+
+textview:selected {
+  background-color: #005577;
+  color: #ffffff;
+}
+
+/* IconView */
+iconview {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+iconview:selected {
+  background-color: #005577;
+  color: #ffffff;
+}
+
+/* FlowBox */
+flowbox {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+flowbox:selected {
+  background-color: #005577;
+  color: #ffffff;
+}
+
+/* GridView */
+gridview {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+gridview:selected {
+  background-color: #005577;
+  color: #ffffff;
+}
+
+/* Label */
+label {
+  color: #e0e0e0;
+}
+
+label:hover {
+  color: #00ffcc;
+}
+
+/* Window Assistant */
+window.assistant {
+  background-color: #0a0a0a;
+  border: 2px solid #00ffcc;
+}
+
+window.assistant headerbar {
+  background-color: #0a0a0a;
+  border-bottom: 2px solid #00ffcc;
+  color: #e0e0e0;
+}
+
+/* Spinner */
+spinner {
+  color: #00ffcc;
+}
+
+spinner:checked {
+  color: #00ff00;
+}
+
+/* Other Widgets */
+.menu, .menubar {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+.menu item {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+.menu item:hover {
+  background-color: #333333;
+  color: #00ffcc;
+}
+
+.text-entry {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+.text-entry:focus {
+  border-color: #00ffcc;
+  background-color: #005577;
+  color: #ffffff;
+}
+
+.notification {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border-left: 4px solid #00ffcc;
+}
+
+.frame {
+  border: 2px solid #00ffcc;
+}
+
+.infobar {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border-left: 4px solid #00ffcc;
+}
+
+link {
+  color: #00ffcc;
+  text-decoration: underline;
+}
+
+notebook {
+  background-color: #0a0a0a;
+  border: 2px solid #00ffcc;
+}
+
+listview {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+  selection-mode: multiple;
+}
+
+listview:selected {
+  background-color: #005577;
+  color: #ffffff;
+}
+
+paned {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+popover {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+progressbar {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+gtk-scale {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+slider {
+  background-color: #0a0a0a;
+  border: 2px solid #00ffcc;
+}
+
+scrollbar {
+  background-color: #0a0a0a;
+  border: 2px solid #00ffcc;
+}
+
+sidebar, .sidebar {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+place-sidebar {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+spinbutton {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+checkbutton, .check {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+checkbutton:checked, .check:checked {
+  background-color: #00ffcc;
+  border-color: #008080;
+}
+
+osd {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+toolbar {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+treeview {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  border: 2px solid #00ffcc;
+}
+
+treeview:selected {
+  background-color: #005577;
+  color: #ffffff;
+}
+
+/* Additional Styles */
+.headerbar {
+  padding: 5px;
+}
+
+.button {
+  padding: 10px;
+  margin: 5px;
+}
+
+.text-entry {
+  padding: 5px;
+  margin: 5px;
+}
+
+/* Detailed Styles for Various States */
+.selection {
+  background-color: #005577;
+  color: #ffffff;
+}
+
+.hover {
+  background-color: #333333;
+  color: #00ffcc;
+}
+
+.active {
+  background-color: #00ff00;
+  color: #ffffff;
+}
+
+.insensitive {
+  background-color: #1e2127;
+  color: #797e86;
+}
+
+/* Example of RGBA usage for transparency */
+.translucent {
+  background-color: rgba(18, 18, 18, 0.8);
+  color: rgba(224, 224, 224, 0.8);
+}
+
+.translucent-hover:hover {
+  background-color: rgba(51, 51, 51, 0.8);
+  color: rgba(0, 255, 204, 0.8);
+}
+
+.translucent-active:active {
+  background-color: rgba(0, 255, 0, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/*# sourceMappingURL=gtk.css.map */

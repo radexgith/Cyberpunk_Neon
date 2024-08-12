@@ -1,0 +1,16 @@
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" version="1.1">
+  <defs>
+    <linearGradient id="color-primary-dark-disabled" x1="4" x2="19.997" y1="4" y2="4" gradientTransform="rotate(45,12,12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CACFD9" offset="1"/>
+    </linearGradient>
+    <linearGradient id="color-surface-disabled" x1="4" x2="19.997" y1="4" y2="4" gradientTransform="rotate(45,12,12)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6E9EF" offset="1"/>
+    </linearGradient>
+  </defs>
+  <g id="scale-slider-disabled" transform="matrix(1,0,0,-1,0,24)">
+    <rect width="24" height="24" fill="none"/>
+    <path d="m12 3.5147 4.2426 4.2426a6 6 0 1 1-8.4853 0z" fill="url(#color-surface-disabled)" stroke="url(#color-primary-dark-disabled)" stroke-linecap="round" stroke-width="1" style="paint-order:stroke fill markers"/>
+  </g>
+  <circle cx="12" cy="12" r="10" stroke="#CACFD9" stroke-width="2" fill="none"/>
+</svg>
+
