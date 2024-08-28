@@ -7,9 +7,10 @@
   overflow: hidden;
 
   background-size: cover;
-  color: #e0e0e0;
+  color: #00ffee;
   font-family: "OCR A Std", monospace;
 }
+
 
 /***************
  * Header bars *
@@ -80,10 +81,10 @@ headerbar {
     windowcontrols {
       button,
       menubutton {
-        min-height: 26px;
-        min-width: 26px;
-        margin: 0;
-        padding: 0;
+        min-height: 20px;
+        min-width: 20px;
+        margin: 2px;
+        padding: 2px 6px;
       }
 
       menubutton button {
@@ -136,34 +137,7 @@ headerbar {
     margin-bottom: 10px;
   }
 
-  /* Specific styling for the next button */
-  button.next, 
-  button.forward, 
-  button[label="Weiter"], 
-  button.next-button {
-    background-color: #00FF00; /* Neon Green */
-    color: #FFFFFF; /* White text */
-    border: 2px solid #00FF00; /* Green border */
-    border-radius: 4px; /* Rounded corners */
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.8); /* Green glow */
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  }
 
-  button.next:hover,
-  button.forward:hover,
-  button[label="Weiter"]:hover,
-  button.next-button:hover {
-    background-color: #00CC00; /* Darker green on hover */
-    box-shadow: 0 0 15px rgba(0, 255, 0, 1); /* Intensified glow */
-  }
-
-  button.next:active,
-  button.forward:active,
-  button[label="Weiter"]:active,
-  button.next-button:active {
-    background-color: #009900; /* Darkest green when active */
-    box-shadow: 0 0 5px rgba(0, 255, 0, 0.8); /* Reduced glow */
-  }
 }
 
 .titlebar:not(headerbar) {
@@ -193,59 +167,80 @@ window.devel {
 }
 
 
+/* Headerbar Buttons */
 headerbar button.close {
-  padding: 2px 2px;
-  max-width: 5px;
-  max-height: 5px;
+  padding: 2px 3px;
+
   margin: 2px;
-  border-radius: 10px;
+  border-radius: 9999px;
   background-image: url('images/close.svg');
+  border: 2px solid #ff00ff; /* Neon Pink Border */
+  box-shadow: 0 0 10px #ff00ff; /* Neon Pink Glow */
 }
 
 headerbar button.minimize {
   background-image: url('images/minimize.svg');
   margin: 2px;
-  border-radius: 10px;
+  border-radius: 9999px;
+  border: 2px solid #00ccff; /* Neon Cyan Border */
+  box-shadow: 0 0 10px #00ccff; /* Neon Cyan Glow */
 }
 
 headerbar button.maximize {
   background-image: url('images/maximize.svg');
   margin: 2px;
-  border-radius: 10px;
+  border-radius: 9999px;
+  border: 2px solid #00ff00; /* Neon Green Border */
+  box-shadow: 0 0 10px #00ff00; /* Neon Green Glow */
 }
+/* Allgemeine Rundungen für spezielle Buttons */
+headerbar windowcontrols button:not(.suggested-action):not(.destructive-action),
+filechooser #pathbarbox > stack > box > button, 
+menubutton.circular > button, 
+button.close, 
+button.circular {
+  border-radius: 9999px; /* Vollständig runde Buttons */
+}
+headerbar button:hover,
+headerbar button:focus,
+headerbar:not(.titlebar) button:hover,
+headerbar:not(.titlebar) button:focus {
 
-headerbar button:hover, headerbar button:focus, headerbar:not(.titlebar) button:hover, headerbar:not(.titlebar) button:focus {
-  box-shadow: inset 0 0 10px 2px rgba(255, 0, 150, 0.8);
   border-color: rgba(150, 0, 255, 1);
 }
 
-headerbar button:active, headerbar button:checked, headerbar:not(.titlebar) button:active, headerbar:not(.titlebar) button:checked {
+headerbar button:active,
+headerbar button:checked,
+headerbar:not(.titlebar) button:active,
+headerbar:not(.titlebar) button:checked {
   border-color: rgba(150, 0, 255, 0.9);
   background-color: #444444;
-  background-image: linear-gradient(to bottom, rgba(255, 0, 150, 0.4), rgba(255, 0, 150, 0.6)), linear-gradient(to top, #555555, #444444 1px, transparent 1px);
+
 }
 
-headerbar button:active:disabled, headerbar button:checked:disabled, headerbar:not(.titlebar) button:active:disabled, headerbar:not(.titlebar) button:checked:disabled {
+headerbar button:active:disabled,
+headerbar button:checked:disabled,
+headerbar:not(.titlebar) button:active:disabled,
+headerbar:not(.titlebar) button:checked:disabled {
   color: rgba(150, 0, 255, 0.5);
   border-color: rgba(255, 0, 150, 0.5);
   background-color: #333333;
 }
 
-headerbar button:disabled, headerbar:not(.titlebar) button:disabled {
+headerbar button:disabled,
+headerbar:not(.titlebar) button:disabled {
   color: rgba(150, 0, 255, 0.3);
   border-color: rgba(255, 0, 150, 0.3);
   background-color: #222222;
 }
 
-
-
-  
+/* Toolbar */
 toolbar {
   padding: 8px;
   border: none;
   color: #FFFFFF;
   background-color: #1E1E1E;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Neon Cyan Shadow */
 }
 
 toolbarview .collapse-spacing {
@@ -263,84 +258,116 @@ toolbar:disabled {
   background-color: #333333;
 }
 
+/* Hintergrundfarben */
+.search-viewport {
+  background-color: #1a1a1a; /* Tiefes Schwarzgrau für den Hintergrund */
+}
+
+.search-view {
+  background-color: #282c34; /* Dunklerer Hintergrund für den Suchbereich */
+  color: #ffffff; /* Weißer Text */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.7); /* Neon Cyan Shadow */
+}
+
+/* Fokussierte Elemente */
+.search-view menubutton button:focus:focus-visible {
+  outline-color: rgba(0, 255, 255, 0.8); /* Neon Cyan Umrandung */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.8); /* Leichter Neon-Glow */
+}
+
+/* Toolbar Buttons */
 toolbar button.flat {
   border-color: transparent;
   border-radius: 4px;
   color: #FFFFFF;
-  background-color: #333333;
-  box-shadow: 0px 0px 10px rgba(255, 0, 150, 0.8);
+  background-color: #333333; /* Dunkler Button-Hintergrund */
+  box-shadow: 0px 0px 10px rgba(255, 0, 150, 0.8); /* Neon Pink Shadow */
+  transition: all 150ms ease-in-out;
 }
 
 toolbar button.flat:hover {
-  border-color: rgba(255, 0, 150, 0.8);
-  background-color: #444444;
+  border-color: rgba(255, 0, 150, 0.8); /* Neon Pink Border bei Hover */
+  background-color: #444444; /* Hellerer Hintergrund bei Hover */
+  box-shadow: 0px 0px 15px rgba(255, 0, 150, 1); /* Verstärkter Neon Glow */
 }
 
-toolbar button.flat:active, toolbar button.flat:checked {
-  border-color: rgba(255, 0, 150, 0.9);
-  background-color: #555555;
+toolbar button.flat:active,
+toolbar button.flat:checked {
+  border-color: rgba(255, 0, 150, 0.9); /* Intensivere Border-Farbe */
+  background-color: #555555; /* Noch hellerer Hintergrund */
+  box-shadow: 0px 0px 12px rgba(255, 0, 150, 1); /* Intensiverer Glow */
 }
 
 toolbar button.flat:disabled {
   border-color: transparent;
-  color: rgba(255, 0, 150, 0.3);
-  background-color: #222222;
+  color: rgba(255, 0, 150, 0.3); /* Abgeblasstes Neon Pink */
+  background-color: #222222; /* Dunklerer Hintergrund bei Deaktivierung */
+  box-shadow: none; /* Kein Shadow bei Deaktivierung */
 }
 
+/* Primäre Toolbar */
 .primary-toolbar {
   -GtkWidget-window-dragging: true;
   padding: 4px;
   border-width: 0 0 2px 0;
   border-style: solid;
-  border-color: rgba(255, 0, 150, 0.5);
+  border-color: rgba(255, 0, 150, 0.5); /* Neon Pink Border unten */
   color: #FFFFFF;
-  background-color: #1E1E1E;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+  background-color: #1E1E1E; /* Dunkler Toolbar-Hintergrund */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Neon Cyan Shadow */
 }
 
 .primary-toolbar:backdrop {
-  border-color: rgba(255, 0, 150, 0.5);
+  border-color: rgba(255, 0, 150, 0.5); /* Neon Pink Border im Hintergrund */
   color: #FFFFFF;
-  background-color: #1E1E1E;
+  background-color: #1E1E1E; /* Dunkler Hintergrund */
 }
 
-.primary-toolbar button, .primary-toolbar .raised button {
+.primary-toolbar button,
+.primary-toolbar .raised button {
   padding: 6px 8px;
   border-width: 1px;
   border-radius: 4px;
   color: #FFFFFF;
-  border-color: rgba(255, 0, 150, 0.8);
-  background-color: #33333344;
-  background-image: linear-gradient(to top, rgba(255, 0, 150, 0.2), rgba(255, 0, 150, 0.4)), linear-gradient(to top, #444444, #333333 1px, transparent 1px), linear-gradient(to right, rgba(255, 0, 150, 0.5), rgba(255, 0, 150, 0.5) 1px, rgba(0, 0, 0, 0.4) 1px, rgba(0, 0, 0, 0.4) 2px, transparent 2px);
-  box-shadow: 0px 0px 10px rgba(255, 0, 150, 0.4);
+  border-color: rgba(255, 0, 150, 0.8); /* Neon Pink Border */
+  background-color: #333333; /* Halbtransparentes Dunkelgrau */
   -gtk-outline-radius: 4px;
   background-repeat: no-repeat;
   background-size: 16px 16px;
   background-position: center;
+  box-shadow: 0 0 12px rgba(255, 0, 150, 0.8); /* Neon Pink Shadow */
+  transition: background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
 }
 
-.primary-toolbar button:hover, .primary-toolbar button:focus, .primary-toolbar .raised button:hover, .primary-toolbar .raised button:focus {
-  box-shadow: inset 0 0 10px 2px rgba(255, 0, 150, 0.8);
-  border-color: rgba(150, 0, 255, 1);
+.primary-toolbar button:hover {
+  background-color: #444444; /* Hellerer Hintergrund bei Hover */
+  box-shadow: 0 0 18px rgba(255, 0, 150, 1); /* Verstärkter Glow bei Hover */
 }
 
-.primary-toolbar button:active, .primary-toolbar button:checked, .primary-toolbar .raised button:active, .primary-toolbar .raised button:checked {
-  border-color: rgba(150, 0, 255, 0.9);
-  background-color: #444444;
-  background-image: linear-gradient(to bottom, rgba(255, 0, 150, 0.4), rgba(255, 0, 150, 0.6)), linear-gradient(to top, #555555, #444444 1px, transparent 1px);
+.primary-toolbar button:active,
+.primary-toolbar button:checked {
+  background-color: #555555; /* Noch hellerer Hintergrund bei Aktivierung */
+  box-shadow: 0 0 15px rgba(255, 0, 150, 1); /* Starker Glow bei Aktivierung */
 }
 
-.primary-toolbar button:active:disabled, .primary-toolbar button:checked:disabled, .primary-toolbar .raised button:active:disabled, .primary-toolbar .raised button:checked:disabled {
+
+
+.primary-toolbar button:active:disabled,
+.primary-toolbar button:checked:disabled,
+.primary-toolbar .raised button:active:disabled,
+.primary-toolbar .raised button:checked:disabled {
   color: rgba(150, 0, 255, 0.5);
   border-color: rgba(255, 0, 150, 0.5);
   background-color: #333333;
 }
 
-.primary-toolbar button:disabled, .primary-toolbar .raised button:disabled {
+.primary-toolbar button:disabled,
+.primary-toolbar .raised button:disabled {
   color: rgba(150, 0, 255, 0.3);
   border-color: rgba(255, 0, 150, 0.3);
   background-color: #222222;
 }
+
 
 /****************
  * Text Entries *
@@ -838,37 +865,24 @@ entry.success > text > selection {
 
 /* Headerbar Buttons */
 headerbar button {
-  color: transparent; /* Text wird vom SVG überlagert */
+  color: transparent; /* Text is overlaid by SVG */
   padding: 5px 10px;
   min-width: 20px;
   min-height: 20px;
   cursor: pointer;
   
-  outline: none; /* Entferne Standardumrandung */
+  outline: none; /* Remove default outline */
   border: none;
-  background-size: 16px 16px; /* Größe der Icons */
-  background-repeat: no-repeat; /* Verhindert Wiederholung des Hintergrunds */
-  background-position: center; /* Positioniert das Icon in der Mitte des Buttons */
+  background-size: 16px 16px; /* Size of icons */
+  background-repeat: no-repeat; /* Prevent background repetition */
+  background-position: center; /* Position the icon in the center of the button */
+  background-color: #1a1a1a; /* Dark background */
+  border-radius: 8px; /* Rounded corners */
+  transition: all 0.3s ease; /* Smooth transitions */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon Cyan Glow */
 }
 
-/* Close-Button */
-headerbar button.close {
 
-  background-color: rgba(255, 0, 255, 0.4);
-
-}
-
-/* Minimize-Button */
-headerbar button.minimize {
-
-  background-color: rgba(0, 255, 150, 0.4);
-}
-
-/* Maximize-Button */
-headerbar button.maximize {
-
-  background-color: rgba(0, 0, 255, 0.4);
-}
 
 .popover {
   padding: 10px;
@@ -885,22 +899,7 @@ headerbar button.maximize {
   box-shadow: 0 0 15px rgba(255, 0, 150, 0.8);
 }
 
-/* Hover-Zustand für Headerbar Buttons */
-headerbar button:hover {
-  border-color: rgba(0, 255, 204, 0.8);
-  color: #00ffcc;
-  box-shadow: 0 0 20px #00ffcc;
-  filter: brightness(1.2);
-  color: transparent;
-}
 
-/* Aktive-Zustand für Headerbar Buttons */
-headerbar button:active {
-  background-size: contain; /* Größere Darstellung des Icons im aktiven Zustand */
-  color: transparent;
-  box-shadow: 0 0 15px #008080;
-  filter: brightness(1.5);
-}
 
 
 
@@ -948,15 +947,16 @@ headerbar button:active {
   color: #00ffcc;
 }
 
-/* Buttons im Floating-Bar */
+/* Buttons in the Floating-Bar */
 .floating-bar button {
   background: transparent;
-  border: 1px solid #ced4da;
-  border-radius: 4px;
+  border: 1px solid #ff00ff; /* Neon Pink Border */
+  border-radius: 8px;
   padding: 4px 8px;
-  color: #00ffcc;
-  transition: background 0.3s, border 0.3s;
+  color: #00ffcc; /* Neon Cyan Text */
+  transition: background 0.3s, border 0.3s, box-shadow 0.3s;
   cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon Cyan Glow */
 }
 
 @keyframes needs_attention {
@@ -993,9 +993,12 @@ splitbutton.destructive-action > menubutton > button, splitbutton.opaque > butto
 splitbutton.opaque > menubutton > button, splitbutton.flat > button,
 splitbutton.flat > menubutton > button, menubutton.suggested-action > button, menubutton.destructive-action > button, menubutton.opaque > button, menubutton.flat > button,
 button.flat {
-  background-color: #1a1a1a;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: #00ffcc;
+  background-color: #1a1a1a; /* Dark Background */
+  border: 1px solid rgba(255, 0, 255, 0.12); /* Soft Neon Pink Border */
+  color: #00ffcc; /* Neon Cyan Text */
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon Cyan Glow */
+  transition: background 0.3s, border 0.3s, box-shadow 0.3s;
 }
 
 .toolbar > button:hover, splitbutton.suggested-action > button:hover,
@@ -1004,9 +1007,10 @@ splitbutton.destructive-action > menubutton > button:hover, splitbutton.opaque >
 splitbutton.opaque > menubutton > button:hover, splitbutton.flat > button:hover,
 splitbutton.flat > menubutton > button:hover, menubutton.suggested-action > button:hover, menubutton.destructive-action > button:hover, menubutton.opaque > button:hover, menubutton.flat > button:hover,
 button.flat:hover {
-  background-color: #2a2a2a;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: #00ffcc;
+  background-color: #2a2a2a; /* Slightly Brighter Background */
+  border: 1px solid rgba(255, 0, 255, 0.2); /* Brighter Neon Pink Border */
+  color: #00ffcc; /* Neon Cyan Text */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Stronger Neon Cyan Glow */
 }
 
 .toolbar > button:active, splitbutton.suggested-action > button:active,
@@ -1015,9 +1019,10 @@ splitbutton.destructive-action > menubutton > button:active, splitbutton.opaque 
 splitbutton.opaque > menubutton > button:active, splitbutton.flat > button:active,
 splitbutton.flat > menubutton > button:active, menubutton.suggested-action > button:active, menubutton.destructive-action > button:active, menubutton.opaque > button:active, menubutton.flat > button:active,
 button.flat:active {
-  background-color: #3a3a3a;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: #00ffcc;
+  background-color: #3a3a3a; /* Darker Background */
+  border: 1px solid rgba(255, 0, 255, 0.3); /* Stronger Neon Pink Border */
+  color: #00ffcc; /* Neon Cyan Text */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Strong Neon Cyan Glow */
 }
 
 .toolbar > button:checked, splitbutton.suggested-action > button:checked,
@@ -1031,9 +1036,10 @@ splitbutton.destructive-action > menubutton > button:selected, splitbutton.opaqu
 splitbutton.opaque > menubutton > button:selected, splitbutton.flat > button:selected,
 splitbutton.flat > menubutton > button:selected, menubutton.suggested-action > button:selected, menubutton.destructive-action > button:selected, menubutton.opaque > button:selected, menubutton.flat > button:selected,
 button.flat:selected {
-  background-color: rgba(255, 0, 255, 0.8);
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: #00ffcc;
+  background-color: rgba(255, 0, 255, 0.8); /* Neon Pink Background */
+  border: 1px solid rgba(255, 0, 255, 0.5); /* Stronger Neon Pink Border */
+  color: #00ffcc; /* Neon Cyan Text */
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7); /* Neon Pink Glow */
 }
 
 .toolbar > button:disabled, splitbutton.suggested-action > button:disabled,
@@ -1042,9 +1048,10 @@ splitbutton.destructive-action > menubutton > button:disabled, splitbutton.opaqu
 splitbutton.opaque > menubutton > button:disabled, splitbutton.flat > button:disabled,
 splitbutton.flat > menubutton > button:disabled, menubutton.suggested-action > button:disabled, menubutton.destructive-action > button:disabled, menubutton.opaque > button:disabled, menubutton.flat > button:disabled,
 button.flat:disabled {
-  background-color: #1a1a1a;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: rgba(0, 255, 255, 0.45);
+  background-color: #1a1a1a; /* Dark Background */
+  border: 1px solid rgba(255, 0, 255, 0.12); /* Soft Neon Pink Border */
+  color: rgba(0, 255, 255, 0.45); /* Faded Neon Cyan Text */
+  box-shadow: none;
 }
 
 button.opaque {
@@ -1053,20 +1060,23 @@ button.opaque {
 }
 
 .osd button.opaque:focus:focus-visible {
-  outline-color: rgba(255, 0, 255, 0.15);
+  outline-color: rgba(255, 0, 255, 0.15); /* Neon Pink Outline */
 }
 
 button.opaque:hover {
   background-image: image(gtkalpha(currentColor, 0.1));
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); /* Neon Pink Glow */
 }
 
 button.keyboard-activating.opaque,
 button.opaque:active {
   background-image: image(rgba(255, 0, 255, 0.2));
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.7); /* Strong Neon Pink Glow */
 }
 
 button.opaque:checked {
   background-image: image(rgba(255, 0, 255, 0.15));
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.7); /* Strong Neon Pink Glow */
 }
 
 button.opaque:checked:hover {
@@ -1081,34 +1091,35 @@ button.opaque:checked:active {
 button {
   min-height: 24px;
   min-width: 18px;
-
   transition: all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border: 1px solid;
   border-radius: 12px;
   padding: 0 8px;
-
   background-clip: border-box;
-  background-color: #1a1a1a;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: #00ffcc;
+  background-color: #1a1a1a; /* Dark Background */
+  border: 1px solid rgba(255, 0, 255, 0.12); /* Soft Neon Pink Border */
+  color: #00ffcc; /* Neon Cyan Text */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon Cyan Glow */
 }
 
 button:hover {
-  background-color: #2a2a2a;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: #00ffcc;
+  background-color: #2a2a2a; /* Slightly Brighter Background */
+  border: 1px solid rgba(255, 0, 255, 0.12); /* Soft Neon Pink Border */
+  color: #00ffcc; /* Neon Cyan Text */
   background-clip: border-box;
   -gtk-icon-filter: brightness(1.2);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Strong Neon Cyan Glow */
 }
 
 button.keyboard-activating,
 button:active,
 button:checked {
-  background-color: #3a3a3a;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: #00ffcc;
+  background-color: #3a3a3a; /* Darker Background */
+  border: 1px solid rgba(255, 0, 255, 0.12); /* Soft Neon Pink Border */
+  color: #00ffcc; /* Neon Cyan Text */
   background-clip: border-box;
   transition-duration: 200ms;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Strong Neon Cyan Glow */
 }
 
 button.keyboard-activating:not(:disabled) label:disabled,
@@ -1119,17 +1130,17 @@ button:checked:not(:disabled) label:disabled {
 }
 
 button:disabled {
-  background-color: #1a1a1a;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: rgba(0, 255, 255, 0.45);
+  background-color: #1a1a1a; /* Dark Background */
+  border: 1px solid rgba(255, 0, 255, 0.12); /* Soft Neon Pink Border */
+  color: rgba(0, 255, 255, 0.45); /* Faded Neon Cyan Text */
   background-clip: border-box;
 }
 
 button:disabled:active,
 button:disabled:checked {
-  background-color: #3a3a3a;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: rgba(0, 255, 255, 0.45);
+  background-color: #3a3a3a; /* Darker Background */
+  border: 1px solid rgba(255, 0, 255, 0.12); /* Soft Neon Pink Border */
+  color: rgba(0, 255, 255, 0.45); /* Faded Neon Cyan Text */
   background-clip: border-box;
 }
 
@@ -1139,7 +1150,6 @@ button separator {
 
 button.flat {
   min-height: 24px;
-
   transition: none;
 }
 
@@ -1248,6 +1258,7 @@ button.font > box {
 button.font > box > box > label {
   font-weight: bold;
 }
+
 
 notebook > header > tabs > arrow, 
 windowcontrols button, 
@@ -1456,11 +1467,15 @@ button:drop(active) {
 
 /* Button-Styling für den Close-Button */
 button.close {
-  background-color: rgba(255, 0, 255, 0.4);
+  background-color: rgba(255, 0, 255, 0.4); /* Neon Pink Background */
   background-image: url('images/close.svg'); /* SVG-Icon hinzufügen */
   background-size: 16px 16px; /* Größe des SVG-Icons */
   background-repeat: no-repeat; /* Verhindert Wiederholung des Hintergrunds */
   background-position: center; /* Positioniert das Icon in der Mitte des Buttons */
+  border: 2px solid rgba(255, 0, 255, 0.6); /* Neon Pink Border */
+  border-radius: 9999px; /* Runde Buttons */
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.7); /* Neon Pink Glow */
+  transition: all 0.3s ease;
 }
 
 /* Styling für runde Buttons */
@@ -1471,6 +1486,29 @@ button.close {
   padding: 0; /* Kein Padding */
   min-height: 28px; /* Minimale Höhe */
   min-width: 28px; /* Minimale Breite */
+  background-color: #1a1a1a; /* Dark Background */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon Cyan Glow */
+  border: 2px solid rgba(0, 255, 255, 0.6); /* Neon Cyan Border */
+  transition: all 0.3s ease;
+}
+
+searchbar button.flat:hover, menubutton.circular > button:hover,
+button.circular:hover,
+button.close:hover {
+  background-color: rgba(0, 255, 255, 0.2); /* Lighter Neon Cyan Background */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Stronger Neon Cyan Glow */
+}
+
+searchbar button.flat:active, menubutton.circular > button:active, 
+searchbar button.flat:checked, menubutton.circular > button:checked,
+button.circular:active,
+button.circular:checked,
+button.close:active,
+button.close:checked {
+  background-color: #3a3a3a; /* Darker Background on Active */
+  border: 2px solid rgba(255, 0, 255, 0.8); /* Neon Pink Border on Active */
+  color: #00ffcc; /* Neon Cyan Text on Active */
+  box-shadow: 0 0 20px rgba(255, 0, 255, 0.8); /* Strong Neon Pink Glow */
 }
 
 /* Styling für Labels in den Buttons */
@@ -1478,36 +1516,37 @@ searchbar button.flat label, menubutton.circular > button label,
 button.circular label,
 button.close label {
   padding: 0; /* Kein Padding für Labels */
+  color: #00ffcc; /* Neon Cyan Text */
 }
 
-/* Styling für den aktiven und ausgewählten Zustand der Buttons */
-searchbar button.flat:active, menubutton.circular > button:active, searchbar button.flat:checked, menubutton.circular > button:checked,
-button.circular:active,
-button.circular:checked,
-button.close:active,
-button.close:checked {
-  background-color: #3a3a3a; /* Hintergrundfarbe im aktiven Zustand */
-  border: 1px solid rgba(255, 0, 255, 0.12); /* Rahmen im aktiven Zustand */
-  color: #00ffcc; /* Textfarbe im aktiven Zustand */
-  border-color: rgba(255, 0, 255, 0.2); /* Rahmenfarbe im aktiven Zustand */
-}
-
-
+/* Styling für Pill Buttons */
 menubutton.pill > button,
 button.pill {
   min-height: 24px;
   min-width: 24px;
   padding: 6px;
-  border-radius: 9999px;
+  border-radius: 9999px; /* Runde Form */
+  background-color: #1a1a1a; /* Dark Background */
+  border: 2px solid rgba(0, 255, 255, 0.6); /* Neon Cyan Border */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon Cyan Glow */
+  transition: all 0.3s ease;
+}
+
+menubutton.pill > button:hover,
+button.pill:hover {
+  background-color: rgba(0, 255, 255, 0.2); /* Lighter Neon Cyan Background */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Stronger Neon Cyan Glow */
 }
 
 menubutton.pill > button.text-button,
 button.pill.text-button {
   padding-left: 18px;
   padding-right: 18px;
+  color: #00ffcc; /* Neon Cyan Text */
 }
 
-button.card {
+
+button.tocard {
   background-color: #1a1a1a;
   background-clip: padding-box;
   font-weight: inherit;
@@ -1553,11 +1592,47 @@ button:drop(active) {
   box-shadow: inset 0 0 0 1px #ffc107;
 }
 
+/* Allgemeiner Button-Stil für OSD-Buttons im Cyberpunk-Stil */
 button.osd {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.65);
-  border: none;
-  box-shadow: none;
+  min-width: 24px;
+  padding: 6px;
+  background-color: rgba(0, 0, 0, 0.7); /* Dunkler Hintergrund für OSD */
+  color: #00ffcc; /* Neon-Cyan Text */
+  border: 2px solid #00ffcc; /* Neon-Cyan Umrandung */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.7); /* Neon-Glow-Schatten */
+  transition: all 150ms ease-in-out;
+}
+
+button.osd > image {
+  padding: 0;
+}
+
+button.osd.remove-button {
+  padding: 0;
+}
+
+button.osd:focus {
+  outline-color: transparent;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 1); /* Verstärkter Neon-Glow bei Fokus */
+}
+
+button.osd:hover {
+  background-color: rgba(0, 0, 0, 0.85);
+  color: #ff00ff; /* Wechsel zu Neon-Pink bei Hover */
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.7); /* Neon-Pink Glow bei Hover */
+}
+
+button.osd:active {
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #ff0044; /* Neon-Rot bei Aktivierung */
+  box-shadow: 0 0 20px rgba(255, 0, 68, 0.9); /* Neon-Roter Glow bei Aktivierung */
+  transform: scale(0.95); /* Leichtes Schrumpfen bei Aktivierung */
+}
+
+button.osd:disabled {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.35); /* Ausgegrauter Text bei Deaktivierung */
 }
 
 button.osd.image-button {
@@ -1587,108 +1662,153 @@ button.osd:disabled {
   opacity: 0.35;
 }
 
+/* Grundlegender Stil für OSD-Buttons */
 menubutton.osd > button,
 .osd button {
-  background-color: rgba(33, 37, 41, 0.95);
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: #f8f9fa;
+  background-color: rgba(33, 37, 41, 0.95); /* Dunkler Hintergrund für Tiefe */
+  border: 1px solid rgba(0, 255, 255, 0.3); /* Neon-Cyan Umrandung für Cyberpunk-Look */
+  color: #00ffcc; /* Neon-Cyan Textfarbe */
+  border-radius: 8px; /* Abgerundete Ecken für modernes Design */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.6); /* Neon-Glow */
 }
 
+/* Hover-Effekt für OSD-Buttons */
 .osd button:hover {
-  background-color: rgba(56, 63, 69, 0.95);
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: #f8f9fa;
+  background-color: rgba(56, 63, 69, 0.95); /* Leichter Farbwechsel bei Hover */
+  border: 1px solid rgba(0, 255, 255, 0.4); /* Intensivere Umrandung */
+  color: #00ffcc; /* Neon-Cyan Textfarbe bleibt erhalten */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Verstärkter Neon-Glow */
 }
 
+/* Aktivierte Zustände (Tastatur, Klick, Auswahl) */
 .osd button.keyboard-activating,
 .osd button:active,
 .osd button:checked {
-  background-color: rgba(10, 12, 13, 0.95);
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: #f8f9fa;
+  background-color: rgba(10, 12, 13, 0.95); /* Tiefere Farbe bei Aktivierung */
+  border: 1px solid rgba(0, 255, 255, 0.5); /* Stärkere Umrandung */
+  color: #00ffcc; /* Neon-Cyan Textfarbe bleibt erhalten */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 1); /* Stärkster Neon-Glow bei Aktivierung */
 }
 
+/* Deaktivierte Buttons */
 .osd button:disabled {
-  background-color: rgba(33, 37, 41, 0.95);
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: rgba(73, 80, 87, 0.45);
+  background-color: rgba(33, 37, 41, 0.95); /* Gedämpfter Hintergrund */
+  border: 1px solid rgba(0, 255, 255, 0.12); /* Leicht gedämpfte Umrandung */
+  color: rgba(0, 255, 255, 0.45); /* Gedämpfte Textfarbe */
 }
 
+/* Flache Buttons ohne Hintergrund */
 .osd button.flat {
   background-color: transparent;
   border: none;
-  color: #00ffcc;
-  box-shadow: none;
+  color: #00ffcc; /* Neon-Cyan Textfarbe */
+  box-shadow: none; /* Kein Glow für flache Buttons */
 }
 
+/* Hover-Effekt für flache Buttons */
 .osd button.flat:hover {
-  background-color: rgba(56, 63, 69, 0.95);
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: #f8f9fa;
+  background-color: rgba(56, 63, 69, 0.95); /* Leichter Hintergrund bei Hover */
+  border: 1px solid rgba(0, 255, 255, 0.4); /* Neon-Cyan Umrandung */
+  color: #00ffcc; /* Neon-Cyan Textfarbe */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Glow bei Hover */
 }
 
+/* Deaktivierte flache Buttons */
 .osd button.flat:disabled {
-  background-color: rgba(33, 37, 41, 0.95);
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: rgba(73, 80, 87, 0.45);
+  background-color: rgba(33, 37, 41, 0.95); /* Gedämpfter Hintergrund */
+  border: 1px solid rgba(0, 255, 255, 0.12); /* Gedämpfte Umrandung */
+  color: rgba(0, 255, 255, 0.45); /* Gedämpfte Textfarbe */
   background-image: none;
 }
 
+/* Aktivierte flache Buttons */
 .osd button.flat:active,
 .osd button.flat:checked {
-  background-color: rgba(10, 12, 13, 0.95);
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: #f8f9fa;
+  background-color: rgba(10, 12, 13, 0.95); /* Tiefere Farbe bei Aktivierung */
+  border: 1px solid rgba(0, 255, 255, 0.5); /* Stärkere Umrandung */
+  color: #00ffcc; /* Neon-Cyan Textfarbe */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 1); /* Stärkster Glow bei Aktivierung */
 }
 
+/* Hover-Effekte für verknüpfte Buttons */
 .osd .linked:not(.vertical):not(.path-bar) > button:hover:not(:checked):not(:active):not(:only-child),
 .osd .linked:not(.vertical):not(.path-bar) > button:hover:not(:checked):not(:active) + button:not(:checked):not(:active) {
-  box-shadow: none;
+  box-shadow: none; /* Kein Glow-Effekt bei verbundenen Buttons */
 }
 
+
+/* Allgemeiner Stil für empfohlene Aktionen */
 button.suggested-action {
-  background-color: #28a745;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: white;
+  background-color: #00ffcc; /* Neon-Cyan Hintergrund */
+  color: #0a0a0a; /* Sehr dunkler Text für hohen Kontrast */
+  border: 2px solid #00ffcc; /* Neon-Cyan Umrandung */
+  border-radius: 8px; /* Abgerundete Ecken für einen moderneren Look */
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.7); /* Neon-Glow */
+  padding: 8px 16px; /* Ausreichende Polsterung für besseren Klickbereich */
+  font-weight: bold; /* Dickere Schrift für bessere Lesbarkeit */
 }
 
+/* Hover-Effekt */
+button.suggested-action:hover {
+  background-color: #00e6b8; /* Leichter Farbwechsel bei Hover */
+  box-shadow: 0 0 20px rgba(0, 255, 204, 1); /* Verstärkter Neon-Glow bei Hover */
+  color: #0a0a0a; /* Dunkler Text bleibt erhalten */
+}
+
+/* Fokus-Effekt */
+button.suggested-action:focus {
+  outline: none; /* Entfernt Standard-Fokus-Effekt */
+  box-shadow: 0 0 25px rgba(0, 255, 204, 0.9); /* Stärkerer Fokus-Glow */
+}
+
+/* Effekt bei Auswahl */
+button.suggested-action:checked {
+  background-color: #00bfa5; /* Anderer Farbton bei Auswahl */
+  box-shadow: 0 0 20px rgba(0, 255, 204, 0.8); /* Konsistenter Glow */
+}
+
+/* Stil für flache Buttons */
 button.suggested-action.flat {
   background-color: transparent;
-  border: none;
   color: #00ffcc;
+  border: 2px solid transparent;
+  box-shadow: none; /* Kein Glow für flache Buttons */
 }
 
-button.suggested-action:hover {
-  background-color: #2dbc4e;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: white;
-}
-
-button.suggested-action:active,
-button.suggested-action:checked {
-  background-color: #23923d;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: white;
-  box-shadow: none;
-}
-
+/* Stil für deaktivierte flache Buttons */
 button.suggested-action.flat:disabled {
   background-color: transparent;
   border: none;
-  color: #00ffcc;
-  color: rgba(0, 255, 255, 0.45);
+  color: rgba(0, 255, 204, 0.45); /* Gedämpfte Farbe für Deaktivierung */
 }
 
+/* Stil für deaktivierte Buttons */
 button.suggested-action:disabled {
-  background-color: #1a1a1a;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: rgba(0, 255, 255, 0.45);
+  background-color: #1a1a1a; /* Dunkler Hintergrund für Deaktivierung */
+  border: 1px solid rgba(255, 0, 255, 0.12); /* Leichte, gedämpfte Umrandung */
+  color: rgba(0, 255, 255, 0.45); /* Gedämpfte Textfarbe */
 }
 
+
+/* Stil für zerstörerische Aktionen */
 button.destructive-action {
-  background-color: #dc3545;
-  border: 1px solid rgba(255, 0, 255, 0.12);
-  color: white;
+  background-color: #ff0044; /* Neon-Rot Hintergrund */
+  color: #ffffff; /* Weißer Text */
+  border: 2px solid #ff0044; /* Neon-Rote Umrandung */
+  box-shadow: 0 0 10px rgba(255, 0, 68, 0.7); /* Neon-Roter Glow */
+}
+
+button.destructive-action:hover {
+  background-color: #e6003a;
+  box-shadow: 0 0 15px rgba(255, 0, 68, 0.9); /* Verstärkter Neon-Glow bei Hover */
+}
+
+button.destructive-action:focus {
+  box-shadow: 0 0 20px rgba(255, 0, 68, 1); /* Fokus-Glow */
+}
+
+button.destructive-action:checked {
+  background-color: #bf0030;
 }
 
 button.destructive-action.flat {
@@ -1766,20 +1886,42 @@ menubutton {
   margin: 0;
 }
 
+/* Allgemeine Menubutton Styles */
 menubutton.osd {
   background: none;
-  color: inherit;
+  color: #e0e0e0; /* Erbt die Farbe aus dem allgemeinen Theme, stellt sicher, dass Text lesbar ist */
 }
 
+/* Menübutton für vorgeschlagene Aktionen */
 menubutton.suggested-action {
-  background-color: #28a745;
-  color: white;
+  background-color: #00ffff; /* Neon-Cyan Hintergrund */
+  color: #0a0a0a; /* Dunkler Text für besseren Kontrast */
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Stärkerer Neon-Cyan-Glow für mehr Sichtbarkeit */
+  padding: 5px 10px; /* Zusätzliche Polsterung für besseren Klickbereich */
+  font-weight: bold; /* Dickere Schrift für bessere Lesbarkeit */
 }
 
+/* Menübutton für destruktive Aktionen */
 menubutton.destructive-action {
-  background-color: #dc3545;
-  color: white;
+  background-color: #ff0044; /* Neon-Rot Hintergrund */
+  color: #ffffff; /* Weißer Text für besseren Kontrast */
+  border-radius: 14px;
+  box-shadow: 0 0 15px rgba(255, 0, 68, 0.7); /* Stärkerer Neon-Rot-Glow für mehr Sichtbarkeit */
+  padding: 5px 10px; /* Zusätzliche Polsterung für besseren Klickbereich */
+  font-weight: bold; /* Dickere Schrift für bessere Lesbarkeit */
 }
+
+/* Undurchsichtiger Menübutton */
+menubutton.opaque {
+  background-color: #2C2C2C; /* Dunklerer Hintergrund, passend zum Dark Theme */
+  color: #e0e0e0; /* Hellerer Text für besseren Kontrast */
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(150, 150, 150, 0.5); /* Leichter Grauer Glow für subtilen Effekt */
+  padding: 5px 10px; /* Zusätzliche Polsterung für besseren Klickbereich */
+  font-weight: bold; /* Dickere Schrift für bessere Lesbarkeit */
+}
+
 
 menubutton.opaque {
   background-color: #d5d7d9;
@@ -1841,23 +1983,27 @@ menubutton arrow.right {
 }
 
 splitbutton {
-  border-radius: 12px;
+  border-radius: 14px;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.7); /* Neon Glow */
 }
 
-splitbutton:drop(active), splitbutton > separator {
-  transition: all 100ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  transition-property: background;
+splitbutton, splitbutton > separator {
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  transition-property: background-color, box-shadow;
 }
 
 splitbutton > separator {
+  min-width: 0;
   margin-top: 6px;
   margin-bottom: 6px;
+  background-color: transparent;
   background: none;
 }
 
 splitbutton > menubutton > button {
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: 6px 10px;
+  border-radius: 14px;
+  background-color: rgba(0, 255, 204, 0.2); /* Neon Tint */
 }
 
 splitbutton.image-button > button {
@@ -1879,22 +2025,23 @@ splitbutton > button:dir(ltr),
 splitbutton > menubutton > button:dir(rtl) {
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
-  margin-right: -1px;
+  margin-right: 0;
 }
 
 splitbutton > button:dir(rtl),
 splitbutton > menubutton > button:dir(ltr) {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  margin-left: -1px;
+  margin-left: 0;
 }
 
 splitbutton.flat > separator {
-  background: rgba(255, 0, 255, 0.12);
+  background: rgba(0, 255, 204, 0.2); /* Neon Separator */
 }
 
 splitbutton.flat:hover, splitbutton.flat:active, splitbutton.flat:checked {
-  background: gtkalpha(currentColor, 0.07);
+  background: rgba(0, 255, 204, 0.3); /* Neon Hover/Active/Checked */
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.8); /* Enhanced Glow */
 }
 
 splitbutton.flat:hover > separator, splitbutton.flat:active > separator, splitbutton.flat:checked > separator {
@@ -1907,42 +2054,44 @@ splitbutton.flat:focus-within:focus-visible > separator {
 
 splitbutton.flat > button,
 splitbutton.flat > menubutton > button {
-  border-radius: 12px;
+  border-radius: 14px;
+  background-color: rgba(0, 255, 204, 0.2); /* Consistent Neon Background */
 }
 
 splitbutton.suggested-action {
-  background-color: #28a745;
+  background-color: #00ffcc; /* Neon Cyan */
   color: white;
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.7); /* Neon Glow */
 }
 
 splitbutton.destructive-action {
-  background-color: #dc3545;
+  background-color: #ff0044; /* Neon Red */
   color: white;
+  box-shadow: 0 0 10px rgba(255, 0, 68, 0.7); /* Neon Red Glow */
 }
 
 splitbutton.opaque {
-  background-color: #d5d7d9;
-  color: #495057;
+  background-color: #222831; /* Dark Grey */
+  color: #00ffcc; /* Neon Cyan Text */
+  box-shadow: 0 0 10px rgba(34, 40, 49, 0.7); /* Subtle Glow */
 }
 
-splitbutton.suggested-action > button:checked,
-splitbutton.suggested-action > menubutton > button:checked, splitbutton.destructive-action > button:checked,
-splitbutton.destructive-action > menubutton > button:checked, splitbutton.opaque > button:checked,
-splitbutton.opaque > menubutton > button:checked {
+splitbutton.suggested-action > button, splitbutton.suggested-action > button:checked, splitbutton.suggested-action > menubutton > button, splitbutton.suggested-action > menubutton > button:checked, splitbutton.destructive-action > button, splitbutton.destructive-action > button:checked, splitbutton.destructive-action > menubutton > button, splitbutton.destructive-action > menubutton > button:checked, splitbutton.opaque > button, splitbutton.opaque > button:checked, splitbutton.opaque > menubutton > button, splitbutton.opaque > menubutton > button:checked {
   color: inherit;
   background-color: transparent;
 }
 
 splitbutton.suggested-action > menubutton > button:dir(ltr), splitbutton.destructive-action > menubutton > button:dir(ltr), splitbutton.opaque > menubutton > button:dir(ltr) {
-  box-shadow: inset 1px 0 rgba(255, 0, 255, 0.12);
+  box-shadow: inset 1px 0 rgba(255, 255, 255, 0.12); /* Inner Shadow */
 }
 
 splitbutton.suggested-action > menubutton > button:dir(rtl), splitbutton.destructive-action > menubutton > button:dir(rtl), splitbutton.opaque > menubutton > button:dir(rtl) {
-  box-shadow: inset -1px 0 rgba(255, 0, 255, 0.12);
+  box-shadow: inset -1px 0 rgba(255, 255, 255, 0.12); /* Inner Shadow */
 }
 
 splitbutton > menubutton > button > arrow.none {
   -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+  color: rgba(0, 255, 204, 0.8); /* Neon Cyan Arrow */
 }
 
 buttoncontent {
@@ -1951,6 +2100,8 @@ buttoncontent {
 
 buttoncontent > label {
   font-weight: bold;
+  color: #00ffcc; /* Neon Cyan Text */
+  text-shadow: 0 0 5px rgba(0, 255, 204, 0.7); /* Neon Glow */
 }
 
 buttoncontent > label:dir(ltr) {
@@ -1959,6 +2110,46 @@ buttoncontent > label:dir(ltr) {
 
 buttoncontent > label:dir(rtl) {
   padding-left: 2px;
+}
+
+.arrow-button > box > buttoncontent > label:dir(ltr), 
+splitbutton > button > buttoncontent > label:dir(ltr) {
+  padding-right: 0;
+}
+
+.arrow-button > box > buttoncontent > label:dir(rtl), 
+splitbutton > button > buttoncontent > label:dir(rtl) {
+  padding-left: 0;
+}
+
+button.color {
+  min-height: 24px;
+  min-width: 24px;
+  padding: 6px;
+  background-color: #222831; /* Dark Grey Background */
+  border: 2px solid #00ffcc; /* Neon Cyan Border */
+  border-radius: 12px; /* Rounded Corners */
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.7); /* Neon Glow Shadow */
+  transition: all 150ms ease-in-out;
+}
+
+button.color:hover {
+  background-color: #00ffcc; /* Neon Cyan Hover Background */
+  color: #222831; /* Dark Text on Neon Hover */
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.9); /* Enhanced Glow on Hover */
+  transform: scale(1.05); /* Slight Zoom on Hover */
+}
+
+button.color:active {
+  background-color: #ff0044; /* Neon Red Active Background */
+  border-color: #ff0044; /* Neon Red Border */
+  box-shadow: 0 0 10px rgba(255, 0, 68, 0.9); /* Neon Red Glow on Active */
+  transform: scale(0.95); /* Slight Shrink on Active */
+}
+
+button.color:focus {
+  outline: none;
+  box-shadow: 0 0 12px rgba(0, 255, 204, 1), 0 0 20px rgba(0, 255, 204, 0.8); /* Focused Neon Glow */
 }
 
 .arrow-button > box > buttoncontent > label:dir(ltr), splitbutton > button > buttoncontent > label:dir(ltr) {
@@ -2590,25 +2781,443 @@ actionbar > revealer > box, actionbar > revealer > box > box.start, actionbar > 
   border-spacing: 6px;
 }
 
+/*************************
+ * Check and Radio items *
+ *************************/
+
+/* Allgemeine Stile für Check- und Radio-Buttons */
+checkbutton,
+radiobutton {
+  outline: none;
+  border-spacing: 3px;
+}
+
+check,
+radio {
+  min-height: 20px;
+  min-width: 20px;
+  margin: 3px;
+  padding: 0;
+  border-radius: 50%; /* Vollständig abgerundet für Cyberpunk-Stil */
+  border: 2px solid rgba(0, 255, 255, 0.6); /* Neon Cyan Border */
+  color: transparent;
+  background-color: rgba(0, 0, 0, 0.6); /* Dunkles Hintergrund für Cyberpunk-Look */
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), box-shadow 150ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+/* Hover-Zustand für Check- und Radio-Buttons */
+check:hover,
+radio:hover {
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.8); /* Neon Cyan Schatten bei Hover */
+  background-color: rgba(0, 0, 0, 0.8); /* Dunklerer Hintergrund bei Hover */
+}
+
+/* Active-Zustand für Check- und Radio-Buttons */
+check:active,
+radio:active {
+  box-shadow: 0 0 8px rgba(0, 255, 255, 1); /* Intensiverer Neon Cyan Schatten bei Aktivierung */
+  background-color: rgba(0, 0, 0, 0.9); /* Dunklerer Hintergrund bei Aktivierung */
+}
+
+/* Disabled-Zustand für Check- und Radio-Buttons */
+check:disabled,
+radio:disabled {
+  background-color: rgba(0, 0, 0, 0.3); /* Hellere Transparenz bei Disabled */
+  border: 2px solid rgba(0, 255, 255, 0.3); /* Neon Cyan Border bei Disabled */
+}
+
+/* Checked- und Indeterminate-Zustand für Check- und Radio-Buttons */
+check:checked,
+check:indeterminate,
+radio:checked,
+radio:indeterminate {
+  color: rgba(0, 0, 0, 0.8);
+  background-color: #00cc00; /* Neon Blau für Checked/Indeterminate Zustand */
+  border-color: #00ccff; /* Neon Blau Border für Checked/Indeterminate Zustand */
+}
+
+/* Hover-Zustand für Checked/Indeterminate Buttons */
+check:checked:hover,
+check:indeterminate:hover,
+radio:checked:hover,
+radio:indeterminate:hover {
+  box-shadow: 0 0 8px rgba(137, 163, 194, 0.6); /* Aufhellender Neon Blau Schatten bei Hover */
+  background-color: #fd00ff; /* Aufhellendes Neon Blau bei Hover */
+}
+
+/* Active-Zustand für Checked/Indeterminate Buttons */
+check:checked:active,
+check:indeterminate:active,
+radio:checked:active,
+radio:indeterminate:active {
+  box-shadow: 0 0 8px rgba(137, 163, 194, 0.8); /* Intensiver Neon Blau Schatten bei Aktivierung */
+  background-color: #00cc00; /* Neon Blau Hintergrund bei Aktivierung */
+}
+
+/* Disabled-Zustand für Checked/Indeterminate Buttons */
+check:checked:disabled,
+check:indeterminate:disabled,
+radio:checked:disabled,
+radio:indeterminate:disabled {
+  color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(137, 163, 194, 0.5); /* Neon Blau Hintergrund bei Disabled */
+}
+
+/* Popover-Stile für Check- und Radio-Buttons */
+popover modelbutton.flat check,
+popover modelbutton.flat check:focus,
+popover modelbutton.flat check:hover,
+popover modelbutton.flat check:focus:hover,
+popover modelbutton.flat check:active,
+popover modelbutton.flat check:disabled,
+popover modelbutton.flat radio,
+popover modelbutton.flat radio:focus,
+popover modelbutton.flat radio:hover,
+popover modelbutton.flat radio:focus:hover,
+popover modelbutton.flat radio:active,
+popover modelbutton.flat radio:disabled {
+  transition: none;
+  box-shadow: none;
+  background-image: none;
+}
+
+/* Anpassungen für Popover-Position */
+popover modelbutton.flat check.left:dir(rtl),
+popover modelbutton.flat radio.left:dir(rtl) {
+  margin-left: -3px;
+  margin-right: 6px;
+}
+
+popover modelbutton.flat check.right:dir(ltr),
+popover modelbutton.flat radio.right:dir(ltr) {
+  margin-left: 6px;
+  margin-right: -3px;
+}
+
+popover.menu check,
+popover.menu radio {
+  transition: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Popover-Menü Positionierung */
+popover.menu check:dir(ltr),
+popover.menu radio:dir(ltr) {
+  margin-right: 6px;
+  margin-left: -3px;
+}
+
+popover.menu check:dir(rtl),
+popover.menu radio:dir(rtl) {
+  margin-left: 6px;
+  margin-right: -3px;
+}
+
+/* Popover-Menü Schatten */
+popover.menu check,
+popover.menu check:hover,
+popover.menu check:disabled,
+popover.menu check:checked:hover,
+popover.menu check:indeterminate:hover,
+popover.menu radio,
+popover.menu radio:hover,
+popover.menu radio:disabled,
+popover.menu radio:checked:hover,
+popover.menu radio:indeterminate:hover {
+  box-shadow: none;
+}
+
+/* Größenanpassungen für kleine Popover-Buttons */
+popover.menu check {
+  min-height: 16px;
+  min-width: 16px;
+  -gtk-icon-size: 16px;
+}
+
+popover.menu check:checked {
+  -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/small-checkbox-checked-symbolic.svg")), -gtk-recolor(url("assets/small-checkbox-checked-symbolic@2.svg")));
+}
+
+popover.menu check:indeterminate {
+  -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/small-checkbox-mixed-symbolic.svg")), -gtk-recolor(url("assets/small-checkbox-mixed-symbolic@2.svg")));
+}
+
+popover.menu radio {
+  min-height: 16px;
+  min-width: 16px;
+  -gtk-icon-size: 16px;
+}
+
+popover.menu radio:checked {
+  -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/small-radio-checked-symbolic.svg")), -gtk-recolor(url("assets/small-radio-checked-symbolic@2.svg")));
+}
+
+popover.menu radio:indeterminate {
+  -gtk-icon-source: -gtk-scaled(-gtk-recolor(url("assets/small-radio-mixed-symbolic.svg")), -gtk-recolor(url("assets/small-radio-mixed-symbolic@2.svg")));
+}
+
+/* Actionbar Stile */
+actionbar > revealer > box check:not(:checked):not(:indeterminate),
+actionbar > revealer > box radio:not(:checked):not(:indeterminate) {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+actionbar > revealer > box check:not(:checked):not(:indeterminate):hover,
+actionbar > revealer > box radio:not(:checked):not(:indeterminate):hover {
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.6); /* Neon Cyan Schatten bei Hover */
+  background-color: rgba(0, 0, 0, 0.15); /* Dunklerer Hintergrund bei Hover */
+}
+
+actionbar > revealer > box check:not(:checked):not(:indeterminate):active,
+actionbar > revealer > box radio:not(:checked):not(:indeterminate):active {
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.8); /* Intensiver Neon Cyan Schatten bei Aktivierung */
+  background-color: rgba(0, 0, 0, 0.2); /* Dunklerer Hintergrund bei Aktivierung */
+}
+
+actionbar > revealer > box check:not(:checked):not(:indeterminate):disabled,
+actionbar > revealer > box radio:not(:checked):not(:indeterminate):disabled {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+/* Check-Buttons Rotation im Active-Zustand */
+check:not(:checked):active {
+  -gtk-icon-transform: rotate(90deg);
+}
+
+/* Treeview und Columnview Stile */
+treeview.view radio,
+treeview.view check,
+columnview.view radio,
+columnview.view check {
+  padding: 0;
+  margin: 0;
+  transition: none;
+}
+
+treeview.view radio,
+treeview.view radio:hover,
+treeview.view radio:disabled,
+treeview.view radio:checked:hover,
+treeview.view radio:indeterminate:hover,
+treeview.view check,
+treeview.view check:hover,
+treeview.view check:disabled,
+treeview.view check:checked:hover,
+treeview.view check:indeterminate:hover,
+columnview.view radio,
+columnview.view radio:hover,
+columnview.view radio:disabled,
+columnview.view radio:checked:hover,
+columnview.view radio:indeterminate:hover,
+columnview.view check,
+columnview.view check:hover,
+columnview.view check:disabled,
+columnview.view check:checked:hover,
+columnview.view check:indeterminate:hover {
+  box-shadow: none;
+}
+
+treeview.view:hover check,
+treeview.view:hover radio,
+treeview.view:selected check,
+treeview.view:selected radio,
+treeview.view:focus check,
+treeview.view:focus radio,
+columnview.view:hover check,
+columnview.view:hover radio,
+columnview.view:selected check,
+columnview.view:selected radio,
+columnview.view:focus check,
+columnview.view:focus radio {
+  box-shadow: none;
+}
+
+treeview.view:hover check:checked,
+treeview.view:hover radio:checked,
+treeview.view:selected check:checked,
+treeview.view:selected radio:checked,
+treeview.view:focus check:checked,
+treeview.view:focus radio:checked,
+columnview.view:hover check:checked,
+columnview.view:hover radio:checked,
+columnview.view:selected check:checked,
+columnview.view:selected radio:checked,
+columnview.view:focus check:checked,
+columnview.view:focus radio:checked {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #00cc00; /* Neon Blau für ausgewählte Elemente */
+}
+
+/* Auswahlmodus für Check-Buttons */
+checkbutton.selection-mode {
+  border-radius: 50%; /* Vollständig abgerundet für Auswahlmodus */
+}
+
+checkbutton.selection-mode check,
+checkbutton.selection-mode radio {
+  padding: 6px;
+  border-radius: 50%;
+}
+
+checkbutton.selection-mode check:checked,
+checkbutton.selection-mode check:indeterminate,
+checkbutton.selection-mode radio:checked,
+checkbutton.selection-mode radio:indeterminate {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #00cc00; /* Neon Blau für Auswahlmodus */
+}
+
+checkbutton.selection-mode label:dir(ltr) {
+  margin-right: 6px;
+}
+
+checkbutton.selection-mode label:dir(rtl) {
+  margin-left: 6px;
+}
+
+
+/*************
+ * Overshoot *
+ *************/
+
+/* Top Overshoot */
+overshoot.top {
+  background-image: radial-gradient(farthest-side at top, rgba(0, 255, 255, 0.3) 85%, rgba(0, 255, 255, 0)), radial-gradient(farthest-side at top, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0));
+  background-size: 100% 3%, 100% 50%;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: transparent;
+  border: 1px solid rgba(0, 255, 255, 0.5); /* Neon Cyan Border */
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.8); /* Neon Cyan Schatten */
+}
+
+/* Bottom Overshoot */
+overshoot.bottom {
+  background-image: radial-gradient(farthest-side at bottom, rgba(0, 255, 255, 0.3) 85%, rgba(0, 255, 255, 0)), radial-gradient(farthest-side at bottom, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0));
+  background-size: 100% 3%, 100% 50%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: transparent;
+  border: 1px solid rgba(0, 255, 255, 0.5); /* Neon Cyan Border */
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.8); /* Neon Cyan Schatten */
+}
+
+/* Left Overshoot */
+overshoot.left {
+  background-image: radial-gradient(farthest-side at left, rgba(0, 255, 255, 0.3) 85%, rgba(0, 255, 255, 0)), radial-gradient(farthest-side at left, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0));
+  background-size: 3% 100%, 50% 100%;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-color: transparent;
+  border: 1px solid rgba(0, 255, 255, 0.5); /* Neon Cyan Border */
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.8); /* Neon Cyan Schatten */
+}
+
+/* Right Overshoot */
+overshoot.right {
+  background-image: radial-gradient(farthest-side at right, rgba(0, 255, 255, 0.3) 85%, rgba(0, 255, 255, 0)), radial-gradient(farthest-side at right, rgba(0, 255, 255, 0.1), rgba(0, 255, 255, 0));
+  background-size: 3% 100%, 50% 100%;
+  background-repeat: no-repeat;
+  background-position: right;
+  background-color: transparent;
+  border: 1px solid rgba(0, 255, 255, 0.5); /* Neon Cyan Border */
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.8); /* Neon Cyan Schatten */
+}
+
+
+/* Dimming Effects */
+flap > dimming,
+leaflet > dimming,
+navigation-view > dimming,
+overlay-split-view > dimming {
+  background-color: rgba(0, 0, 0, 0.3); /* Dunklerer Hintergrund für einen Neon-Effekt */
+  background-image: none;
+}
+
+/* Borders */
+flap > border,
+leaflet > border,
+navigation-view > border,
+overlay-split-view > border {
+  background-color: transparent;
+  background-image: none;
+  border: 2px solid #00ffff; /* Neon Cyan Border */
+}
+
+/* Shadows */
+flap > shadow,
+leaflet > shadow,
+navigation-view > shadow,
+overlay-split-view > shadow {
+  min-width: 56px;
+  min-height: 56px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Neon Cyan Schatten für eine leuchtende Wirkung */
+}
+
+/* Left Shadows */
+flap > shadow.left,
+leaflet > shadow.left,
+navigation-view > shadow.left,
+overlay-split-view > shadow.left {
+  background-image: linear-gradient(to right, rgba(0, 255, 255, 0.4), rgba(0, 255, 255, 0.2) 40px, rgba(0, 255, 255, 0) 56px),
+                    linear-gradient(to right, rgba(0, 255, 255, 0.6), rgba(0, 255, 255, 0.2) 7px, rgba(0, 255, 255, 0) 24px);
+}
+
+/* Right Shadows */
+flap > shadow.right,
+leaflet > shadow.right,
+navigation-view > shadow.right,
+overlay-split-view > shadow.right {
+  background-image: linear-gradient(to left, rgba(0, 255, 255, 0.4), rgba(0, 255, 255, 0.2) 40px, rgba(0, 255, 255, 0) 56px),
+                    linear-gradient(to left, rgba(0, 255, 255, 0.6), rgba(0, 255, 255, 0.2) 7px, rgba(0, 255, 255, 0) 24px);
+}
+
+/* Up Shadows */
+flap > shadow.up,
+leaflet > shadow.up,
+navigation-view > shadow.up,
+overlay-split-view > shadow.up {
+  background-image: linear-gradient(to bottom, rgba(0, 255, 255, 0.4), rgba(0, 255, 255, 0.2) 40px, rgba(0, 255, 255, 0) 56px),
+                    linear-gradient(to bottom, rgba(0, 255, 255, 0.6), rgba(0, 255, 255, 0.2) 7px, rgba(0, 255, 255, 0) 24px);
+}
+
+/* Down Shadows */
+flap > shadow.down,
+leaflet > shadow.down,
+navigation-view > shadow.down,
+overlay-split-view > shadow.down {
+  background-image: linear-gradient(to top, rgba(0, 255, 255, 0.4), rgba(0, 255, 255, 0.2) 40px, rgba(0, 255, 255, 0) 56px),
+                    linear-gradient(to top, rgba(0, 255, 255, 0.6), rgba(0, 255, 255, 0.2) 7px, rgba(0, 255, 255, 0) 24px);
+}
+
 /*************
  * Notebooks *
  *************/
+
+/* Checked Tab */
 notebook > header > tabs > tab:checked {
   outline: 2px solid #ff00ff; /* Neon pink outline */
   outline-offset: -2px;
   transition: outline 200ms ease-out;
+  box-shadow: 0 0 10px #ff00ff; /* Neon pink glow */
+  background-color: #1e1e1e; /* Dark background for selected tab */
 }
 
+/* Focused Checked Tab */
 notebook > header > tabs > tab:checked:focus:focus-visible {
   outline-width: 2px;
   outline-color: #ff00ff; /* Neon pink outline for focus */
+  box-shadow: 0 0 15px #ff00ff; /* Stronger neon pink glow on focus */
 }
 
+/* Notebook Header */
 notebook > header {
   padding: 1px;
   border-color: #444444; /* Darker border color */
   border-width: 1px;
   background-color: #1c1c1c; /* Dark background */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Neon cyan glow */
 }
 
 notebook > header > tabs {
@@ -3126,61 +3735,150 @@ scale.vertical, slider.vertical {
 
 /* TextView */
 textview {
-  background-color: #0a0a0a;
-  color: #e0e0e0;
-  border: 2px solid #00ffcc;
-  padding: 10px;
+  background-color: #1b1b1b; /* Dunkles, aber nicht zu schwarzes Hintergrund für bessere Lesbarkeit */
+  color: #e0e0e0; /* Hellgrauer Text für guten Kontrast */
+  border: 2px solid #00ffcc; /* Neon-Cyan Border */
+  padding: 12px; /* Leicht erhöhter Padding für mehr Komfort */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon-Cyan Glow */
 }
 
 textview:selected {
-  background-color: #005577;
-  color: #ffffff;
+  background-color: #003344; /* Dunkles Cyan bei Auswahl für besseren Kontrast */
+  color: #ffffff; /* Weißer Text bei Auswahl */
 }
 
 /* IconView */
 iconview {
-  background-color: #0a0a0a;
+  background-color: #1b1b1b; /* Gleicher Hintergrund wie TextView */
   color: #e0e0e0;
   border: 2px solid #00ffcc;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon-Cyan Glow */
 }
 
 iconview:selected {
-  background-color: #005577;
+  background-color: #003344;
   color: #ffffff;
 }
 
 /* FlowBox */
 flowbox {
-  background-color: #0a0a0a;
+  background-color: #1b1b1b;
   color: #e0e0e0;
   border: 2px solid #00ffcc;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon-Cyan Glow */
 }
 
 flowbox:selected {
-  background-color: #005577;
+  background-color: #003344;
   color: #ffffff;
 }
 
 /* GridView */
 gridview {
-  background-color: #0a0a0a;
+  background-color: #1b1b1b;
   color: #e0e0e0;
   border: 2px solid #00ffcc;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon-Cyan Glow */
 }
 
 gridview:selected {
-  background-color: #005577;
+  background-color: #003344;
   color: #ffffff;
 }
 
-/* Label */
+/* Grundlegendes Label-Styling */
 label {
-  color: #e0e0e0;
+  color: #e0e0e0; /* Hellgrauer Text für gute Lesbarkeit */
+  transition: color 150ms ease-in-out, text-shadow 150ms ease-in-out;
 }
 
 label:hover {
-  color: #00ffcc;
+  color: #00ffcc; /* Neon-Cyan Text bei Hover */
+  text-shadow: 0 0 5px #00ffcc; /* Leichter Neon-Glow bei Hover */
 }
+
+label.separator {
+  color: rgba(231, 237, 243, 0.7); /* Leicht abgedunkelter Text für Separatoren */
+}
+
+label:disabled {
+  opacity: 1;
+  color: rgba(231, 237, 243, 0.5); /* Ausgegrauter Text bei Deaktivierung */
+}
+
+headerbar label:disabled, 
+tab label:disabled, 
+button label:disabled {
+  color: inherit;
+  opacity: 1;
+}
+
+label.osd {
+  border-radius: 14px;
+  background-color: rgba(22, 24, 29, 0.9); /* Dunkler Hintergrund */
+  color: #ffffff;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.5); /* Neon-Pink Glow */
+}
+
+/* Abgedunkelte Labels */
+.dim-label, 
+row.expander image.expander-row-arrow, 
+row label.subtitle {
+  color: rgba(231, 237, 243, 0.7);
+  opacity: 1;
+}
+
+
+/**********
+ * Frames *
+ **********/
+frame,
+.frame {
+  border: 2px solid #00ffff; /* Neon-Cyan Border */
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* Neon-Cyan Glow */
+}
+
+frame > label {
+  margin: 4px;
+  color: #00ffff; /* Neon-Cyan Text */
+  text-shadow: 0 0 5px #00ffff; /* Leichter Neon-Glow */
+}
+
+/* Action Bar mit Neon-Border */
+actionbar > revealer > box {
+  padding: 6px;
+  border-top: 1px solid #00ffff; /* Neon-Cyan Border oben */
+  background-color: rgba(22, 24, 29, 0.9); /* Dunkler Hintergrund */
+}
+
+actionbar > revealer > box, 
+actionbar > revealer > box > box.start, 
+actionbar > revealer > box > box.end {
+  border-spacing: 6px;
+}
+
+/* Scrolled Window mit Cyberpunk Grid */
+scrolledwindow > junction {
+  background: #1c1c1c, /* Dunkler Hintergrund */
+              linear-gradient(to bottom, transparent 1px, #00ffff 1px), /* Neon-Cyan Grid */
+              linear-gradient(to right, transparent 1px, #00ffff 1px); /* Neon-Cyan Grid */
+}
+
+scrolledwindow > junction:dir(rtl) {
+  background: #1c1c1c, /* Dunkler Hintergrund */
+              linear-gradient(to bottom, transparent 1px, #00ffff 1px), /* Neon-Cyan Grid */
+              linear-gradient(to left, transparent 1px, #00ffff 1px); /* Neon-Cyan Grid */
+}
+
+/* Separator im Cyberpunk-Stil */
+separator {
+  background: #444444; /* Dunkler Separator */
+  min-width: 1px;
+  min-height: 1px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Leichter Neon-Cyan Glow */
+}
+
 
 /* Window Assistant */
 window.assistant {
@@ -3240,6 +3938,191 @@ spinner:checked {
 
 .frame {
   border: 2px solid #00ffcc;
+}
+
+/***********
+ * Dialogs *
+ ***********/
+
+/* Allgemeines Button-Styling */
+window.messagedialog .response-area > box > button, window.dialog.message .dialog-action-area > button {
+  border-radius: 5px; /* Leichte Abrundung für einen modernen Look */
+  min-height: 28px;
+  padding: 6px 12px;
+  margin: 0;
+  border: 2px solid #00ffff; /* Neon Cyan Border für Buttons */
+  color: #e7edf3; /* Helle Textfarbe für Kontrast */
+  background: rgba(0, 0, 0, 0.5); /* Dunkler Hintergrund für Buttons */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.6); /* Neon Cyan Schatten für Buttons */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+window.messagedialog .response-area > box > button:hover, window.dialog.message .dialog-action-area > button:hover {
+  background: #00ffff; /* Neon Cyan Hintergrund bei Hover */
+  color: #000000; /* Schwarzer Text bei Hover für hohen Kontrast */
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.8); /* Intensiverer Neon Cyan Schatten bei Hover */
+}
+
+/* Abgerundete Ecken für Buttons */
+window.messagedialog .response-area > box > button:first-child, window.dialog.message .dialog-action-area > button:first-child {
+  border-radius: 5px 0 0 5px; /* Abgerundete Ecken auf der linken Seite */
+}
+
+window.messagedialog .response-area > box > button:last-child, window.dialog.message .dialog-action-area > button:last-child {
+  border-radius: 0 5px 5px 0; /* Abgerundete Ecken auf der rechten Seite */
+}
+
+window.messagedialog .response-area > box > button:only-child, window.dialog.message .dialog-action-area > button:only-child {
+  border-radius: 5px; /* Abgerundete Ecken für alleinstehende Buttons */
+}
+
+/* Hintergrund des Dialogs */
+window.dialog.message.background {
+  background-color: #1e1e1e; /* Dunkler Hintergrund für den Dialog */
+}
+
+/* Dialog Box Styling */
+window.dialog.message box.dialog-vbox.vertical {
+  margin-top: 6px;
+  border-spacing: 24px;
+}
+
+window.dialog.message box.dialog-vbox.vertical > box.vertical {
+  margin-bottom: 6px;
+}
+
+window.dialog.message box.dialog-vbox.vertical > box > box > box > label.title {
+  font-weight: 800;
+  font-size: 15pt;
+  color: #00ffff; /* Neon Cyan für den Titel */
+}
+
+/* Titlebar Styling */
+window.dialog.message .titlebar {
+  min-height: 24px;
+  border-style: none;
+  box-shadow: inset 0 1px rgba(0, 255, 255, 0.2); /* Neon Cyan Schatten für die Titlebar */
+  background-color: #1e1e1e; /* Dunkler Hintergrund für die Titlebar */
+  color: #e7edf3; /* Helle Textfarbe */
+}
+
+window.dialog.message .titlebar:backdrop {
+  background-color: #1e1e1e; /* Gleiche Farbe für den Titlebar-Hintergrund bei Backdrop */
+  color: rgba(231, 237, 243, 0.7);
+}
+
+/* Action Area Styling */
+window.dialog.message .dialog-action-area {
+  border-top: 1px solid rgba(0, 255, 255, 0.3); /* Neon Cyan Border für Action Area */
+  margin: 0;
+  border-spacing: 0;
+  background-color: #2b2d34; /* Dunkler Hintergrund für Action Area */
+}
+
+window.dialog.message .dialog-action-area > button {
+  border: none;
+}
+
+window.dialog.message .dialog-action-area > button:not(:last-child) {
+  border-right: 1px solid rgba(0, 255, 255, 0.3); /* Neon Cyan Border zwischen Buttons */
+}
+
+window.dialog.message .dialog-action-area > button.suggested-action:not(:disabled) {
+  color: #00ffff; /* Neon Cyan für den vorgeschlagenen Button */
+}
+
+window.dialog.message .dialog-action-area > button.destructive-action:not(:disabled) {
+  color: #ff77ff; /* Neon Magenta für den destruktiven Button */
+}
+
+/* About Dialog Styling */
+window.aboutdialog.background.csd scrolledwindow.frame, window.aboutdialog.background.csd scrolledwindow.frame > viewport.view, window.aboutdialog.background.csd scrolledwindow.frame > textview.view, window.aboutdialog.background.csd scrolledwindow.frame > textview.view > text {
+  border-radius: 14px; /* Abgerundete Ecken für den About Dialog */
+  background-color: #1e1e1e; /* Dunkler Hintergrund für den About Dialog */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Neon Cyan Schatten für den About Dialog */
+}
+
+
+/********************
+ * AdwMessageDialog *
+ ********************/
+
+/* Allgemeines Dialog-Styling */
+window.messagedialog {
+  background-color: #2b2d34; /* Dunkler Cyberpunk-Hintergrund */
+  color: #e7edf3; /* Helle Textfarbe für Kontrast */
+  border: 2px solid #00ffff; /* Neon Cyan Border */
+  border-radius: 20px; /* Abgerundete Ecken für den Cyberpunk-Stil */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Neon Cyan Schatten */
+}
+
+/* Message Area */
+window.messagedialog .message-area {
+  padding: 24px 30px;
+  border-spacing: 10px;
+  background: rgba(0, 0, 0, 0.7); /* Leicht durchsichtiger Hintergrund für die Nachricht */
+  border-radius: 15px; /* Abgerundete Ecken innerhalb der Nachricht */
+}
+
+/* Suggested Button */
+window.messagedialog .response-area > box > button.suggested {
+  color: #00ffff; /* Neon Cyan für den vorgeschlagenen Button */
+  border: 1px solid #00ffff; /* Neon Cyan Border für den Button */
+  border-radius: 10px; /* Abgerundete Ecken für den Button */
+  background: rgba(0, 0, 0, 0.5); /* Hintergrundfarbe für den Button */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.6); /* Neon Cyan Schatten für den Button */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+window.messagedialog .response-area > box > button.suggested:hover {
+  background-color: #00ffff; /* Neon Cyan Hintergrund bei Hover */
+  color: #000000; /* Schwarzer Text bei Hover für hohen Kontrast */
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.8); /* Intensiverer Neon Cyan Schatten bei Hover */
+}
+
+/* Destructive Button */
+window.messagedialog .response-area > box > button.destructive {
+  color: #ff77ff; /* Neon Magenta für den destruktiven Button */
+  border: 1px solid #ff77ff; /* Neon Magenta Border für den Button */
+  border-radius: 10px; /* Abgerundete Ecken für den Button */
+  background: rgba(0, 0, 0, 0.5); /* Hintergrundfarbe für den Button */
+  box-shadow: 0 0 8px rgba(255, 119, 255, 0.6); /* Neon Magenta Schatten für den Button */
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+window.messagedialog .response-area > box > button.destructive:hover {
+  background-color: #ff77ff; /* Neon Magenta Hintergrund bei Hover */
+  color: #000000; /* Schwarzer Text bei Hover für hohen Kontrast */
+  box-shadow: 0 0 12px rgba(255, 119, 255, 0.8); /* Intensiverer Neon Magenta Schatten bei Hover */
+}
+
+/* CSD Dialog Styling */
+window.messagedialog.csd:not(.solid-csd) {
+  border-radius: 20px; /* Abgerundete Ecken */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Neon Cyan Schatten */
+}
+
+window.messagedialog.csd:not(.solid-csd) .response-area > box.horizontal > button {
+  margin: 0;
+}
+
+window.messagedialog.csd:not(.solid-csd) .response-area > box.horizontal > button:first-child {
+  margin-left: 0;
+}
+
+window.messagedialog.csd:not(.solid-csd) .response-area > box.horizontal > button:last-child {
+  margin-right: 0;
+}
+
+window.messagedialog.csd:not(.solid-csd) .response-area > box.vertical > button {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+window.messagedialog.csd:not(.solid-csd) .response-area > box.vertical > button:last-child {
+  border-bottom-left-radius: 20px; /* Abgerundete Ecken am unteren Ende des letzten Buttons */
+  border-bottom-right-radius: 20px;
+  margin-bottom: 0;
 }
 
 /**************
@@ -3303,10 +4186,12 @@ notebook {
   position: relative;
   padding-right: 24px; /* Platz für den Close-Button schaffen */
   margin: 2px;
-  border: 2px solid rgba(255, 0, 255, 0.8);
+  border: 2px solid rgba(255, 0, 255, 0.8); /* Neon Pinke Ränder */
   border-radius: 6px;
-  background-color: rgba(30, 30, 30, 0.8); /* Kontrastreicher Hintergrund */
+  background-color: rgba(30, 30, 30, 0.8); /* Dunkler, kontrastreicher Hintergrund */
   color: #FFFFFF; /* Weißer Text */
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.6); /* Neon Pinker Schatten */
+  transition: all 200ms ease-in-out;
 }
 
 .notebook tab button.close {
@@ -3314,16 +4199,17 @@ notebook {
   right: 4px; /* Platzierung am rechten Rand des Tabs */
   top: 50%;
   transform: translateY(-50%);
-  width: 16px; /* Breitere Größe für bessere Bedienbarkeit */
+  width: 16px;
   height: 16px;
   padding: 0;
   margin: 0;
   background-size: 12px 12px;
-  background-image: url('images/close.svg'); /* Stellen Sie sicher, dass der Pfad korrekt ist */
+  background-image: url('images/close.svg'); /* Sicherstellen, dass der Pfad korrekt ist */
   background-repeat: no-repeat;
   background-position: center;
   border: none;
   background-color: transparent; /* Hintergrund transparent für bessere Sichtbarkeit */
+  transition: background-color 150ms ease-in-out;
 }
 
 .notebook tab button.close:hover {
@@ -3377,6 +4263,7 @@ notebook {
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.8); /* Neon Grüner Schatten */
   }
 }
+
 
 notebook {
   /* Fokus-Ring für ausgewählte Tabs */
@@ -3752,7 +4639,7 @@ row.entry {
   .edit-icon:disabled {
     opacity: 0.5;
   }
-
+  
   .indicator {
     opacity: 0.7; /* Sichtbarer Hinweis */
   }
@@ -3764,6 +4651,104 @@ row.entry {
       font-family: monospace;
     }
   }
+}
+/* Indicator Styles */
+indicatorbin > indicator, indicatorbin > mask {
+  min-width: 8px; /* Etwas größer für besseren Neon-Effekt */
+  min-height: 8px;
+  border-radius: 9999px;
+}
+
+/* Neonfarben für Indikatoren */
+indicatorbin > indicator {
+  margin: 2px;
+  background-color: rgba(0, 255, 255, 0.6); /* Neon Cyan */
+}
+
+/* Label-Stile für Indikatoren */
+indicatorbin > indicator > label {
+  font-size: 0.8rem; /* Etwas größere Schriftart für bessere Lesbarkeit */
+  font-weight: bold;
+  padding: 2px 6px;
+  color: #000000; /* Schwarz für Kontrast zu Neonfarben */
+}
+
+/* Hintergrund für Masken */
+indicatorbin > mask {
+  padding: 2px;
+  background: #1a1d26; /* Dunklerer Hintergrund */
+}
+
+/* Aufmerksamkeit-Indikatoren */
+indicatorbin.needs-attention > indicator {
+  background-color: #ff77ff; /* Neon Magenta */
+}
+
+/* Label-Stile für Aufmerksamkeit-Indikatoren */
+indicatorbin.needs-attention > indicator > label {
+  color: #ffffff; /* Weiß für hohen Kontrast */
+}
+
+/* Preferences Page Layout */
+preferencespage > scrolledwindow > viewport > clamp > box {
+  margin: 24px 12px;
+  border-spacing: 24px;
+}
+
+/* Preferences Group Box Styles */
+preferencesgroup > box, preferencesgroup > box .labels {
+  border-spacing: 6px;
+}
+
+/* Header in Preferences Group */
+preferencesgroup > box > box.header:not(.single-line) {
+  margin-bottom: 6px;
+}
+
+/* Single Line Box in Preferences Group */
+preferencesgroup > box > box.single-line {
+  min-height: 34px;
+}
+
+/* Hintergrund-Preview-Button in Preferences Group */
+preferencesgroup > box button.background-preview-button.toggle {
+  padding: 0;
+  background: none;
+  border: 2px solid #00ffff; /* Neon Cyan Border */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.5); /* Neon Cyan Schatten */
+  outline-color: transparent;
+  outline-width: 3px;
+  outline-offset: 3px;
+  outline-style: solid;
+  border-radius: 14px;
+}
+
+/* Hover-Zustand für Hintergrund-Preview-Button */
+preferencesgroup > box button.background-preview-button.toggle:hover {
+  outline-color: rgba(255, 255, 255, 0.2); /* Neon Cyan Hover-Effekt */
+}
+
+/* Aktiver Zustand für Hintergrund-Preview-Button */
+preferencesgroup > box button.background-preview-button.toggle:active {
+  outline-color: rgba(255, 255, 255, 0.5); /* Neon Cyan Aktiv-Effekt */
+}
+
+/* Geprüfter Zustand für Hintergrund-Preview-Button */
+preferencesgroup > box button.background-preview-button.toggle:checked {
+  outline-color: #ff77ff; /* Neon Magenta */
+}
+
+/* Cutout-Button in Preferences Group */
+preferencesgroup > box .cutout-button {
+  background-color: #2e3540; /* Dunklerer Hintergrund für den Button */
+  border: 2px solid #00ffff; /* Neon Cyan Border */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.5); /* Neon Cyan Schatten */
+}
+
+/* About Page Layout */
+window.about .main-page > viewport > clamp > box {
+  margin: 12px;
+  border-spacing: 6px;
 }
 
 row.spin {
@@ -3863,6 +4848,68 @@ row.combo {
       }
     }
   }
+}
+
+/*************
+ * Expanders *
+ *************/
+
+/* Basis-Styling für Expanders */
+expander {
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1);
+  min-width: 16px;
+  min-height: 16px;
+  color: rgba(231, 237, 243, 0.7); /* Helle Textfarbe für den Standard-Zustand */
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic");
+}
+
+/* Stil für RTL (Recht-zu-Links) Layout */
+expander:dir(rtl) {
+  -gtk-icon-source: -gtk-icontheme("pan-end-symbolic-rtl");
+}
+
+/* Hover- und Aktiv-Zustände */
+expander:hover, expander:active {
+  color: #00ffff; /* Neon Cyan für Hover- und Aktiv-Zustände */
+}
+
+/* Stil für den gecheckten Zustand (erweitert) */
+expander:checked {
+  -gtk-icon-source: -gtk-icontheme("pan-down-symbolic");
+  color: #00ffff; /* Neon Cyan für den erweiterten Zustand */
+}
+
+/* Stil für deaktivierte Expanders */
+expander:disabled {
+  color: rgba(231, 237, 243, 0.32); /* Gedämpfte Farbe für deaktivierte Expanders */
+}
+
+/* Styling für den Titel des Expander-Widgets */
+expander-widget > box > title {
+  border-radius: 10px; /* Leichte Abrundung für einen modernen Look */
+  background-color: #2e3540; /* Dunkler Hintergrund für den Titelbereich */
+  color: #e7edf3; /* Helle Textfarbe für Kontrast */
+  padding: 8px 12px; /* Polsterung für besseren Abstand */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.6); /* Neon Cyan Schatten für den Titelbereich */
+}
+
+/* Hover-Effekt für den Titelbereich eines Expanders */
+expander-widget > box > title:hover > expander {
+  color: #00ffff; /* Neon Cyan Farbe für Hover-Effekt */
+}
+
+/* Styling für Sidebar- und Stackswitcher-Widgets im aktiven Zustand */
+.navigation-sidebar:not(decoration):not(window):drop(active):focus,
+.navigation-sidebar:not(decoration):not(window):drop(active),
+placessidebar:not(decoration):not(window):drop(active):focus,
+placessidebar:not(decoration):not(window):drop(active),
+stackswitcher:not(decoration):not(window):drop(active):focus,
+stackswitcher:not(decoration):not(window):drop(active),
+expander-widget:not(decoration):not(window):drop(active):focus,
+expander-widget:not(decoration):not(window):drop(active) {
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.8); /* Neon Cyan Schatten für den aktiven Zustand */
+  border: 1px solid #00ffff; /* Neon Cyan Border für den aktiven Zustand */
+  background-color: #1e1e1e; /* Dunkler Hintergrund für den aktiven Zustand */
 }
 
 /******************
@@ -4383,7 +5430,7 @@ filechooserbutton:drop(active) {
 sidebar {
   padding: 10px;
   border-right: 2px solid rgba(255, 0, 150, 0.8);
-  color: #FFFFFF;
+  color: #000000;
   background-color: #3E3E3E;
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
 }
@@ -4450,183 +5497,143 @@ stacksidebar row.activatable:selected:active {
   color: #ff00ff; /* Neon pink text */
 }
 
+/* Sidebar Styles */
 place-sidebar {
   background-color: #0a0a0a;
   color: #e0e0e0;
   border: 2px solid #00ffcc;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Neon Cyan Glow */
 }
 
 .nautilus-window .sidebar, .sidebar {
   min-width: 250px;
   max-width: 250px;
+  background-color: #1a1a1a; /* Dunklerer Hintergrund */
+  color: #e0e0e0;
+  border-left: 2px solid #00ffcc;
 }
 
 .nautilus-window .sidebar headerbar, .sidebar headerbar {
-  border-color: rgba(255, 0, 150, 0.8);
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+  border-color: rgba(255, 0, 150, 0.8); /* Neon Pink Border */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Neon Cyan Glow */
+  background-color: #2C2C2C; /* Etwas hellerer Hintergrund */
 }
 
 .sidebar headerbar button, .sidebar headerbar entry {
   border-radius: 4px;
-  color: #FFFFFF;
+  color: #FFFFFF; /* Weißer Text */
   background-color: #2C2C2C;
-  border: 1px solid rgba(255, 0, 150, 0.6);
-  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8);
+  border: 1px solid rgba(255, 0, 150, 0.6); /* Neon Pink Border */
+  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8); /* Neon Pink Glow */
 }
 
 .sidebar headerbar button:hover, .sidebar headerbar entry:hover {
-  border-color: rgba(150, 0, 255, 0.8);
-  box-shadow: inset 0 0 10px 2px rgba(255, 0, 150, 0.8);
+  border-color: rgba(150, 0, 255, 0.8); /* Neon Purple Border bei Hover */
+  box-shadow: inset 0 0 10px 2px rgba(255, 0, 150, 0.8); /* Neon Pink Innenleuchten */
 }
 
 .sidebar headerbar button:active, .sidebar headerbar entry:active {
-  border-color: rgba(150, 0, 255, 0.9);
-  background-color: #3D3D3D;
+  border-color: rgba(150, 0, 255, 0.9); /* Neon Purple Border bei Aktivierung */
+  background-color: #3D3D3D; /* Etwas hellerer Hintergrund */
 }
 
 .sidebar headerbar button:disabled, .sidebar headerbar entry:disabled {
-  color: rgba(150, 0, 255, 0.5);
-  border-color: rgba(255, 0, 150, 0.5);
-  background-color: #1E1E1E;
+  color: rgba(150, 0, 255, 0.5); /* Gedämpfter Neon Purple Text */
+  border-color: rgba(255, 0, 150, 0.5); /* Gedämpfte Neon Pink Border */
+  background-color: #1E1E1E; /* Dunkler Hintergrund */
 }
 
-.content {
+/* Content and View Styling */
+.content, .view {
   border-radius: 8px;
   color: #FFFFFF;
   background-color: #2C2C2C;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
-}
-
-.view {
-  border-radius: 8px;
-  color: #FFFFFF;
-  background-color: #2C2C2C;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Neon Cyan Glow */
 }
 
 .view button, .view entry {
   border-radius: 4px;
   color: #FFFFFF;
   background-color: #2C2C2C;
-  border: 1px solid rgba(255, 0, 150, 0.6);
-  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8);
+  border: 1px solid rgba(255, 0, 150, 0.6); /* Neon Pink Border */
+  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8); /* Neon Pink Glow */
 }
 
 .view button:hover, .view entry:hover {
-  border-color: rgba(150, 0, 255, 0.8);
-  box-shadow: inset 0 0 10px 2px rgba(255, 0, 150, 0.8);
+  border-color: rgba(150, 0, 255, 0.8); /* Neon Purple Border bei Hover */
+  box-shadow: inset 0 0 10px 2px rgba(255, 0, 150, 0.8); /* Neon Pink Innenleuchten */
 }
 
 .view button:active, .view entry:active {
-  border-color: rgba(150, 0, 255, 0.9);
-  background-color: #3D3D3D;
+  border-color: rgba(150, 0, 255, 0.9); /* Neon Purple Border bei Aktivierung */
+  background-color: #3D3D3D; /* Etwas hellerer Hintergrund */
 }
 
 .view button:disabled, .view entry:disabled {
-  color: rgba(150, 0, 255, 0.5);
-  border-color: rgba(255, 0, 150, 0.5);
-  background-color: #1E1E1E;
+  color: rgba(150, 0, 255, 0.5); /* Gedämpfter Neon Purple Text */
+  border-color: rgba(255, 0, 150, 0.5); /* Gedämpfte Neon Pink Border */
+  background-color: #1E1E1E; /* Dunkler Hintergrund */
 }
 
-.content .frame, .content .frame:backdrop {
-  border-radius: 8px;
-  color: #FFFFFF;
-  background-color: #2C2C2C;
-  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+/* Entry Focus States */
+.entry.error:focus, .entry.error:focus:not(:hover) {
+  border-color: rgba(255, 0, 0, 0.9); /* Rotes Border bei Fehler */
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8); /* Roter Glow */
 }
 
-.entry.error:focus {
-  border-color: rgba(255, 0, 0, 0.9);
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+.entry.success:focus, .entry.success:focus:not(:hover) {
+  border-color: rgba(0, 255, 0, 0.9); /* Grünes Border bei Erfolg */
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.8); /* Grüner Glow */
 }
 
-.entry.success:focus {
-  border-color: rgba(0, 255, 0, 0.9);
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+.entry.error:not(:focus), .entry.success:not(:focus) {
+  border-color: rgba(255, 0, 0, 0.7), rgba(0, 255, 0, 0.7); /* Gedämpfter Border bei Nicht-Fokus */
+  box-shadow: none; /* Kein Glow bei Nicht-Fokus */
 }
 
-.entry.error:focus:not(:hover) {
-  border-color: rgba(255, 0, 0, 0.9);
-  box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
-}
-
-.entry.success:focus:not(:hover) {
-  border-color: rgba(0, 255, 0, 0.9);
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
-}
-
-.entry.error:not(:focus) {
-  border-color: rgba(255, 0, 0, 0.7);
-  box-shadow: none;
-}
-
-.entry.success:not(:focus) {
-  border-color: rgba(0, 255, 0, 0.7);
-  box-shadow: none;
-}
-
-.progress {
-  height: 8px;
+/* Progress and Scale Styles */
+.progress, .scale {
   border-radius: 4px;
   background-color: #3D3D3D;
-  box-shadow: inset 0 0 10px rgba(255, 0, 150, 0.6);
+  box-shadow: inset 0 0 10px rgba(255, 0, 150, 0.6); /* Neon Pink Innenleuchten */
 }
 
-.progressbar {
+.progressbar, .scale .bar {
   border-radius: 4px;
-  background-color: #1E1E1E;
-  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.8);
+  background-color: #1E1E1E; /* Dunkler Hintergrund */
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.8); /* Neon Cyan Innenleuchten */
 }
 
-.progressbar .bar {
-  border-radius: 4px;
-  background-image: linear-gradient(to right, #FF00FF, #00FFFF);
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+.progressbar .bar, .scale .bar {
+  background-image: linear-gradient(to right, #FF00FF, #00FFFF); /* Gradient von Neon Pink zu Neon Cyan */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Neon Cyan Glow */
 }
 
-.scale {
-  height: 10px;
-  border-radius: 5px;
-  background-color: #3D3D3D;
-  box-shadow: inset 0 0 10px rgba(255, 0, 150, 0.6);
-}
-
-.scale .bar {
-  border-radius: 5px;
-  background-image: linear-gradient(to right, #FF00FF, #00FFFF);
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
-}
-
-.scrollbar {
+/* Scrollbar and Slider Styles */
+.scrollbar, .slider {
   border-radius: 4px;
   background-color: #2C2C2C;
-  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.6);
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.6); /* Neon Cyan Innenleuchten */
 }
 
 .scrollbar .slider {
-  border-radius: 4px;
   background-color: #3D3D3D;
-  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.8);
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.8); /* Neon Cyan Innenleuchten */
 }
 
-.slider {
-  border-radius: 4px;
-  background-color: #2C2C2C;
-  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.6);
-}
-
+/* Switch Styles */
 .switch {
-  width: 50px;
-  height: 25px;
+  width: 24px;
+  height: 16px;
   border-radius: 25px;
   background-color: #2C2C2C;
-  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.8);
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.8); /* Neon Cyan Innenleuchten */
   position: relative;
 }
 
 .switch:checked {
-  background-color: #1E1E1E;
-  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.8);
+  background-color: #1E1E1E; /* Dunkler Hintergrund bei Aktivierung */
+  box-shadow: inset 0 0 10px rgba(0, 255, 255, 0.8); /* Neon Cyan Innenleuchten */
 }
 
 .switch:before {
@@ -4635,26 +5642,27 @@ place-sidebar {
   width: 21px;
   height: 21px;
   border-radius: 50%;
-  background-color: #FFFFFF;
-  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8);
+  background-color: #FFFFFF; /* Weißer Schalter */
+  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8); /* Neon Pink Glow */
   transition: 0.3s;
   left: 2px;
   top: 2px;
 }
 
 .switch:checked:before {
-  left: 27px;
+  left: 27px; /* Position des Schalters bei Aktivierung */
 }
 
+/* Togglebutton Styles */
 .togglebutton {
   border-radius: 4px;
   background-color: #2C2C2C;
-  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8);
+  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8); /* Neon Pink Glow */
 }
 
 .togglebutton:checked {
-  background-color: #1E1E1E;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  background-color: #1E1E1E; /* Dunkler Hintergrund bei Aktivierung */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Neon Cyan Glow */
 }
 
 .togglebutton:before {
@@ -4663,24 +5671,25 @@ place-sidebar {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #FFFFFF;
-  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8);
+  background-color: #FFFFFF; /* Weißer Knopf */
+  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8); /* Neon Pink Glow */
   transition: 0.3s;
 }
 
 .togglebutton:checked:before {
-  background-color: #00FFFF;
+  background-color: #00FFFF; /* Neon Cyan Knopf bei Aktivierung */
 }
 
+/* Check and Radio Button Styles */
 .check, .radio {
   border-radius: 4px;
   background-color: #2C2C2C;
-  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8);
+  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8); /* Neon Pink Glow */
 }
 
 .check:checked, .radio:checked {
-  background-color: #1E1E1E;
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  background-color: #1E1E1E; /* Dunkler Hintergrund bei Aktivierung */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.8); /* Neon Cyan Glow */
 }
 
 .check:before, .radio:before {
@@ -4689,96 +5698,120 @@ place-sidebar {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background-color: #FFFFFF;
-  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8);
+  background-color: #FFFFFF; /* Weißer Punkt */
+  box-shadow: 0 0 10px rgba(255, 0, 150, 0.8); /* Neon Pink Glow */
   transition: 0.3s;
 }
 
 .check:checked:before, .radio:checked:before {
-  background-color: #00FFFF;
+  background-color: #00FFFF; /* Neon Cyan Punkt bei Aktivierung */
 }
 
 
-
+/* SpinButton */
 spinbutton {
-  background-color: #0a0a0a;
-  color: #e0e0e0;
-  border: 2px solid #00ffcc;
+  background-color: #1b1b1b; /* Dunkler, aber nicht zu schwarzer Hintergrund */
+  color: #e0e0e0; /* Hellgrauer Text für besseren Kontrast */
+  border: 2px solid #00ffcc; /* Neon-Cyan Border */
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon-Cyan Glow */
 }
 
+/* CheckButton und Check */
 checkbutton, .check {
-  background-color: #0a0a0a;
-  color: #e0e0e0;
-  border: 2px solid #00ffcc;
+  background-color: #1b1b1b; 
+  color: #e0e0e0; 
+  border: 2px solid #00ffcc; 
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon-Cyan Glow */
 }
 
 checkbutton:checked, .check:checked {
-  background-color: #00ffcc;
-  border-color: #008080;
+  background-color: #00ffcc; /* Neon-Cyan Hintergrund bei Auswahl */
+  border-color: #008080; /* Dunklere Cyan-Farbe für den Border */
+  color: #000000; /* Schwarzer Text für besseren Kontrast bei ausgewähltem Zustand */
 }
 
+/* OSD */
 osd {
-  background-color: #0a0a0a;
+  background-color: #1b1b1b;
   color: #e0e0e0;
   border: 2px solid #00ffcc;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5); /* Neon-Cyan Glow */
 }
 
+/* Toolbar */
 toolbar {
-  background-color: #0a0a0a;
+  background-color: #1b1b1b;
   color: #e0e0e0;
   border: 2px solid #00ffcc;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon-Cyan Glow */
 }
 
+/* TreeView */
 treeview {
-  background-color: #0a0a0a;
+  background-color: #1b1b1b;
   color: #e0e0e0;
   border: 2px solid #00ffcc;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon-Cyan Glow */
 }
 
 treeview:selected {
-  background-color: #005577;
-  color: #ffffff;
+  background-color: #003344; /* Dunkles Cyan bei Auswahl */
+  color: #ffffff; /* Weißer Text bei Auswahl */
 }
 
+
+/* Flat Button Styles */
 .button.flat {
   border-color: transparent;
-  border-radius: 4px;
-  color: #FFFFFF;
-  background-color: #333333;
-  box-shadow: 0px 0px 10px rgba(255, 0, 150, 0.8);
+  border-radius: 6px; /* Leicht abgerundete Ecken für einen futuristischen Look */
+  color: #FFFFFF; /* Weißer Text für guten Kontrast */
+  background-color: #1a1a1a; /* Dunkler Hintergrund für die Buttons */
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8); /* Neon-Cyan Glow */
+  padding: 8px 12px; /* Mehr Polsterung für besseren Touch */
+  transition: all 0.3s ease-in-out; /* Sanfte Übergänge bei Hover und Aktivierung */
 }
 
 .button.flat:hover {
-  border-color: rgba(255, 0, 150, 0.8);
-  background-color: #444444;
+  border-color: rgba(0, 255, 255, 0.8); /* Neon-Cyan Border bei Hover */
+  background-color: #2b2b2b; /* Etwas hellerer Hintergrund bei Hover */
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.9); /* Intensiverer Neon-Cyan Glow */
 }
 
 .button.flat:active, .button.flat:checked {
-  border-color: rgba(255, 0, 150, 0.9);
-  background-color: #555555;
+  border-color: rgba(0, 255, 255, 0.9); /* Neon-Cyan Border bei Aktivierung */
+  background-color: #3d3d3d; /* Noch hellerer Hintergrund bei Aktivierung */
+  box-shadow: 0 0 25px rgba(0, 255, 255, 1); /* Starker Glow bei Aktivierung */
 }
 
 .button.flat:disabled {
   border-color: transparent;
-  color: rgba(255, 0, 150, 0.3);
-  background-color: #222222;
+  color: rgba(0, 255, 255, 0.3); /* Gedämpfter Neon-Cyan Text bei Deaktivierung */
+  background-color: #1E1E1E; /* Dunkler Hintergrund bei Deaktivierung */
+  box-shadow: none; /* Kein Glow bei deaktivierten Buttons */
 }
 
+/* Hover and Active States for Buttons, SpinButtons, Entries */
 button:hover, spinbutton:hover, entry:hover {
-  border-color: rgba(150, 0, 255, 0.8);
-  box-shadow: inset 0 0 10px 2px rgba(255, 0, 150, 0.8);
+  border-color: rgba(0, 255, 255, 0.8); /* Neon-Cyan Border bei Hover */
+  box-shadow: inset 0 0 10px 2px rgba(0, 255, 255, 0.8); /* Innenleuchtende Cyan-Schatten */
 }
 
 button:active, spinbutton:active, entry:active {
-  border-color: rgba(150, 0, 255, 0.9);
-  background-color: #3D3D3D;
+  border-color: rgba(0, 255, 255, 0.9); /* Neon-Cyan Border bei Aktivierung */
+  background-color: #3D3D3D; /* Dunkleres Grau bei Aktivierung */
 }
 
 button:disabled, spinbutton:disabled, entry:disabled {
-  color: rgba(150, 0, 255, 0.5);
-  border-color: rgba(255, 0, 150, 0.5);
-  background-color: #1E1E1E;
+  color: rgba(0, 255, 255, 0.5); /* Gedämpfte Neon-Cyan Farbe bei Deaktivierung */
+  border-color: rgba(0, 255, 255, 0.5); /* Gedämpfte Neon-Cyan Border bei Deaktivierung */
+  background-color: #1E1E1E; /* Dunkler Hintergrund bei Deaktivierung */
 }
+
 
 
 /*********
@@ -5409,45 +6442,7 @@ levelbar > trough > block.empty {
 }
 
 
-/**********
- * Frames *
- **********/
-frame,
-.frame {
-  border: 1px solid #00ffff; /* Neon cyan border */
-  border-radius: 10px;
-}
-frame > label {
-  margin: 4px;
-  color: #00ffff; /* Neon cyan text */
-}
 
-actionbar > revealer > box {
-  padding: 6px;
-  border-top: 1px solid #00ffff; /* Neon cyan border */
-}
-actionbar > revealer > box, 
-actionbar > revealer > box > box.start, 
-actionbar > revealer > box > box.end {
-  border-spacing: 6px;
-}
-
-scrolledwindow > junction {
-  background: #1c1c1c, /* Dark background */
-              linear-gradient(to bottom, transparent 1px, #00ffff 1px), /* Neon cyan grid */
-              linear-gradient(to right, transparent 1px, #00ffff 1px); /* Neon cyan grid */
-}
-scrolledwindow > junction:dir(rtl) {
-  background: #1c1c1c, /* Dark background */
-              linear-gradient(to bottom, transparent 1px, #00ffff 1px), /* Neon cyan grid */
-              linear-gradient(to left, transparent 1px, #00ffff 1px); /* Neon cyan grid */
-}
-
-separator {
-  background: #444444; /* Dark separator */
-  min-width: 1px;
-  min-height: 1px;
-}
 
 
 /*******************************************************
@@ -6348,6 +7343,66 @@ headerbar .nautilus-canvas-item.subtitle:selected, .titlebar:not(headerbar) .nau
   animation: needs_attention_keyframes 3s ease-in-out;
   animation-iteration-count: 3;
 }
+#NautilusPathButton, filechooser #pathbarbox > stack > box > button, window.messagedialog .response-area > box > button, window.dialog.message .dialog-action-area > button, .app-notification button, .toolbar button, dropdown > .linked:not(.vertical) > button:not(:only-child),
+combobox > .linked:not(.vertical) > button:not(:only-child), splitbutton.suggested-action > button, splitbutton.suggested-action > menubutton > button, splitbutton.destructive-action > button, splitbutton.destructive-action > menubutton > button, splitbutton.opaque > button, splitbutton.opaque > menubutton > button, menubutton.suggested-action > button, menubutton.destructive-action > button, menubutton.opaque > button, menubutton.flat > button, button.flat {
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-size 300ms cubic-bezier(0, 0, 0.2, 1), background-image 1200ms cubic-bezier(0, 0, 0.2, 1), outline 300ms cubic-bezier(0, 0, 0.2, 1);
+  background-image: radial-gradient(circle, transparent 10%, transparent 0%);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1000% 1000%;
+  background-color: transparent;
+  outline: 2px solid rgba(0, 255, 204, 0.6); /* Neon Green Outline */
+  outline-offset: 2px;
+  color: rgba(0, 255, 204, 0.8); /* Neon Green Text */
+  box-shadow: 0 0 10px rgba(0, 255, 204, 0.7); /* Neon Glow Effect */
+}
+
+#NautilusPathButton:focus:not(:hover):not(:active), filechooser #pathbarbox > stack > box > button:focus:not(:hover):not(:active), window.messagedialog .response-area > box > button:focus:not(:hover):not(:active), window.dialog.message .dialog-action-area > button:focus:not(:hover):not(:active), .app-notification button:focus:not(:hover):not(:active), .toolbar button:focus:not(:hover):not(:active), dropdown > .linked:not(.vertical) > button:focus:not(:hover):not(:active):not(:only-child),
+combobox > .linked:not(.vertical) > button:focus:not(:hover):not(:active):not(:only-child), splitbutton.suggested-action > button:focus:not(:hover):not(:active), splitbutton.suggested-action > menubutton > button:focus:not(:hover):not(:active), splitbutton.destructive-action > button:focus:not(:hover):not(:active), splitbutton.destructive-action > menubutton > button:focus:not(:hover):not(:active), splitbutton.opaque > button:focus:not(:hover):not(:active), splitbutton.opaque > menubutton > button:focus:not(:hover):not(:active), menubutton.suggested-action > button:focus:not(:hover):not(:active), menubutton.destructive-action > button:focus:not(:hover):not(:active), menubutton.opaque > button:focus:not(:hover):not(:active), menubutton.flat > button:focus:not(:hover):not(:active), button.flat:focus:not(:hover):not(:active) {
+  color: #0ff; /* Bright Neon Cyan Text */
+  outline: 3px solid rgba(0, 255, 204, 0.9); /* Stronger Outline on Focus */
+  outline-offset: -2px;
+  box-shadow: 0 0 15px rgba(0, 255, 204, 1); /* Brighter Glow on Focus */
+}
+
+#NautilusPathButton:hover, filechooser #pathbarbox > stack > box > button:hover, window.messagedialog .response-area > box > button:hover, window.dialog.message .dialog-action-area > button:hover, .app-notification button:hover, .toolbar button:hover, dropdown > .linked:not(.vertical) > button:hover:not(:only-child),
+combobox > .linked:not(.vertical) > button:hover:not(:only-child), splitbutton.suggested-action > button:hover, splitbutton.suggested-action > menubutton > button:hover, splitbutton.destructive-action > button:hover, splitbutton.destructive-action > menubutton > button:hover, splitbutton.opaque > button:hover, splitbutton.opaque > menubutton > button:hover, menubutton.suggested-action > button:hover, menubutton.destructive-action > button:hover, menubutton.opaque > button:hover, menubutton.flat > button:hover, button.flat:hover {
+  background-color: rgba(0, 255, 204, 0.2); /* Slight Background Tint on Hover */
+  color: #00ffcc; /* Brighter Neon Text on Hover */
+  box-shadow: 0 0 15px rgba(0, 255, 204, 0.8); /* Enhanced Glow on Hover */
+}
+
+#NautilusPathButton:active, filechooser #pathbarbox > stack > box > button:active, window.messagedialog .response-area > box > button:active, window.dialog.message .dialog-action-area > button:active, .app-notification button:active, .toolbar button:active, dropdown > .linked:not(.vertical) > button:active:not(:only-child),
+combobox > .linked:not(.vertical) > button:active:not(:only-child), splitbutton.suggested-action > button:active, splitbutton.suggested-action > menubutton > button:active, splitbutton.destructive-action > button:active, splitbutton.destructive-action > menubutton > button:active, splitbutton.opaque > button:active, splitbutton.opaque > menubutton > button:active, menubutton.suggested-action > button:active, menubutton.destructive-action > button:active, menubutton.opaque > button:active, menubutton.flat > button:active, button.flat:active {
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), border-image 225ms cubic-bezier(0, 0, 0.2, 1), background-size 0ms, background-image 0ms;
+  animation: ripple 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  background-image: radial-gradient(circle, rgba(0, 255, 204, 0.3) 10%, transparent 0%);
+  background-size: 100% 100%;
+  background-color: rgba(0, 255, 204, 0.2);
+  color: #00ffcc;
+  box-shadow: 0 0 20px rgba(0, 255, 204, 1); /* Strong Glow on Active */
+}
+
+#NautilusPathButton:disabled, filechooser #pathbarbox > stack > box > button:disabled, window.messagedialog .response-area > box > button:disabled, window.dialog.message .dialog-action-area > button:disabled, .app-notification button:disabled, .toolbar button:disabled, dropdown > .linked:not(.vertical) > button:disabled:not(:only-child),
+combobox > .linked:not(.vertical) > button:disabled:not(:only-child), splitbutton.suggested-action > button:disabled, splitbutton.suggested-action > menubutton > button:disabled, splitbutton.destructive-action > button:disabled, splitbutton.destructive-action > menubutton > button:disabled, splitbutton.opaque > button:disabled, splitbutton.opaque > menubutton > button:disabled, menubutton.suggested-action > button:disabled, menubutton.destructive-action > button:disabled, menubutton.opaque > button:disabled, menubutton.flat > button:disabled, button.flat:disabled {
+  color: rgba(0, 255, 204, 0.3); /* Faded Neon Color for Disabled */
+  background-color: transparent;
+  box-shadow: none; /* No Shadow for Disabled */
+}
+
+#NautilusPathButton:checked, filechooser #pathbarbox > stack > box > button:checked, window.messagedialog .response-area > box > button:checked, window.dialog.message .dialog-action-area > button:checked, .app-notification button:checked, .toolbar button:checked, dropdown > .linked:not(.vertical) > button:checked:not(:only-child),
+combobox > .linked:not(.vertical) > button:checked:not(:only-child), splitbutton.suggested-action > button:checked, splitbutton.suggested-action > menubutton > button:checked, splitbutton.destructive-action > button:checked, splitbutton.destructive-action > menubutton > button:checked, splitbutton.opaque > button:checked, splitbutton.opaque > menubutton > button:checked, menubutton.suggested-action > button:checked, menubutton.destructive-action > button:checked, menubutton.opaque > button:checked, menubutton.flat > button:checked, button.flat:checked {
+  background-color: rgba(0, 255, 204, 0.3); /* Slightly Darker Neon for Checked */
+  color: #00ffcc;
+  box-shadow: 0 0 18px rgba(0, 255, 204, 0.9); /* Glow Effect on Checked */
+}
+
+#NautilusPathButton:checked:disabled, filechooser #pathbarbox > stack > box > button:checked:disabled, window.messagedialog .response-area > box > button:checked:disabled, window.dialog.message .dialog-action-area > button:checked:disabled, .app-notification button:checked:disabled, .toolbar button:checked:disabled, dropdown > .linked:not(.vertical) > button:checked:disabled:not(:only-child),
+combobox > .linked:not(.vertical) > button:checked:disabled:not(:only-child), splitbutton.suggested-action > button:checked:disabled, splitbutton.suggested-action > menubutton > button:checked:disabled, splitbutton.destructive-action > button:checked:disabled, splitbutton.destructive-action > menubutton > button:checked:disabled, splitbutton.opaque > button:checked:disabled, splitbutton.opaque > menubutton > button:checked:disabled, menubutton.suggested-action > button:checked:disabled, menubutton.destructive-action > button:checked:disabled, menubutton.opaque > button:checked:disabled, menubutton.flat > button:checked:disabled, button.flat:checked:disabled {
+  background-color: rgba(0, 255, 204, 0.3); /* Consistent Color for Disabled Checked */
+  color: rgba(0, 255, 204, 0.5); /* Faded Glow for Disabled Checked */
+  box-shadow: none; /* No Shadow for Disabled Checked */
+}
 
 .operations-list,
 .operations-list > :hover {
@@ -6543,5 +7598,227 @@ flowboxchild:selected .icon-ui-labels-box {
 flowboxchild:selected image {
   -gtk-icon-effect: dim;
   -gtk-icon-shadow: 0px 0px #ff00ff;
+}
+/* Spinner Animation */
+.spinner.fade-in:checked {
+  animation: pre-delay 0.5s linear 1, fade-in 1s linear 1, spin 1s linear infinite;
+  animation-delay: 0s, 0.5s, 0.5s;
+}
+
+/* Background Styles */
+window > contents > leaflet > box > stack.background {
+  background-color: #121212; /* Dunkler Hintergrund */
+  background-image: linear-gradient(to bottom, transparent, transparent 48px, #1e1e1e 48px, #1e1e1e);
+}
+
+/* Colors */
+@define-color weather_temp_chart_fill_color rgba(0, 255, 255, 0.5); /* Neon Cyan */
+@define-color weather_temp_chart_stroke_color #00ffff; /* Neon Cyan */
+@define-color weather_thermometer_warm_color #ff77ff; /* Neon Magenta */
+@define-color weather_thermometer_cold_color #00bfff; /* Neon Blue */
+
+/* Labels and Text */
+#places-label {
+  font-weight: bold;
+  color: #ff00ff; /* Neon Magenta */
+}
+
+#temperature-label {
+  font-size: 32pt;
+  font-weight: 900;
+  margin-left: 9px;
+  color: #00ffff; /* Neon Cyan */
+}
+
+#conditions-grid *:backdrop {
+  color: rgba(231, 237, 243, 0.7);
+}
+
+/* Content View */
+.content-view.cell {
+  font-weight: bold;
+  color: #e0e0e0; /* Helles Grau für besseren Kontrast */
+}
+
+/* Borders and Shadows */
+.forecast-card {
+  transition: border-radius 100ms ease-out, box-shadow 200ms ease-in-out;
+  border-radius: 14px;
+  border: 2px solid #00ffff; /* Neon Cyan Border */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.7); /* Neon Cyan Shadow */
+}
+
+.forecast-card separator {
+  background-color: #2e3540;
+}
+
+#daily-forecast-box > separator:last-child {
+  background-color: transparent;
+  min-width: 0;
+}
+
+#conditions-grid,
+#attributionGrid {
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+/* Forecast Card for Small Screens */
+#weather-page .small .forecast-card {
+  margin-left: 0;
+  margin-right: 0;
+  border-radius: 0;
+  border-width: 1px 0;
+  border-color: #00ffff; /* Neon Cyan Border */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.5); /* Neon Cyan Shadow */
+}
+
+/* Temperature Labels */
+.forecast-temperature-label {
+  font-weight: bold;
+  color: #ff77ff; /* Neon Magenta */
+}
+
+/* Weather Thermometer */
+WeatherThermometer {
+  margin-bottom: 12px;
+}
+
+WeatherThermometer > label.high {
+  font-weight: bold;
+  color: #ff77ff; /* Neon Magenta */
+}
+
+WeatherThermometer > label.low {
+  font-weight: bold;
+  color: #00bfff; /* Neon Blue */
+}
+
+/* Forecast Button */
+.forecast-button {
+  margin: 0 12px;
+  background-color: #333333; /* Dunkler Hintergrund für den Button */
+  color: #00ffff; /* Neon Cyan Text */
+  border: 2px solid #00ffff; /* Neon Cyan Border */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.5); /* Neon Cyan Shadow */
+}
+
+/* Forecast Graphic */
+.forecast-graphic {
+  margin: 18px;
+}
+
+/* Circular Button */
+button.osd.circular {
+  border-radius: 9999px;
+  min-width: 24px;
+  min-height: 24px;
+  background-color: #333333; /* Dunkler Hintergrund für den Button */
+  border: 2px solid #00ffff; /* Neon Cyan Border */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.5); /* Neon Cyan Shadow */
+}
+
+button.osd.circular > image {
+  padding: 0;
+}
+
+/* Scrolled Window */
+scrolledwindow.inline list,
+scrolledwindow.inline listview {
+  background: none;
+  color: inherit;
+}
+
+scrolledwindow.inline undershoot.top {
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.12);
+}
+
+
+
+/* Circular Image */
+image.circular {
+  min-width: 36px;
+  min-height: 36px;
+  padding: 0;
+  border-radius: 9999px;
+  border: 2px solid #00ffff; /* Neon Cyan Border */
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.5); /* Neon Cyan Shadow */
+}
+/* Allgemeine Card-Stile */
+.card {
+  border-radius: 14px;
+  border: 2px solid #00ffff; /* Neon Cyan Border */
+  background-clip: border-box;
+  color: #e7edf3; /* Helles Weiß für Text */
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon Cyan Schatten */
+  outline: none;
+  background-color: #1a1d26; /* Dunklerer Hintergrund für Card */
+}
+
+/* Aktivierbare Card-Stile */
+.card.activatable {
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), 
+              background-size 300ms cubic-bezier(0, 0, 0.2, 1), 
+              background-image 1200ms cubic-bezier(0, 0, 0.2, 1), 
+              outline 300ms cubic-bezier(0, 0, 0.2, 1);
+  background-color: rgba(255, 255, 255, 0.1); /* Hellerer Hintergrund beim Hover */
+  background-image: radial-gradient(circle, rgba(0, 255, 255, 0.2) 10%, transparent 0%); /* Neon Cyan Glühen */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1000% 1000%;
+  outline: 0 solid transparent;
+  outline-offset: 2px;
+  color: #e7edf3; /* Helles Weiß für Text */
+}
+
+/* Hover-Effekte für aktivierbare Card */
+.card.activatable:hover {
+  background-color: rgba(0, 255, 255, 0.1); /* Neon Cyan Hover Hintergrund */
+  color: #e7edf3; /* Helles Weiß für Text */
+  outline: 0 solid transparent;
+}
+
+/* Aktiver Zustand für aktivierbare Card */
+.card.activatable:active {
+  transition: all 75ms cubic-bezier(0, 0, 0.2, 1), 
+              background-size 0ms, 
+              background-image 0ms, 
+              border 0ms;
+  animation: ripple 225ms cubic-bezier(0, 0, 0.2, 1) forwards;
+  background-image: radial-gradient(circle, rgba(0, 255, 255, 0.3) 10%, transparent 0%); /* Neon Cyan Ripple-Effekt */
+  background-size: 0% 0%;
+  background-color: rgba(0, 255, 255, 0.2); /* Neon Cyan Hintergrund bei Aktivität */
+  color: #e7edf3; /* Helles Weiß für Text */
+  outline: 0 solid transparent;
+}
+
+/* Toast-Stile */
+toast {
+  margin: 12px;
+  margin-bottom: 24px;
+  border-radius: 9999px;
+  border-spacing: 6px;
+  padding: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3), /* Dunklerer Schatten für mehr Tiefe */
+              0 4px 8px rgba(0, 0, 0, 0.2), 
+              0 1px 12px rgba(0, 0, 0, 0.15), 
+              inset 0 1px rgba(0, 255, 255, 0.2); /* Neon Cyan Innerer Schatten */
+  background-color: #2a2f36; /* Dunkler Hintergrund für Toast */
+  color: #00ffff; /* Neon Cyan Text */
+  border: none;
+}
+
+/* Ausrichtung des Toasts */
+toast:dir(ltr) {
+  padding-left: 12px;
+}
+
+toast:dir(rtl) {
+  padding-right: 12px;
+}
+
+toast > label {
+  margin: 0 6px;
+  color: #00ffff; /* Neon Cyan für Label */
 }
 
